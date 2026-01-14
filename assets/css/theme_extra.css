@@ -96,7 +96,7 @@ td, th {
    ========================================================= */
 
 /* =========================================================
-   🔥 HARD OVERRIDE – RTD CURRENT NAV FIX
+    HARD OVERRIDE – RTD CURRENT NAV FIX
    ========================================================= */
 
 /* RESET ALL CURRENT STATES FIRST */
@@ -110,12 +110,13 @@ td, th {
     background-color: transparent !important;
     background-image: none !important;
     color: #ffffff !important;
+    
 }
 
 /* CURRENT TOP-LEVEL ITEM */
 .wy-menu-vertical li.toctree-l1.current > a {
     background-color: rgba(255, 255, 255, 0.15) !important;
-    border-left: 4px solid #d52bff !important;
+    border-left: 4px solid #801880 !important;
     font-weight: 600;
 }
 
@@ -468,3 +469,25 @@ form .search-query {
 
 
 
+/* Styling for all figure captions automatically */
+figcaption {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 11px;               /* Small font size */
+    font-weight: 600;              /* Semi-bold for a high-end look */
+    text-transform: uppercase;      /* All caps for a professional feel */
+    letter-spacing: 1.5px;         /* Spaced out letters (very "cool" aesthetic) */
+    color: #666;                   /* Sophisticated grey */
+    text-align: center;            /* Centers the text */
+    margin-top: 12px;              /* Space between image and text */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #007bff; /* A small accent "line" under the name */
+    display: inline-block;         /* Keeps the border only as wide as the text */
+    width: 100%;                   /* Or use 'display: block' depending on layout */
+}
+
+/* Optional: Adding a hover effect to make it interactive */
+figcaption:hover {
+    color: #000;
+    border-bottom-color: #333;
+    transition: all 0.3s ease;
+}

@@ -130,38 +130,11 @@ function closeModal() {
 // =======================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. YOUR DATASET (Main and Sub-nav)
-    // const searchData = [
-    //     { title: "Home", url: "index.html", tags: "start" },
-    //     { title: "Overview", url: "pages/overview.html", tags: "intro" },
-    //     { title: "1. Accounting Dashboard", url: "pages/dashboard.html", tags: "stats" },
-    //     { title: "2. Chart of Accounts", url: "pages/coa.html", tags: "coa" },
-    //     { title: "3. Generate Vouchers", url: "pages/generate-vouchar.html", tags: "entry" },
-    //     { title: "3.1 Debit Voucher Entry", url: "pages/generate-vouchar.html#debit-entry", tags: "payment" },
-    //     { title: "3.2 Credit Voucher Entry", url: "pages/generate-vouchar.html#credit-entry", tags: "receive" },
-    //     { title: "3.3 Journal Voucher Entry", url: "pages/generate-vouchar.html#journal-entry", tags: "adjustment" },
-    //     { title: "3.4 Contra Voucher Entry", url: "pages/generate-vouchar.html#contra-entry", tags: "transfer" },
-    //     { title: "4. Bank Reconciliation", url: "pages/bank.html", tags: "reconcile" },
-    //     { title: "4.1. Bank Reconciliation management", url: "pages/bank.html#reconciliation-actions", tags: "reconcile" },
-    //      { title: "management", url: "pages/bank.html#reconciliation-actions", tags: "reconcile" },
-    //     { title: "7. Reports", url: "pages/reports.html", tags: "p&l balance" }
-    // ];
+   
 
     // 2. STYLING THE DROPDOWN
     const style = document.createElement('style');
-    // style.innerHTML = `
-    //     .search-results-container {
-    //         position: absolute; background: white; width: 100%; z-index: 9999;
-    //         border: 1px solid #ccc; border-radius: 0 0 4px 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    //         max-height: 300px; overflow-y: auto; display: none;
-    //     }
-    //     .search-result-item {
-    //         padding: 10px; border-bottom: 1px solid #eee; display: block;
-    //         color: #333 !important; text-decoration: none; font-size: 13px;
-    //     }
-    //     .search-result-item:hover { background: #818ceb; color: white !important; }
-    //     .search-result-item strong { display: block; color: inherit; }
-    // `;
+   
 
     style.innerHTML = `
     .search-results-container {

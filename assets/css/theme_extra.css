@@ -410,9 +410,61 @@ form .search-query {
     font-weight: bold;
     cursor: pointer;
 }
+  /* ========================= */
+/* next prev button */
+/* ============================ */
+/* Container Spacing */
+.rst-footer-buttons {
+    margin-top: 30px !important;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    overflow: hidden; /* Clear floats */
+}
 
+/* Base Fancy Button Style */
+.btn-neutral {
+    background-color: #ffffff !important;
+    color: #0b0836 !important; /* Your signature purple */
+    border: 1px solid #050233 !important;
+    border-radius: 10px !important; /* Rounded pill shape */
+    padding: 10px 25px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+}
 
+/* Hover Effects */
+.btn-neutral:hover {
+    background-color: #264574 !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 15px rgba(127, 113, 253, 0.2);
+    transform: translateY(-3px); /* Lifts up slightly */
+}
 
+/* Icon Spacing */
+.btn-neutral .icon {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow movements on hover */
+.btn-neutral.float-right:hover .icon {
+    transform: translateX(5px); /* Arrow nudges right */
+}
+
+.btn-neutral.float-left:hover .icon {
+    transform: translateX(-5px); /* Arrow nudges left */
+}
+
+/* Float Helpers */
+.float-right { float: right; }
+.float-left { float: left; }
 
 
 

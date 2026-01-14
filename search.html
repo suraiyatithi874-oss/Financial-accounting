@@ -7,7 +7,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="thecreation">
-  <link rel="shortcut icon" href="./img/favicon.ico">
+ 
+
+
+<style>
+    /* Professional Result Styling */
+    .search-results-container {
+        margin-top: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+    .no-results-card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
+        animation: fadeIn 0.5s ease;
+    }
+    .no-results-card i {
+        font-size: 50px;
+        color: #ff6b6b;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .no-results-card h2 { color: #2c3e50; margin-bottom: 10px; }
+    .no-results-card p { color: #7f8c8d; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+<!-- search data -->
+<script src="./assets/js/search_data.js"></script>
+<script>
+
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    const resultsDiv = document.getElementById('mkdocs-search-results');
+
+    if (!query || query.trim() === "") {
+        resultsDiv.innerHTML = `
+            <div class="no-results-card">
+                <h2>Ready to Search</h2>
+                <p>Please type a keyword above to find documentation.</p>
+            </div>`;
+        return;
+    }
+
+    const searchTerm = query.toLowerCase().trim();
+
+    // 1. Try to find an EXACT match first for immediate redirect
+    const exactMatch = searchData.find(item => 
+        item.title.toLowerCase() === searchTerm || 
+        item.tags.toLowerCase().split(' ').includes(searchTerm)
+    );
+
+    if (exactMatch) {
+        resultsDiv.innerHTML = `<div class="no-results-card"><h2>Redirecting to ${exactMatch.title}...</h2></div>`;
+        window.location.href = exactMatch.url;
+        return;
+    }
+
+    // 2. If no exact match, look for PARTIAL matches
+    const partialMatches = searchData.filter(item => 
+        item.title.toLowerCase().includes(searchTerm) || 
+        item.tags.toLowerCase().includes(searchTerm)
+    );
+
+    if (partialMatches.length > 0) {
+        resultsDiv.innerHTML = '<h2>Suggested Results</h2>';
+        partialMatches.forEach(res => {
+            resultsDiv.innerHTML += `
+                <div style="margin-bottom: 15px; padding: 15px; border: 1px solid #eee; border-radius: 8px;">
+                    <a href="${res.url}" style="font-size: 18px; color: #4d035e; font-weight: bold; text-decoration: none;">
+                        ${res.title}
+                    </a>
+                    <p style="margin: 5px 0 0; color: #666; font-size: 13px;">Path: ${res.url}</p>
+                </div>`;
+        });
+    } else {
+        // 3. SHOW THE BEAUTIFUL ERROR MESSAGE
+        resultsDiv.innerHTML = `
+            <div class="no-results-card">
+                <i class="fa fa-exclamation-circle"></i>
+                <h2>Oops! Nothing Found</h2>
+                <p>We couldn't find any results for "<strong>${query}</strong>".</p>
+                <p style="margin-top:10px; font-size: 0.9em;">Please enter a correct keyword like "Home", "Day Close", or "Reports".</p>
+                <button onclick="document.querySelector('.search_input').focus()" 
+                        style="margin-top:20px; padding: 10px 20px; background: #7a88e8; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Try Again
+                </button>
+            </div>`;
+    }
+};
+</script>
+
+ <link rel="shortcut icon" href="./img/favicon.ico">
   <title>Financial Accounting Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
@@ -22,7 +121,6 @@
   <script type="text/javascript" src="./assets/js/highlight.pack.js"></script> 
 
 <script src="./assets/js/search_index-data.js"></script>
-
   
 </head>
 
@@ -34,6 +132,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> FINANCIAL ACCOUNTING </a>
+
+        <div class="user-manual-label">
+    User Manual
+  </div>
+      
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />

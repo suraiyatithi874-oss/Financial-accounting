@@ -113,12 +113,203 @@ function closeModal() {
   document.getElementById("imageModal").style.display = "none";
 }
 
-// Add this inside a <script> tag at the bottom of index.html
-document.getElementById('rtd-search-form').onsubmit = function(e) {
-    var query = this.querySelector('input[name="q"]').value.toLowerCase();
-    if (query === 'home') {
-        window.location.href = 'index.html';
-        return false; // Prevent form submission
+
+// document.getElementById('rtd-search-form').onsubmit = function(e) {
+//     var query = this.querySelector('input[name="q"]').value.toLowerCase();
+//     if (query === 'home') {
+//         window.location.href = 'index.html';
+//         return false;
+//     }
+    
+// };
+
+
+// ====================================
+// searching
+
+// =======================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. YOUR DATASET (Main and Sub-nav)
+    // const searchData = [
+    //     { title: "Home", url: "index.html", tags: "start" },
+    //     { title: "Overview", url: "pages/overview.html", tags: "intro" },
+    //     { title: "1. Accounting Dashboard", url: "pages/dashboard.html", tags: "stats" },
+    //     { title: "2. Chart of Accounts", url: "pages/coa.html", tags: "coa" },
+    //     { title: "3. Generate Vouchers", url: "pages/generate-vouchar.html", tags: "entry" },
+    //     { title: "3.1 Debit Voucher Entry", url: "pages/generate-vouchar.html#debit-entry", tags: "payment" },
+    //     { title: "3.2 Credit Voucher Entry", url: "pages/generate-vouchar.html#credit-entry", tags: "receive" },
+    //     { title: "3.3 Journal Voucher Entry", url: "pages/generate-vouchar.html#journal-entry", tags: "adjustment" },
+    //     { title: "3.4 Contra Voucher Entry", url: "pages/generate-vouchar.html#contra-entry", tags: "transfer" },
+    //     { title: "4. Bank Reconciliation", url: "pages/bank.html", tags: "reconcile" },
+    //     { title: "4.1. Bank Reconciliation management", url: "pages/bank.html#reconciliation-actions", tags: "reconcile" },
+    //      { title: "management", url: "pages/bank.html#reconciliation-actions", tags: "reconcile" },
+    //     { title: "7. Reports", url: "pages/reports.html", tags: "p&l balance" }
+    // ];
+
+    // 2. STYLING THE DROPDOWN
+    const style = document.createElement('style');
+    // style.innerHTML = `
+    //     .search-results-container {
+    //         position: absolute; background: white; width: 100%; z-index: 9999;
+    //         border: 1px solid #ccc; border-radius: 0 0 4px 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    //         max-height: 300px; overflow-y: auto; display: none;
+    //     }
+    //     .search-result-item {
+    //         padding: 10px; border-bottom: 1px solid #eee; display: block;
+    //         color: #333 !important; text-decoration: none; font-size: 13px;
+    //     }
+    //     .search-result-item:hover { background: #818ceb; color: white !important; }
+    //     .search-result-item strong { display: block; color: inherit; }
+    // `;
+
+    style.innerHTML = `
+    .search-results-container {
+        position: absolute;
+        background: #ffffff;
+        width: 100%;
+        z-index: 9999;
+        top: 100%;
+        left: 0;
+        margin-top: 5px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.05);
+        max-height: 350px;
+        overflow-y: auto;
+        display: none;
+        border: 1px solid rgba(0,0,0,0.08);
+        animation: fadeInSlide 0.2s ease-out;
     }
-    // Add more shortcuts here
-};
+
+    @keyframes fadeInSlide {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Modern Scrollbar */
+    .search-results-container::-webkit-scrollbar {
+        width: 6px;
+    }
+    .search-results-container::-webkit-scrollbar-thumb {
+        background: #e1e4e5;
+        border-radius: 10px;
+    }
+
+    .search-result-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid #f4f6f8;
+        display: flex;
+        flex-direction: column;
+        color: #444 !important;
+        text-decoration: none;
+        font-size: 13px;
+        transition: all 0.15s ease-in-out;
+        position: relative;
+    }
+
+    .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+    .search-result-item strong {
+        display: block;
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+
+    /* Sub-text or Tag effect */
+    .search-result-item::after {
+        content: "Documentation Site Section";
+        font-size: 10px;
+        color: #95a5a6;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Professional Hover Effect */
+    .search-result-item:hover {
+        background: #f8f9ff;
+        padding-left: 22px; /* Smooth shift */
+        color: #09173b !important;
+    }
+
+    /* Sidebar Highlight Bar on Hover */
+    .search-result-item:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #09173b; /* Your purple brand color */
+        border-radius: 0 4px 4px 0;
+    }
+
+    .search-result-item:hover strong {
+        color: #09173b;
+    }
+`;
+
+
+
+
+    document.head.appendChild(style);
+
+    // 3. SEARCH LOGIC
+    document.querySelectorAll('.wy-form').forEach(form => {
+        const input = form.querySelector('input[name="q"]');
+        const resultsBox = document.createElement('div');
+        resultsBox.className = 'search-results-container';
+        form.style.position = 'relative';
+        form.appendChild(resultsBox);
+
+        input.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            resultsBox.innerHTML = '';
+
+            if (query.length < 1) {
+                resultsBox.style.display = 'none';
+                return;
+            }
+
+            const matches = searchData.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.tags.toLowerCase().includes(query)
+            );
+
+            if (matches.length > 0) {
+                resultsBox.style.display = 'block';
+                matches.forEach(item => {
+                    // AUTO-PATH CORRECTION:
+                    // If we are currently inside the "pages" folder, 
+                    // and the link starts with "pages/", we remove "pages/" and add nothing.
+                    // If the link is "index.html", we change it to "../index.html".
+                    let finalUrl = item.url;
+                    const isInsidePages = window.location.pathname.includes('/pages/');
+
+                    if (isInsidePages) {
+                        if (finalUrl.startsWith('pages/')) {
+                            finalUrl = finalUrl.replace('pages/', '');
+                        } else if (finalUrl === 'index.html') {
+                            finalUrl = '../index.html';
+                        }
+                    }
+
+                    const a = document.createElement('a');
+                    a.href = finalUrl;
+                    a.className = 'search-result-item';
+                    a.innerHTML = `<strong>${item.title}</strong>`;
+                    resultsBox.appendChild(a);
+                });
+            } else {
+                resultsBox.style.display = 'none';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!form.contains(e.target)) resultsBox.style.display = 'none';
+        });
+    });
+});

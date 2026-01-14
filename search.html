@@ -20,6 +20,9 @@
   <script src="./assets/js/jquery-2.1.1.min.js"></script>
   <script src="./assets/js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="./assets/js/highlight.pack.js"></script> 
+
+<script src="./assets/js/search_index-data.js"></script>
+
   
 </head>
 
@@ -202,37 +205,6 @@
 
 
 
-<script>
-document.querySelectorAll('#rtd-search-form').forEach(form => {
-    form.onsubmit = function(e) {
-        let query = this.querySelector('input[name="q"]').value.toLowerCase().trim();
-        
-        // Custom Redirect Shortcuts for ALL your pages
-        const shortcuts = {
-            "home": "index.html",
-            "overview": "pages/overview.html",
-            "dashboard": "pages/dashboard.html",
-            "coa": "pages/coa.html",
-            "chart of accounts": "pages/coa.html",
-            "vouchers": "pages/generate-vouchar.html",
-            "bank": "pages/bank.html",
-            "reconciliation": "pages/bank.html",
-            "income": "pages/income.html",
-            "expense": "pages/income.html",
-            "process": "pages/process.html",
-            "reports": "pages/reports.html"
-        };
-
-        if (shortcuts[query]) {
-            e.preventDefault(); // Stop it from going to search.html
-            window.location.href = shortcuts[query];
-        } else {
-            // If the word isn't in our list, let it go to search.html as normal
-            // This is where you would need search_index.json for "real" searching
-        }
-    };
-});
-</script>
     <script>var base_url = '.';</script>
    
       <script src="./assets/js/theme.js"></script>

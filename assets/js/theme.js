@@ -112,3 +112,13 @@ function openModal(element) {
 function closeModal() {
   document.getElementById("imageModal").style.display = "none";
 }
+
+// Add this inside a <script> tag at the bottom of index.html
+document.getElementById('rtd-search-form').onsubmit = function(e) {
+    var query = this.querySelector('input[name="q"]').value.toLowerCase();
+    if (query === 'home') {
+        window.location.href = 'index.html';
+        return false; // Prevent form submission
+    }
+    // Add more shortcuts here
+};

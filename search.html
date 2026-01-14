@@ -69,7 +69,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="/.pages/generate-vouchar.html">3. Generate Vouchers</a>
+    <a class="" href="./pages/generate-vouchar.html">3. Generate Vouchers</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -151,10 +151,16 @@
 
   <h1 id="search">Search Results</h1>
 
-  <form id="content_search" action="search.html">
+  <!-- <form id="content_search" action="search.html">
     <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
     <input name="q" id="mkdocs-search-query" type="text" class="search_input search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off" autofocus>
-  </form>
+  </form> -->
+
+
+<form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" class="search_input search-query ui-autocomplete-input" name="q" placeholder="Search docs" />
+</form>
+
 
   <div id="mkdocs-search-results" class="search-results">
     Searching...
@@ -193,6 +199,40 @@
       
     </span>
 </div>
+
+
+
+<script>
+document.querySelectorAll('#rtd-search-form').forEach(form => {
+    form.onsubmit = function(e) {
+        let query = this.querySelector('input[name="q"]').value.toLowerCase().trim();
+        
+        // Custom Redirect Shortcuts for ALL your pages
+        const shortcuts = {
+            "home": "index.html",
+            "overview": "pages/overview.html",
+            "dashboard": "pages/dashboard.html",
+            "coa": "pages/coa.html",
+            "chart of accounts": "pages/coa.html",
+            "vouchers": "pages/generate-vouchar.html",
+            "bank": "pages/bank.html",
+            "reconciliation": "pages/bank.html",
+            "income": "pages/income.html",
+            "expense": "pages/income.html",
+            "process": "pages/process.html",
+            "reports": "pages/reports.html"
+        };
+
+        if (shortcuts[query]) {
+            e.preventDefault(); // Stop it from going to search.html
+            window.location.href = shortcuts[query];
+        } else {
+            // If the word isn't in our list, let it go to search.html as normal
+            // This is where you would need search_index.json for "real" searching
+        }
+    };
+});
+</script>
     <script>var base_url = '.';</script>
    
       <script src="./assets/js/theme.js"></script>

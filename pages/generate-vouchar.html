@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>2. Generate Vouchar - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+ <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+  
+
+
+<script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+         <div class="user-manual-label">
+    User Manual
+  </div>
+
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1">
+          <a href="../pages/overview.html"> Overview</a>
+        </li>
+
+
+
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/dashboard.html">1. Accounting Dashboard</a>
+	    </li>
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/coa.html">2. Chart Of Account</a>
+	    </li>
+        <li class="toctree-l1 current">
+          <a class="current" href="">3. Generate Vouchers</a>
+          <ul>
+            <li><a href="#debit-entry">2.1 debit voucher Entry</a></li>
+            <li><a href="#credit-entry">3.2 Credit voucher Entry</a></li>
+            <li><a href="#journal-entry">3.3 Journal voucher Entry</a></li>
+            <li><a href="#contra-entry">3.4 Contra voucher Entry</a></li>
+            <li><a href="#fund-transfer">3.5 Fund Transfer voucher Entry</a></li>
+            <li><a href="#auth-workflow">3.6  Authorization Workflow</a></li>
+            
+          </ul>
+        </li>
+  </li>
+          
+            
+        
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/bank.html">4. Bank Reconciliation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/reports.html">7. Reports</a>
+	    </li>
+          
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+        
+           <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">Generate Vouchar</li>
+    
+    <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+<div role="main">
+    <div class="section">
+        <h1 id="3-generate-vouchers">3. Generate Vouchers</h1>
+
+        <div class="admonition note">
+            <p class="admonition-title">Purpose</p>
+            <p>
+                This module allows users to manage financial transactions through various voucher types—<strong>Debit, Credit, Journal, Contra, and Fund Transfer</strong>. 
+                It streamlines data entry, tracking, and adjustments, helping maintain an accurate record of organizational finances.
+            </p>
+        </div>
+
+        <h2 id="navigation">Navigation</h2>
+        <div class="card">
+            <p><strong>Menu Path:</strong> <code style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Main Menu &rarr; Generate Vouchers</code></p>
+        </div>
+
+        <h2 id="operations">Operations Overview</h2>
+        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 30px;">
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+                <h4 style="color: #4d035e; margin-top: 0;">🔍 Smart Filters</h4>
+                <p style="font-size: 0.9em;">Use date, type, and branch filters to locate specific vouchers instantly.</p>
+            </div>
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+                <h4 style="color: #4d035e; margin-top: 0;">⚡ Quick Access</h4>
+                <p style="font-size: 0.9em;">Use the top button bar to jump directly into specific voucher entry forms.</p>
+            </div>
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+                <h4 style="color: #4d035e; margin-top: 0;">📝 Bulk Entry</h4>
+                <p style="font-size: 0.9em;">Add multiple line items to a single voucher before finalizing the post.</p>
+            </div>
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+                <h4 style="color: #4d035e; margin-top: 0;">🛡️ Audit Ready</h4>
+                <p style="font-size: 0.9em;">Track "Entered By" and "Authorized By" status for every financial movement.</p>
+            </div>
+        </div>
+
+        <h3 id="debit-entry" style="color: #4d035e; border-left: 5px solid #4d035e; padding-left: 15px;">3.1 Debit Voucher Entry</h3>
+        <p>Used for payments and expenses where cash or bank is credited.</p>
+        <div class="card" style="padding: 20px; background: #fdfdff; border: 1px solid #e1e4e5; border-radius: 8px;">
+            <ol style="line-height: 1.8;">
+                <li>Click the <strong>Debit Voucher</strong> button.</li>
+                <li><strong>Select Branch:</strong> Choose the relevant outlet.</li>
+                <li><strong>Accounts:</strong> Define the Debit account (Expense/Asset) and Credit account (Cash/Bank).</li>
+                <li><strong>Amount & Narration:</strong> Input accuracy-checked values and optional cheque details.</li>
+                <li>Click <strong>"Insert"</strong> to add the line to the table.</li>
+                <li>Click <strong>"Save"</strong> to finalize and post to the ledger.</li>
+            </ol>
+        </div>
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/vouchers/debit-vouchers-entry.JPG" alt="Debit Voucher Form" style="max-width: 100%; height: auto; border-radius: 4px;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.1: Debit Voucher Entry Interface</figcaption>
+            </figure>
+        </div> -->
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/vouchers/debit-vouchers-entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.1: Debit Voucher Entry Interface</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+
+        <h3 id="credit-entry" style="color: #4d035e; border-left: 5px solid #4d035e; padding-left: 15px; margin-top: 40px;">3.2 Credit Voucher Entry</h3>
+        <p>Used for receiving funds where cash or bank is debited.</p>
+        <div class="card" style="padding: 20px; background: #fdfdff; border: 1px solid #e1e4e5; border-radius: 8px;">
+            <ol style="line-height: 1.8;">
+                <li>Click the <strong>Credit Voucher</strong> button.</li>
+                <li>Choose the business unit/branch.</li>
+                <li>Specify financial value and add a <strong>Cheque Reference</strong> if applicable.</li>
+                <li>Review the entry in the <strong>Voucher Grid</strong>.</li>
+                <li>Add a <strong>Global Narration</strong> for an overall summary.</li>
+                <li>Click <strong>"Save"</strong> to post.</li>
+            </ol>
+        </div>
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/vouchers/credit-voucher-entry.JPG" alt="Credit Voucher Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.2: Credit Voucher Entry Interface</figcaption>
+            </figure>
+        </div> -->
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/vouchers/credit-voucher-entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.2: Credit Voucher Entry Interface</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+        <h3 id="journal-entry" style="color: #4d035e; border-left: 5px solid #4d035e; padding-left: 15px; margin-top: 40px;">3.3 Journal Voucher Entry</h3>
+        <p>Used for non-cash adjustments, depreciation, or rectifications.</p>
+        <div class="card" style="padding: 20px; background: #fdfdff; border: 1px solid #e1e4e5; border-radius: 8px;">
+            <ol style="line-height: 1.8;">
+                <li>Pick the <strong>Branch</strong> for the adjustment.</li>
+                <li>Select <strong>multiple ledger accounts</strong> for complex multi-line entries.</li>
+                <li>Hit <strong>"Insert"</strong> to build the list below.</li>
+                <li>Ensure total Debits equal total Credits.</li>
+                <li>Click <strong>"Save"</strong> to finalize.</li>
+            </ol>
+        </div>
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/vouchers/journal-oucher-entry.JPG" alt="Journal Voucher Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.3: Journal Voucher Entry for Adjustments</figcaption>
+            </figure>
+        </div> -->
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/vouchers/journal-oucher-entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.3: Journal Vouchar Entry For Adjustments</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+        <h3 id="contra-entry" style="color: #4d035e; border-left: 5px solid #4d035e; padding-left: 15px; margin-top: 40px;">3.4 Contra Voucher Entry</h3>
+        <p>Used for internal movements (e.g., Cash to Bank or Bank to Cash).</p>
+        <div class="card" style="padding: 20px; background: #fdfdff; border: 1px solid #e1e4e5; border-radius: 8px;">
+            <ol style="line-height: 1.8;">
+                <li>Select the branch where the internal transfer is occurring.</li>
+                <li>Define the <strong>Source</strong> and <strong>Destination</strong> (Cash/Bank).</li>
+                <li>Type the exact value being moved.</li>
+                <li>Add a <strong>Global Narration</strong> (e.g., "Withdrawal for Petty Cash").</li>
+                <li>Click <strong>"Save"</strong> to finalize.</li>
+            </ol>
+        </div>
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/vouchers/contra -voucher-entry.JPG" alt="Contra Voucher Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.4: Contra Voucher for Internal Transfers</figcaption>
+            </figure>
+        </div> -->
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/vouchers/contra -voucher-entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.4:Contra Voucher for Internal Transfers</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+
+        <h3 id="fund-transfer" style="color: #4d035e; border-left: 5px solid #4d035e; padding-left: 15px; margin-top: 40px;">3.5 Fund Transfer Voucher Entry</h3>
+        <p>Used for moving funds between two different branches.</p>
+        <div class="card" style="padding: 20px; background: #fdfdff; border: 1px solid #e1e4e5; border-radius: 8px;">
+            <ol style="line-height: 1.8;">
+                <li>Select the <strong>Sending Branch</strong> and <strong>Target Branch</strong>.</li>
+                <li>Choose the receiving <strong>Cash/Bank account</strong> in the target branch.</li>
+                <li>Enter transfer amount and optional reference info.</li>
+                <li>Click <strong>"Insert"</strong> followed by <strong>"Save"</strong>.</li>
+            </ol>
+        </div>
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/vouchers/fund-transfer-voucher-entry.JPG" alt="Fund Transfer Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.5: Inter-Branch Fund Transfer Interface</figcaption>
+            </figure>
+        </div> -->
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/vouchers/fund-transfer-voucher-entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.5: Inter-Branch Fund Transfer Interface</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+
+<h2 id="voucher-management">Voucher Management Actions</h2>
+<p>Once vouchers are created, they can be managed via the main list page using the icons in the <strong>Action</strong> column:</p>
+
+<div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px;">
+    
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">📝 Update Voucher</h4>
+        <ol style="font-size: 0.9em; padding-left: 20px; margin-top: 10px;">
+            <li>Locate the specific voucher in the summary table.</li>
+            <li>Click the <strong>Edit (📝)</strong> button in the Action column.</li>
+            <li>Modify the ledger accounts, amounts, or narration as required.</li>
+            <li>Click <strong>Save</strong> to update the record.</li>
+        </ol>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">👁️ View Voucher</h4>
+        <ol style="font-size: 0.9em; padding-left: 20px; margin-top: 10px;">
+            <li>Click the <strong>Eye (👁️)</strong> icon to inspect full voucher details.</li>
+            <li>Review individual line items, global narrations, and entry timestamps.</li>
+            <li><strong>Use Case:</strong> Ideal for internal audits or quick transaction reviews.</li>
+        </ol>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; border-left: 4px solid #dc3545;">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">🗑️ Delete Voucher</h4>
+        <p style="font-size: 0.9em; margin-bottom: 10px;">Click the <strong>Trash (🗑️)</strong> icon next to the voucher you wish to remove.</p>
+        <div style="background: #fff5f5; padding: 10px; border-radius: 4px; border: 1px solid #feb2b2; font-size: 0.85em; color: #c53030;">
+            <strong>Restriction:</strong> Deletion is only permitted for <strong>Unauthorized</strong> vouchers. Once a voucher is Authorized, it cannot be deleted until it is first Unauthorized by a manager.
+        </div>
+    </div>
+
+</div>
+
+        <h2 id="auth-workflow" style="margin-top: 50px;">3.6 Authorization Workflow</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="card" style="padding: 20px; border-top: 4px solid #f0ad4e;">
+                <h4 style="color: #8a6d3b;">Unauthorized List</h4>
+                <p style="font-size: 0.9em;">Pending vouchers that have been entered but not yet verified.</p>
+                <ul style="font-size: 0.85em;">
+                    <li>Apply filters (Branch, Type, Date).</li>
+                    <li>Tick checkboxes for selection.</li>
+                    <li>Click <strong>"Authorize"</strong> to post to final accounts.</li>
+                </ul>
+            </div>
+            <div class="card" style="padding: 20px; border-top: 4px solid #5cb85c;">
+                <h4 style="color: #3c763d;">Authorized List</h4>
+                <p style="font-size: 0.9em;">Finalized vouchers that are currently reflected in the ledgers.</p>
+                <ul style="font-size: 0.85em;">
+                    <li>Search by specific Voucher Code.</li>
+                    <li>Select and click <strong>"Unauthorize"</strong> to pull back for correction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/authorized-vouchers/Index.jpg" alt="Fund Transfer Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.6: Authorized List</figcaption>
+            </figure>
+        </div> -->
+        <!-- <div class="dashboard-preview" style="margin: 20px 0; text-align: center;">
+            <figure style="display: inline-block; padding: 8px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <img src="../assets/images/generate-vouchers/unauthorized-vouchers/Index.JPG" alt="Fund Transfer Form" style="max-width: 100%; height: auto;">
+                <figcaption style="font-size: 0.85em; color: #777; margin-top: 8px;">Figure 3.7: Unauthorized List</figcaption>
+            </figure>
+        </div> -->
+
+
+        <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/authorized-vouchers/Index.jpg" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.6: Authorized List</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/generate-vouchers/unauthorized-vouchers/Index.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 3.7: Unauthorized List</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+        <div class="admonition warning">
+            <p class="admonition-title">Maker-Checker Policy</p>
+            <p>Only users with specific "Checker" permissions can authorize vouchers. Unauthorized vouchers will not appear in financial reports like the Trial Balance or Income Statement.</p>
+        </div>
+    </div>
+</div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+            <a href="../pages/bank.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+            <a href="../pages/coa.html" class="btn btn-neutral float-left">
+              <span class="icon icon-circle-arrow-left"></span> Previous
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+       -->
+      
+      
+        <span style="margin-left: 15px"><a href="../pages/bank.html" style="color: #f1eff1">Next &raquo;</a></span>
+      
+    </span>
+</div>
+<!-- <script src="../js/theme.js"></script> -->
+
+ <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

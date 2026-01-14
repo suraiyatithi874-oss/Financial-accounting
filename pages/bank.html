@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>2. Bank Reconciliation - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+
+ <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+
+
+ <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+
+         <div class="user-manual-label">
+    User Manual
+  </div>
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1">
+          <a href="../pages/overview.html"> Overview</a>
+        </li>
+
+
+
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/dashboard.html">1. Accounting Dashboard</a>
+	    </li>
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/coa.html">2. Chart Of Account</a>
+	    </li>
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/generate-vouchar.html">3. Generate Vouchar</a>
+	    </li>
+        <li class="toctree-l1 current">
+          <a class="current" href=" ">4. Bank Reconciliation</a>
+          <ul>
+            <li><a href="#4-bank-reconciliation">4.1 Bank Reconciliation</a></li>
+        
+            
+          </ul>
+        </li>
+  </li>
+          
+            
+        
+            
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/reports.html">7. Reports</a>
+	    </li>
+          
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+        
+           <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">Bank Reconciliation</li>
+    
+     <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+<div role="main">
+    <div class="section">
+        <h1 id="4-bank-reconciliation">4. Bank Reconciliation</h1>
+
+        <div class="admonition note">
+            <p class="admonition-title">Purpose</p>
+            <p>
+                The Bank Reconciliation module allows you to match and reconcile bank transactions recorded in the system against 
+                actual bank statements. This process ensures financial accuracy, helps spot discrepancies, and maintains 
+                clean audit trails for organizational transparency.
+            </p>
+        </div>
+
+        <h2 id="navigation">Navigation</h2>
+        <div class="card">
+            <p><strong>Menu Path:</strong> <code style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Main Menu &rarr; Bank Reconciliation Entry</code></p>
+        </div>
+
+        <h2 id="how-to-use">🕹️ How to Use</h2>
+        <div class="card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fafafa;">
+            <p style="margin-bottom: 10px;"><strong>Step 1: Apply System Filters</strong></p>
+            <ul style="line-height: 1.8; margin-bottom: 20px;">
+                <li>Select the relevant <strong>Region / Area / Branch</strong>.</li>
+                <li>Define the <strong>Voucher Date Range</strong> to pull bank-related transactions.</li>
+                <li>Click the <span style="color: #4d035e; font-weight: bold;">Search</span> button to display all entries within the time frame.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px;"><strong>Step 2: Reconcile Entries</strong></p>
+            <ul style="line-height: 1.8;">
+                <li>Review the transactions populated in the grid.</li>
+                <li>Locate the <strong>Reconciliation Date</strong> input field for each entry.</li>
+                <li>Input the date the transaction appeared on your physical bank statement.</li>
+                <li>Click <strong>Save</strong> once all dates are confirmed.</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/bank-reconciliation/Bank-Reconciliation-Entry.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 1.1:  Bank Reconciliation Entry</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+        <h2 id="reconciliation-actions">Reconciliation Management</h2>
+        <p>Manage your bank entries effectively using these dedicated action cards:</p>
+
+        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px;">
+            
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; border-top: 4px solid #4d035e;">
+                <h4 style="color: #4d035e; margin-top: 0;">➕ Entry</h4>
+                <p style="font-size: 0.9em;">
+                    After filtering by date and branch, set the <strong>Reconciliation Date</strong> for new transactions and click <strong>Save</strong> to mark them as matched.
+                </p>
+            </div>
+
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; border-top: 4px solid #4d035e;">
+                <h4 style="color: #4d035e; margin-top: 0;">📝 Update</h4>
+                <p style="font-size: 0.9em;">
+                    Need to correct a mistake? Simply modify the <strong>reconciliation date</strong> directly within the entry row and click <strong>Save</strong> to apply changes.
+                </p>
+            </div>
+
+            <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; border-top: 4px solid #4d035e;">
+                <h4 style="color: #4d035e; margin-top: 0;">👁️ View</h4>
+                <p style="font-size: 0.9em;">
+                    All matched and unmatched transactions appear dynamically in the grid after a search, allowing for real-time monitoring of your bank status.
+                </p>
+            </div>
+
+            <div class="feature-card" style="border: 1px solid #dc3545; padding: 20px; border-radius: 8px; background: #fff5f5;">
+                <h4 style="color: #c53030; margin-top: 0;">🗑️ Delete</h4>
+                <p style="font-size: 0.9em; color: #9b2c2c;">
+                    Click the <strong>Trash (🗑️)</strong> icon to remove a reconciliation entry. This will revert the transaction to an "unreconciled" status.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="admonition warning" style="margin-top: 30px;">
+            <p class="admonition-title">Pro-Tip</p>
+            <p>Always ensure the reconciliation date matches the date on your <strong>Bank Statement</strong>, not necessarily the date the transaction was entered into the system.</p>
+        </div>
+
+    </div>
+</div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+            <a href="../pages/income.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+            <a href="../pages/generate-vouchar.html" class="btn btn-neutral float-left">
+              <span class="icon icon-circle-arrow-left"></span> Previous
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+       -->
+      
+      
+        <span style="margin-left: 15px"><a href="../pages/income.html" style="color: #f1eff1">Next &raquo;</a></span>
+      
+    </span>
+</div>
+<!-- <script src="../js/theme.js"></script> -->
+
+ <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

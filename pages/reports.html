@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>1. Reports - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+  
+  
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+ <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+  <!-- <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script src="../js/highlight.pack.js"></script> -->
+
+     <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+   <div class="user-manual-label">
+    User Manual
+  </div>
+        <!-- <div class="user-manual-label">
+    User Manual
+  </div> -->
+      
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/overview.html">  Overview</a>
+	    </li>
+        
+
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/dashboard.html">1. Accounting Dashboard</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/coa.html">2. Chart of Accounts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/generate-vouchar.html">3. Generate Vouchers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/bank.html">4. Bank Reconciliation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            
+         <li class="toctree-l1 current">
+          <a class="current" href="">7. Reports</a>
+          <ul>
+            <li><a class="toctree-l3" href="#7-1-general-ledgers">7.1 General Ledgers</a></li>
+            <li><a class="toctree-l3" href="#7-2-branch-wise-ledger">7.2 Branch Wise Ledger</a></li>
+            <li><a class="toctree-l3" href="#7-3-cash-bank-book">7.3  Cash & Bank book</a></li>
+            <li><a class="toctree-l3" href="#7-4-comprehensive-income">7.4  Statements Of Comprehensive Income</a></li>
+            <li><a class="toctree-l3" href="#7-5-receipt-payment">7.5 Receipt Payment</a></li>
+            <li><a class="toctree-l3" href="#7-6-trial-balance">7.6 Trial Balance</a></li>
+            <li><a class="toctree-l3" href="#7-7-financial-position">7.7  Statement of Financial Position</a></li>
+            <li><a class="toctree-l3" href="#7-8-voucher-print">7.8  Voucher Print</a></li>
+            <li><a class="toctree-l3" href="#7-9-bank-reconciliation">7.9 Bank Reconciliation  </a></li>
+          </ul>
+        </li> 
+       
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+  <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Overview</li>
+   
+  </ul>
+  <hr/>
+</div> -->
+
+   <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">Reports</li>
+    
+   <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+
+      
+
+
+<div role="main">
+    <div class="section">
+        <h1 id="7-reports">7. Reports</h1>
+
+        <div class="admonition note">
+            <p class="admonition-title">Purpose</p>
+            <p>
+                The Reports menu consolidates key financial statements and ledger records for 
+                monitoring, analysis, and audit purposes. It provides branch-level insights and helps verify the 
+                accuracy and completeness of transactions across all modules.
+            </p>
+        </div>
+
+       
+
+
+<h2 id="navigation">Navigation</h2>
+        <div class="card" style="margin-bottom: 30px;">
+            <p><strong>Menu Path:</strong> <code style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Main Menu &rarr; Reports</code></p>
+        </div>
+
+        <h2 id="report-index">📊 Report Catalog Index</h2>
+        <p>Select the relevant sub-module from the Reports menu based on your documentation requirements:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9em; text-align: left; border: 1px solid #e1e4e5;">
+            <thead>
+                <tr style="background-color:  #060b1b; color: white;">
+                    <th style="padding: 12px; border: 1px solid #e1e4e5;">Ref #</th>
+                    <th style="padding: 12px; border: 1px solid #e1e4e5;">Sub-Module Name</th>
+                    <th style="padding: 12px; border: 1px solid #e1e4e5;">Primary Use / Feature</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.1</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">General Ledgers</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Detailed transaction history with voucher drill-down.</td>
+                </tr>
+                <tr style="background-color: #fdfdff;">
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.2</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Branch Wise Ledger Report</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Opening/Closing positions filtered by specific branch.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.3</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Cash & Bank Book</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Real-time monitoring of liquidity and cash movements.</td>
+                </tr>
+                <tr style="background-color: #fdfdff;">
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.4</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Statement Of Comprehensive Income</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Profit/Loss summary categorized by income and expense.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.5</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Receipt Payment</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Monthly and cumulative view of all cash inflows/outflows.</td>
+                </tr>
+                <tr style="background-color: #fdfdff;">
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.6</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Trial Balance</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Overview of Dr/Cr side-by-side for all organizational projects.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.7</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Statement Of Financial Position</td>
+                    <td style="padding: 10px; border: 10px; border: 1px solid #e1e4e5;">Yearly comparison of Assets and Liabilities (Balance Sheet).</td>
+                </tr>
+                <tr style="background-color: #fdfdff;">
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.8</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Voucher Print</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Batch printing and export of transaction vouchers with words.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; font-weight: bold;">8.9</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5; color:  #060b1b; font-weight: bold;">Bank Reconciliation</td>
+                    <td style="padding: 10px; border: 1px solid #e1e4e5;">Tracking timing differences between system and bank dates.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+<!-- 7.1 -->
+
+<h2 id="7-1-general-ledgers" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.1 General Ledgers</h2>
+
+<div style="background: #f4e8f7; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; General Ledgers</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #e1e4e5; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">📋</span> Core Capabilities
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
+                <strong style="color: #333; display: block;">Voucher Drill-Down</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">Clicking codes (e.g. <i>FT0000...</i>) reveals activity logs, narrations, and cheque details.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
+                <strong style="color: #333; display: block;">Status Indicators</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">High-visibility visual cues for Dr/Cr transaction orientation.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block;">Live Execution</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">Instant UI refresh—data updates the moment a filter is changed.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Smart Filtering
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 8px;"><b style="color: #d192e8;">Region/Area:</b> Select broad or targeted locations.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #d192e8;">Branch:</b> Filter by HO or specific field units.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #d192e8;">Ledger:</b> Target specific financial account heads.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #d192e8;">Voucher Gen:</b> Filter by "Generated" vs "Pending".</li>
+            <li style="margin-bottom: 8px;"><b style="color: #d192e8;">Date Range:</b> Custom period selection for audits.</li>
+        </ul>
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2); font-style: italic; font-size: 0.8em; color: #e1e4e5;">
+            Click the <strong>Search Button</strong> to refresh the grid results.
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #e1e4e5; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #e1e4e5; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #666;">INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ff5f56; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #ffbd2e; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #27c93f; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/General-Ledgers.JPG" alt="General Ledger Detailed View" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.1: General Ledger interface showcasing the filter panel and interactive voucher list.</i></p>
+    </div> -->
+
+
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/General-Ledgers.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.1: General Ledger interface showcasing the filter panel and interactive voucher list.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+
+
+<!-- 7.2 -->
+
+
+<h2 id="7-2-branch-wise-ledger" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.2 Branch Wise Ledger Report</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Branch Wise Ledger Report</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">📋</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
+                <strong style="color: #333; display: block;">Opening & Closing Balance</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">Track the financial position per branch over your selected period.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">
+                <strong style="color: #333; display: block;">Debit / Credit Summary</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">Quickly view monthly and total transactional values with Dr/Cr status highlights.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block;">Export & Review</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 5px 0;">Built-in options to <strong>Print</strong> or <strong>Download</strong> for audit sharing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Region & Area:</b> Scope your data by operational location.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Branch:</b> Filter by specific branches or include Head Office.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Voucher Type:</b> View specific types or leave as "All".</li>
+            <li style="margin-bottom: 12px; background: rgba(255,255,255,0.1); padding: 8px; border-radius: 6px; border-left: 3px solid #ffc107;">
+                <b style="color: #ffc107;">Search By (Required):</b> Select Fiscal Year, Current Year, or Date Range.
+            </li>
+            <li style="background: rgba(255,255,255,0.1); padding: 8px; border-radius: 6px; border-left: 3px solid #ffc107;">
+                <b style="color: #ffc107;">Ledger (Required):</b> Select a specific account to narrow the vouchers.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #3b4a7a;">BRANCH LEDGER INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/branch-Wise-ledger-report.JPG" alt="Branch Wise Ledger Detailed View" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.2: Branch Wise Ledger report showing organized financial tracking and export tools.</i></p>
+    </div> -->
+
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/branch-Wise-ledger-report.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.2: Branch Wise Ledger report showing organized financial tracking and export tools</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+    <!-- 7.3 -->
+
+<h2 id="7-3-cash-bank-book" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.3 Cash & Bank Book</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Cash & Bank Book Report</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">📑</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Cash & Bank Ledger Summary</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Presents clear debit, credit, and balance info for all cash/bank accounts.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Detailed Voucher Insights</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Clicking voucher codes displays transaction details, account heads, and narrations.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Auto-Calculation & Tagging</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Automatic totals/subtotals and location tagging (Company/Branch info) at the header.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Precision Reporting</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Supports single-day or wide range-based views with export/print options.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Branch & Ledger:</b> Select specific units/accounts or view "All".</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Voucher Filter:</b> Narrow by specific voucher types.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Report Type:</b> Toggle between <strong>Cash</strong>, <strong>Bank</strong>, or <strong>Both</strong>.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Date Range:</b> Define start and end dates for focused data.</li>
+            <li style="margin-top: 15px; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; border-left: 3px solid #ffc107;">
+                <b style="color: #ffc107;">Search By (Required):</b> Must select Fiscal Year, Current Year, or Date Range.
+            </li>
+        </ul>
+        <div style="margin-top: 20px; font-size: 0.8em; opacity: 0.9; text-align: center; border: 1px dashed rgba(255,255,255,0.3); padding: 8px; border-radius: 6px;">
+            Click the <strong>Search Button</strong> to generate report instantly.
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #3b4a7a;">CASH & BANK BOOK INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Cash-Bank-Book.JPG" alt="Cash and Bank Book Interface" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.3: Cash & Bank Book report featuring real-time filtering and location-specific headers.</i></p>
+    </div> -->
+
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Cash-Bank-Book.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.3: Cash & Bank Book report featuring real-time filtering and location-specific headers.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+<!-- 7.4 -->
+
+<h2 id="7-4-comprehensive-income" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.4 Statement Of Comprehensive Income</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Statement of Comprehensive Income</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">📊</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Income & Expenditure Segmentation</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Categorized by accounts such as Sales Revenue, Discounts, Salaries, and Staff Benefits.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Hierarchical Account View</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Structured by account codes (e.g., [40000], [51000]) for transparent financial tracking.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Dynamic Comparative Columns</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Dedicated columns for <strong>This Month</strong>, <strong>This Period</strong>, and <strong>Cumulative</strong> totals.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Warehouse & Note Precision</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Scoped to specific warehouses with a "Notes" column for line-item annotations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Branch Selection:</b> Target specific business branches for localized reporting.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Depth Level Control:</b> Adjust granularity to toggle between summary and detailed views.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">‘0’ Balance Toggle:</b> Hide accounts with no activity for a cleaner, focused report.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Date Range Selector:</b> Define the financial period using specific Start and End dates.</li>
+        </ul>
+        <div style="margin-top: 20px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); text-align: center;">
+            <span style="font-size: 0.85em;">Click <strong>Search</strong> to execute the query and refresh the financial summary.</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #3b4a7a;">INCOME STATEMENT INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Statement-Comprehensive-Income.JPG" alt="Statement of Comprehensive Income Interface" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.4: Statement of Comprehensive Income showing hierarchical account segmentation and periodic totals.</i></p>
+    </div> -->
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Statement-Comprehensive-Income.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.4: Statement of Comprehensive Income showing hierarchical account segmentation and periodic totals.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+
+<!-- 7.5 -->
+
+
+<h2 id="7-5-receipt-payment" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.5 Receipt Payment</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Receipt Payment</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">💸</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Opening Balance</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Clearly displays the starting cash and bank balances for the selected period.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Income & Expense Details</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Comprehensive listing of receipts (Sales, Refunds) and payments (Inventory, Expenses).</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Periodic Views</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Transactions are categorized into <strong>Current Month</strong>, <strong>Selected Period</strong>, and <strong>Cumulative</strong> totals.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Annotated Reporting</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Integrated <strong>Notes Section</strong> for providing context or explanations for specific line items.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Branch & Location:</b> Filter by Region, Area, or individual branches for localized data.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Depth Level:</b> Choose between a high-level summary or a full detailed breakdown.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Round Up Option:</b> Enable for a cleaner presentation by rounding large figures.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Voucher Type:</b> Filter results to show only specific transaction types.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Date Range:</b> Select Start and End dates to define the reporting window.</li>
+        </ul>
+        <div style="margin-top: 20px; padding: 12px; border: 1px dashed rgba(255,255,255,0.4); border-radius: 8px; text-align: center;">
+            <span style="font-size: 0.85em;">Click the <strong>Search Button</strong> to generate the updated report.</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #3b4a7a;">RECEIPT PAYMENT REPORT INTERFACE</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Receipt-Payment.JPG" alt="Receipt Payment Report View" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.5: Detailed Receipt Payment view with opening balances and periodic transaction breakdowns.</i></p>
+    </div> -->
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Receipt-Payment.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.5: Detailed Receipt Payment view with opening balances and periodic transaction breakdowns</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+
+<!-- 7.6 -->
+
+<h2 id="7-6-trial-balance" style="color: #3b4a7a; border-left: 10px solid #3b4a7a; padding-left: 15px; margin-top: 50px;">7.6 Trial Balance</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background: #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color: #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Trial Balance</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">⚖️</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Account Balances Overview</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Visualizes the flow: <i>Starting Balance &rarr; Period Activity &rarr; Final Cumulative Balance.</i></p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Side-by-Side Dr/Cr Columns</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Shows both Debit (Dr) and Credit (Cr) values simultaneously for every account head.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Categorized Organization</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Accounts are grouped by functional codes (Assets, Liabilities, Inventory, Equipment, etc.).</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Universal Scope</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Includes account data from every project and type across the entire organization.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Location Filter:</b> Scope results by Region, Area, or specific Branch (e.g., Head Office).</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Depth Level:</b> Choose between a high-level summary or a granular multi-level account breakdown.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Hide Zero Balances:</b> Toggle to skip inactive accounts for a more concise report.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Round Off:</b> Simplify large figures for professional presentation.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Date Range:</b> Specify the exact period for the trial balance calculation.</li>
+        </ul>
+        <div style="margin-top: 20px; padding: 12px; background: rgba(255,255,255,0.1); border-radius: 8px; text-align: center; font-weight: bold;">
+            <span style="font-size: 0.85em;">Apply filters and click Search to generate the report.</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color: #3b4a7a;">TRIAL BALANCE INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Trial-Balance.JPG" alt="Trial Balance Report Interface" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.6: Comprehensive Trial Balance view with side-by-side activity and balance columns.</i></p>
+    </div> -->
+
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Trial-Balance.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.6: Comprehensive Trial Balance view with side-by-side activity and balance columns.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+     <!-- 7.7 -->
+       <h2 id="7-7-financial-position" style="color:  #3b4a7a; border-left: 10px solid  #3b4a7a; padding-left: 15px; margin-top: 50px;">7.7 Statement Of Financial Position</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background:  #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color:  #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Statement Of Financial Position</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color:  #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🏛️</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Assets & Liabilities Overview</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Lists categories like property, inventory, receivables, and cash to reveal organizational net worth.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Yearly Comparison</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Displays side-by-side values for the <strong>Previous Year</strong> and <strong>Current Year</strong> for trend analysis.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Full Organizational Snapshot</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Automatically covers every project under the organization for a unified financial view.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Multi-Format Export</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Generate and share the report in various digital formats or hardcopy prints.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Location Focus:</b> Target specific Regions, Areas, or Branches (e.g., Dhaka, Banasree).</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Depth Level:</b> Toggles account grouping from high-level summary to full breakdown.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Zero Balance Toggle:</b> Clean up the report by hiding accounts with no activity.</li>
+            <li style="margin-bottom: 8px;"><b style="color: #b3d7ff;">Round Off:</b> Removes decimal places for a cleaner, professional presentation.</li>
+            <li style="margin-top: 15px; background: rgba(255,255,255,0.1); padding: 8px; border-radius: 6px; border-left: 3px solid #ffc107;">
+                <b style="color: #ffc107;">Search By & Date To:</b> Choose the reporting period and the final cutoff date.
+            </li>
+        </ul>
+        <div style="margin-top: 20px; font-size: 0.8em; text-align: center; border: 1px dashed rgba(255,255,255,0.3); padding: 8px; border-radius: 6px;">
+            Click <strong>Search</strong> to apply filters and refresh the position statement.
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color:  #3b4a7a;">FINANCIAL POSITION INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background:  #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Statement-of-Financial-Position.JPG" alt="Statement of Financial Position Interface" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.7: Statement of Financial Position showing comparative analysis between fiscal years.</i></p>
+    </div> -->
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Statement-of-Financial-Position.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.7: Statement of Financial Position showing comparative analysis between fiscal years.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+        <!-- 7.8 -->
+
+       <h2 id="7-8-voucher-print" style="color:  #3b4a7a; border-left: 10px solid  #3b4a7a; padding-left: 15px; margin-top: 50px;">7.8 Voucher Print</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background:  #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color:  #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Voucher Print</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color:  #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🖨️</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Voucher Master View</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Comprehensive display of dates, codes, branch names, account heads, and amounts.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Branch-wise Totals</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Automatic subtotaling per branch for quick comparative transaction analysis.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Amount in Words Verification</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Displays grand totals and automatically converts numerical amounts into words for formal printing.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Audit-Ready Layout</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Clean table structure with sequential serial numbers for easy record-keeping and referencing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 12px;"><b style="color: #b3d7ff;">Location Toggles:</b> Narrow results by Region, Area, or specific Branch activity.</li>
+            <li style="margin-bottom: 12px;"><b style="color: #b3d7ff;">Account Type:</b> Filter specifically by the type of financial accounts involved in the transactions.</li>
+            <li style="margin-bottom: 12px;"><b style="color: #b3d7ff;">Date Range:</b> Select the start and end dates to capture specific voucher entries.</li>
+        </ul>
+        <div style="margin-top: 30px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); text-align: center;">
+            <span style="font-size: 0.85em; font-weight: bold;">Click the <strong>Search Button</strong> to execute and refresh.</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color:  #3b4a7a;">VOUCHER PRINT INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background:  #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/Voucher-Print.JPG" alt="Voucher Print Report Interface" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.8: Voucher Print layout featuring subtotals per branch and formatted grand totals.</i></p>
+    </div> -->
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/Voucher-Print.JPG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.8: Voucher Print layout featuring subtotals per branch and formatted grand totals.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+      <!-- 7.9 -->
+
+       <h2 id="7-9-bank-reconciliation" style="color:  #3b4a7a; border-left: 10px solid  #3b4a7a; padding-left: 15px; margin-top: 50px;">7.9 Bank Reconciliation</h2>
+
+<div style="background: #e7f1ff; padding: 12px 20px; border-radius: 8px; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
+    <span style="background:  #3b4a7a; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">NAV</span>
+    <span style="font-family: monospace; color:  #3b4a7a; font-weight: bold;">Menu &rarr; Reports &rarr; Bank Reconciliation</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;">
+    
+    <div style="background: #ffffff; border: 1px solid #dee2e6; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color:  #3b4a7a; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🏦</span> Includes / Features
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Dual Date Tracking</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Simultaneously tracks <strong>Voucher Date</strong> and <strong>Reconciliation Date</strong> to identify timing differences between books and bank.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Voucher Summary Table</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Lists voucher codes, debit/credit values, and transaction amounts in an audit-ready grid.</p>
+            </div>
+            <div style="border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <strong style="color: #333; display: block; font-size: 0.95em;">Running Totals</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">Automatic calculation of the running balance displayed clearly at the bottom of the report.</p>
+            </div>
+            <div>
+                <strong style="color: #333; display: block; font-size: 0.95em;">Branch-wide Consolidation</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 3px 0;">View reconciliation details for specific branches or consolidated for the entire organization (HO included).</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #060b1b; color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15);">
+        <h4 style="color: #ffffff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2em;">🔍</span> Filters / Search
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0; font-size: 0.85em; line-height: 1.8;">
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Branch Selector:</b> Choose individual branches or <strong>All (With HO)</strong> for full visibility.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Ledger Filter:</b> Select specific bank ledger accounts or view all at once.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Voucher Type:</b> Narrow results by Receipts, Payments, or specific voucher classes.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Voucher Date Range:</b> Filter by the original date of entry.</li>
+            <li style="margin-bottom: 10px;"><b style="color: #b3d7ff;">Recon. Date Range:</b> Filter by the date the bank cleared the transaction.</li>
+        </ul>
+        <div style="margin-top: 20px; padding: 12px; border: 1px dashed rgba(255,255,255,0.4); border-radius: 8px; text-align: center;">
+            <span style="font-size: 0.85em;">Click <strong>Search</strong> to generate the updated reconciliation view.</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin: 40px 0; border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;">
+    <div style="background: #f8f9fa; padding: 10px 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.8em; font-weight: bold; color:  #3b4a7a;">BANK RECONCILIATION INTERFACE PREVIEW</span>
+        <div style="display: flex; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #ccd5ae; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background: #e9edc9; border-radius: 50%;"></div>
+            <div style="width: 10px; height: 10px; background:  #3b4a7a; border-radius: 50%;"></div>
+        </div>
+    </div>
+    <!-- <div style="padding: 20px; background: #fff; text-align: center;">
+        <img src="../assets/images/reports/bank-reconciliation.PNG" alt="Bank Reconciliation Report View" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #eee;">
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;"><i>Figure 7.9: Bank Reconciliation report showing timing differences and running balance totals.</i></p>
+    </div> -->
+
+    <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/reports/bank-reconciliation.PNG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 7.9: Bank Reconciliation report showing timing differences and running balance totals.</figcaption>
+  </figure>
+</div>
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+
+
+    </div>
+</div>
+  
+        <footer>
+          <!-- <div class="rst-footer-buttons" role="navigation">
+            <a href="../started/index.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+          </div> -->
+           <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+          
+            <a href="../pages/process.html" class="btn btn-neutral float-left">
+              <span class="icon icon-circle-arrow-left"></span> Previous
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+       -->
+      
+        <span style="margin-left: 15px"><a href="../pages/process.html" style="color: #fcfcfc">prev &raquo;</a></span>
+      
+    </span>
+</div>
+
+<!-- <script src="../js/theme.js"></script> -->
+
+ <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

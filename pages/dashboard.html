@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>2. Dashboard - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  -->
+ <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+
+<script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+
+         <div class="user-manual-label">
+    User Manual
+  </div>
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1">
+          <a href="../pages/overview.html"> Overview</a>
+        </li>
+
+        <li class="toctree-l1 current">
+          <a class="current" href=" ">1. Accounting Dashboard</a>
+          <ul>
+            <li><a href="#prerequisites">1.1 Accounting Dashboard</a></li>
+            <li><a href="#navigation-overview">1.2 Navigation Overview</a></li>
+            <li><a href="#first-login">1.3 First Login</a></li>
+            <li><a href="#initial-setup">1.4 Initial Configuration</a></li>
+          </ul>
+        </li>
+  </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/coa.html">2. Chart of Accounts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/generate-vouchar.html">3. Generate Vouchers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/bank.html">4. Bank Reconciliation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/reports.html">7. Reports</a>
+	    </li>
+          
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+        
+           <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">Dashboard</li>
+    
+     <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+
+        <div role="main">
+          
+          <div class="section">
+
+  <h1>1. Accounting Dashboard</h1>
+
+  <div class="admonition note">
+    <p class="admonition-title">Purpose</p>
+    <p>
+    The Accounting Dashboard is your central hub. It provides quick access to 
+    organizational financial records, enabling smooth transitions between accounts, vouchers, 
+    and reporting tools.
+    </p>
+  </div>
+
+
+  <div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/dashboard/Dashboard.PNG" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 1.1: Overview of the Financial Accounting Dashboard Interface</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+
+  <!-- <div class="dashboard-preview" style="margin: 25px 0; text-align: center;">
+    <figure style="
+      display: inline-block; 
+      padding: 10px; 
+      background: #fff; 
+      border: 1px solid #e1e4e5; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      max-width: 100%;">
+      
+      <img src="../assets/images/dashboard/Dashboard.PNG" alt="Accounting Dashboard Screenshot" style="
+        width: 100%; 
+        height: auto; 
+        border-radius: 4px; 
+        display: block;
+        border: 1px solid #f0f0f0;">
+      
+      <figcaption style="
+        margin-top: 10px; 
+        font-size: 0.9em; 
+        color: #666; 
+        font-style: italic;">
+        Figure 1.1: Overview of the Financial Accounting Dashboard Interface
+      </figcaption>
+    </figure>
+  </div> -->
+  <div class="card">
+    <h4>Dashboard Highlights</h4>
+    <ul>
+      <li><strong>Centralized Access:</strong> Real-time overview of financial health.</li>
+      <li><strong>Module Shortcuts:</strong> Direct links to COA, Vouchers, and Reconciliations.</li>
+      <li><strong>System Status:</strong> Quick view of pending vs. authorized transactions.</li>
+    </ul>
+  </div>
+
+
+
+  <h2 id="navigation-overview">1.2 Navigation Overview</h2>
+  <p>
+    The system utilizes a <strong>Sidebar Menu (Left Panel)</strong> for primary navigation. 
+    This allows users to switch between different functional areas without losing context.
+  </p>
+
+  
+
+  <h3 id="sidebar-explanation">Sidebar Module Explanation</h3>
+  <table class="docutils">
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Chart of Accounts</strong></td>
+        <td>Define account structures (Assets, Liabilities, Income, Expenses).</td>
+      </tr>
+      <tr>
+        <td><strong>Generate Vouchers</strong></td>
+        <td>Record daily transactions (Debit, Credit, Journal, Contra).</td>
+      </tr>
+      <tr>
+        <td><strong>Bank Reconciliation</strong></td>
+        <td>Match system records with bank statements.</td>
+      </tr>
+      <tr>
+  <td><strong>Income & Expense Voucher</strong></td>
+  <td>Record operational income and expense entries such as utilities, salaries, rent, service income, and adjustments.</td>
+</tr>
+
+      <tr>
+        <td><strong>Process</strong></td>
+        <td>Handle Period Endings (Day, Month, and Year Close).</td>
+      </tr>
+      <tr>
+        <td><strong>Reports</strong></td>
+        <td>Generate Ledgers, Trial Balances, and Financial Statements.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="first-login">1.3 First Login & Security</h2>
+  <div class="card">
+    <h4>Accessing the System</h4>
+    <ol>
+      <li>Open the system URL in a supported web browser.</li>
+      <li>Enter your <strong>User ID</strong> and <strong>Password</strong>.</li>
+      <li>Select your assigned <strong>Working Branch</strong> (e.g., Head Office or Outlet 01).</li>
+      <li><strong>Important:</strong> You must change your default password upon the first successful login.</li>
+    </ol>
+  </div>
+
+  <div class="admonition warning">
+    <p class="admonition-title">Security Notice</p>
+    <p>
+      Unauthorized access is strictly prohibited. Ensure your credentials are kept confidential 
+      and always "Log Out" when leaving your workstation.
+    </p>
+  </div>
+
+  <h2 id="initial-setup">1.4 Initial Configuration</h2>
+  <p>Before recording transactions, ensure the following core configurations are verified by an Admin:</p>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+    <div class="card">
+      <h4>1. Company Profile</h4>
+      <p>Verify Fiscal Year settings and Base Currency (e.g., BDT/USD).</p>
+    </div>
+
+    <div class="card">
+      <h4>2. Branch Mapping</h4>
+      <p>Ensure all operational branches and warehouses are correctly defined.</p>
+    </div>
+
+    <div class="card">
+      <h4>3. User Roles</h4>
+      <p>Confirm <strong>Maker/Checker</strong> permissions for voucher authorization.</p>
+    </div>
+
+    <div class="card">
+      <h4>4. Opening Balances</h4>
+      <p>Input initial balances via <strong>Process → Opening Balance</strong> to start the period.</p>
+    </div>
+  </div>
+
+</div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+            <a href="../pages/coa.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+            <a href="../pages/overview.html" class="btn btn-neutral float-left">
+              <span class="icon icon-circle-arrow-left"></span> Previous
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+       -->
+      
+      
+        <span style="margin-left: 15px"><a href="../pages/coa.html" style="color: #f1eff1">Next &raquo;</a></span>
+      
+    </span>
+</div>
+<!-- <script src="../js/theme.js"></script> -->
+  <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>2. COA - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+<link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+
+         <div class="user-manual-label">
+    User Manual
+  </div>
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1">
+          <a href="../pages/overview.html"> Overview</a>
+        </li>
+
+        <li class="toctree-l1">
+		
+    <a class="" href="../pages/dashboard.html">1. Accounting Dashboard</a>
+	    </li>
+        <li class="toctree-l1 current">
+          <a class="current" href=" ">2. Chart Of Account</a>
+          <ul>
+            <li><a href="#prerequisites">2.1 Chart of Account</a></li>
+            <li><a href="#coa-entry">2.2 COA List Entry</a></li>
+            
+          </ul>
+        </li>
+  </li>
+          
+            
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/generate-vouchar.html">3. Generate Vouchers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/bank.html">4. Bank Reconciliation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/reports.html">7. Reports</a>
+	    </li>
+          
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+        
+           <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">Charts Of Accounts</li>
+    
+    <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+<div role="main">
+    <div class="section">
+        <h1 id="2-coa">2. Chart of Accounts (COA)</h1>
+
+        <div class="admonition note">
+            <p class="admonition-title">Purpose</p>
+            <p>
+                This module allows users to define and manage the full structure of accounts used in their 
+                organization's financial system. It organizes financial accounts under categories like 
+                <strong>Assets, Liabilities, Income, and Expenses</strong> using a hierarchical approach.
+            </p>
+        </div>
+
+        <h2 id="navigation">Navigation</h2>
+        <div class="card">
+            <p><strong>Menu Path:</strong> <code style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Main Menu &rarr; Chart of Account (COA)</code></p>
+        </div>
+
+        
+
+     
+<h2 id="operations">Operations</h2>
+<p>The COA List Page provides the following tools to manage your financial structure effectively:</p>
+
+<div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px;">
+    
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+        <h4 style="color: #4d035e; margin-top: 0;">List Page Control</h4>
+        <p style="font-size: 0.9em;">Displays the Account Head List with options for Ledgers, Search, Publish/Unpublish, Export, and Print.</p>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+        <h4 style="color: #4d035e; margin-top: 0;">Branch & Account Type Filters</h4>
+        <p style="font-size: 0.9em;">Allows filtering of the list based on specific <strong>Branch</strong> or <strong>Account Category</strong> (Assets, Liabilities, etc.).</p>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+        <h4 style="color: #4d035e; margin-top: 0;">Search Bar</h4>
+        <p style="font-size: 0.9em;">Quickly locate accounts using keywords to navigate large lists instantly.</p>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+        <h4 style="color: #4d035e; margin-top: 0;">Account Head List</h4>
+        <p style="font-size: 0.9em;">Displays the <strong>Name</strong>, unique <strong>Code</strong>, and <strong>Type</strong> of each account charted in the system.</p>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
+        <h4 style="color: #4d035e; margin-top: 0;">Expandable Hierarchy</h4>
+        <p style="font-size: 0.9em;">Click <strong>folder icons</strong> to expand or collapse account groups to view parent-child relationships.</p>
+    </div>
+
+</div>
+
+<!-- <div class="dashboard-preview" style="margin: 30px 0; text-align: center;">
+    <figure style="display: inline-block; padding: 10px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
+        <img src="../assets/images/coa/index.png" alt="COA List Page" style="width: 100%; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 0.9em; color: #666; font-style: italic;">
+            Figure 2.1: Chart of Accounts List View showing Name, Code, and Hierarchy
+        </figcaption>
+    </figure>
+</div> -->
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/coa/index.png" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 2.1: Charts of Accounting List View</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+        <h2 id="how-to-use">🕹️ How to Use</h2>
+        <div class="card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fafafa;">
+            <ul style="line-height: 1.8;">
+                <li><strong>Navigation:</strong> Locate accounts using the hierarchy tree or filters.</li>
+                <li><strong>Actions:</strong> Use icons beside accounts to perform <strong>Entry, Update, View, or Delete</strong>.</li>
+                <li><strong>Sub-Accounts:</strong> Click the <span style="color: green; font-weight: bold;">(+)</span> icon within a category to add nested ledgers.</li>
+            </ul>
+        </div>
+
+        
+
+        <h2 id="detailed-actions">Data Management Actions</h2>
+<p>Follow these steps to manage and maintain your Chart of Accounts data accurately:</p>
+
+<div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+    
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">✨ New Entry</h4>
+        <ol style="font-size: 0.9em; padding-left: 20px; margin-top: 10px;">
+            <li>Click the <strong>"New Entry"</strong> button to add a primary Account Head or Ledger.</li>
+            <li>Click the <strong>"+" icon</strong> directly next to a parent category to create a nested sub-account.</li>
+        </ol>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">📝 Update Data</h4>
+        <ol style="font-size: 0.9em; padding-left: 20px; margin-top: 10px;">
+            <li>Navigate to the COA list page.</li>
+            <li>Click the <strong>Edit (📝)</strong> icon located next to the specific account.</li>
+            <li>Modify the necessary fields in the form.</li>
+            <li>Click <strong>Save</strong> to commit the updates.</li>
+        </ol>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">👁️ View Details</h4>
+        <ol style="font-size: 0.9em; padding-left: 20px; margin-top: 10px;">
+            <li>Go to the COA list page.</li>
+            <li>Click the <strong>View (👁️)</strong> icon to open the full detailed profile of the account.</li>
+            <li>Review account history and classification.</li>
+        </ol>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">🔘 Publish - Unpublish</h4>
+        <p style="font-size: 0.9em; margin-bottom: 8px;">Locate the <strong>toggle switch</strong> under the Action column:</p>
+        <ul style="font-size: 0.85em; padding-left: 20px; list-style-type: none;">
+            <li>🟢 <strong>Switch ON (Active):</strong> Account is published and available for transactions.</li>
+            <li>⚪ <strong>Switch OFF (Inactive):</strong> Account is unpublished and hidden from entries.</li>
+        </ul>
+        <p style="font-size: 0.85em; color: #666; font-style: italic;">Status updates are reflected automatically in the Status column.</p>
+    </div>
+
+    <div class="feature-card" style="border: 1px solid #e1e4e5; padding: 20px; border-radius: 8px; background: #fff; border-left: 4px solid #dc3545;">
+        <h4 style="color: #4d035e; margin-top: 0; border-bottom: 2px solid #f4e8f7; padding-bottom: 8px;">🗑️ Delete Data</h4>
+        <p style="font-size: 0.9em;">Click the <strong>Trash (🗑️)</strong> icon beside an account.</p>
+        <div style="background: #fff5f5; padding: 10px; border-radius: 4px; border: 1px solid #feb2b2; font-size: 0.85em; color: #c53030;">
+            <strong>Warning:</strong> Only accounts without dependent transactions can be removed. System confirmation is required.
+        </div>
+    </div>
+
+</div>
+        <hr style="margin: 40px 0; border-top: 1px solid #e1e4e5;">
+
+      
+        <h2 id="coa-entry">2.2 Chart Of Account List Entry</h2>
+
+<div class="admonition note">
+    <p class="admonition-title">Form Purpose</p>
+    <p>
+        This form allows you to add a new ledger or account head into the system. 
+        Each field defines how the account will behave in transactions and reports.
+    </p>
+</div>
+
+<div class="card" style="padding: 20px; border: 1px solid #e1e4e5; border-radius: 8px; background: #fff;">
+    <h4 style="color: #4d035e; border-bottom: 2px solid #f4e8f7; padding-bottom: 10px; margin-top: 0;">📋 Field Descriptions</h4>
+    <table class="docutils" style="width: 100%; margin-top: 10px;">
+        <thead>
+            <tr style="background: #f8f9fa;">
+                <th style="width: 25%;">Field Name</th>
+                <th>Requirement & Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Ledger Name</strong></td>
+                <td><span style="color: #d9534f; font-weight: bold;">[Required]</span> Type the account name (e.g., Cash, Sales Revenue).</td>
+            </tr>
+            <tr>
+                <td><strong>Account Code</strong></td>
+                <td><span style="color: #d9534f; font-weight: bold;">[Required]</span> Input a unique numerical code (e.g., 101).</td>
+            </tr>
+            <tr>
+                <td><strong>Parent Account</strong></td>
+                <td>Choose <strong>Grand Parent</strong> for top-level categories or select a specific parent for sub-accounts.</td>
+            </tr>
+            <tr>
+                <td><strong>Account Type</strong></td>
+                <td><span style="color: #d9534f; font-weight: bold;">[Required]</span> Choose from: Assets, Liabilities, Equity, Income, or Expenses.</td>
+            </tr>
+            <tr>
+                <td><strong>Ordering After</strong></td>
+                <td>Set the visual position under the parent (e.g., At First, or after another account).</td>
+            </tr>
+            <tr>
+                <td><strong>Assign Project</strong></td>
+                <td>Tick <strong>"All Project"</strong> for global availability or <strong>"General"</strong> for common system use.</td>
+            </tr>
+            <tr>
+                <td><strong>Description</strong></td>
+                <td>Optional field for purpose notes, branch addresses, or additional details.</td>
+            </tr>
+            <tr>
+                <td><strong>Is Group Head</strong></td>
+                <td>
+                    <strong>Checked:</strong> Account acts as a folder for sub-accounts.<br>
+                    <strong>Unchecked:</strong> Account acts as a "Leaf" (Transactional) ledger.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card" style="margin-top: 20px; padding: 20px; border: 1px solid #e1e4e5; border-radius: 8px; background: #fdfdff;">
+    <h4 style="color: #4d035e; margin-top: 0;">💾 Finalizing the Entry</h4>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="background: #f0fff4; border: 1px solid #c6f6d5; padding: 15px; border-radius: 6px;">
+            <p style="margin-bottom: 5px; font-weight: bold; color: #276749;">Step 9: Save Button</p>
+            <p style="font-size: 0.9em; margin: 0;">Click the <strong>Save</strong> button to commit the new account to the database.</p>
+        </div>
+        <div style="background: #fff5f5; border: 1px solid #fed7d7; padding: 15px; border-radius: 6px;">
+            <p style="margin-bottom: 5px; font-weight: bold; color: #9b2c2c;">Step 10: Back / Cancel</p>
+            <p style="font-size: 0.9em; margin: 0;">Click <strong>Back</strong> to discard changes and return to the previous list page.</p>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="dashboard-preview" style="margin: 30px 0; text-align: center;">
+    <figure style="display: inline-block; padding: 10px; background: #fff; border: 1px solid #e1e4e5; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
+        <img src="../assets/images/coa/add.png" alt="COA Entry Form Interface" style="width: 100%; border-radius: 4px;">
+        <figcaption style="margin-top: 10px; font-size: 0.9em; color: #666; font-style: italic;">
+            Figure 2.2: Detailed view of the Chart of Account Entry Form
+        </figcaption>
+    </figure>
+</div>
+        -->
+
+<div class="image-container">
+  <figure class="custom-figure">
+    <div class="img-wrapper">
+      <img src="../assets/images/coa/add.png" alt="Accounting Dashboard" class="preview-img">
+      <div class="img-overlay" onclick="openModal(this)">
+        <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+      </div>
+    </div>
+    <figcaption>Figure 2.2: Charts of Account Entry Form</figcaption>
+  </figure>
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImg">
+  <div id="caption"></div>
+</div>
+
+        <div class="admonition warning">
+            <p class="admonition-title">Important Tip</p>
+            <p>Ensure <strong>"Is Group Head"</strong> is only checked for organizational categories. Actual money transactions must be posted to leaf accounts (not Group Heads).</p>
+        </div>
+
+    </div>
+</div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+            <a href="../pages/generate-vouchar.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+            <a href="../pages/dashboard.html" class="btn btn-neutral float-left">
+              <span class="icon icon-circle-arrow-left"></span> Previous
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+       -->
+      
+      
+        <span style="margin-left: 15px"><a href="../pages/generate-vouchar.html" style="color: #f1eff1">Next &raquo;</a></span>
+      
+    </span>
+</div>
+<!-- <script src="../js/theme.js"></script> -->
+
+ <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

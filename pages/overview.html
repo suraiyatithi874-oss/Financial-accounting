@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>1. Overview - Financial Accounting System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  -->
+ <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> 
+<script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="wy-grid-for-nav">
+
+  <!-- SIDEBAR -->
+  <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-nav-search">
+      <a href="../index.html" class="icon icon-home">
+        FINANCIAL ACCOUNTING
+      </a>
+
+         <div class="user-manual-label">
+    User Manual
+  </div>
+      <div role="search">
+        <form class="wy-form" action="../search.html" method="get">
+          <input type="text" name="q" placeholder="Search documentation">
+        </form>
+      </div>
+    </div>
+
+    <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+      <ul class="current">
+
+        <li class="toctree-l1">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="toctree-l1 current">
+          <a class="current" href=" "> Overview</a>
+          <ul>
+            <li><a class="toctree-l3" href="#purpose">1 Module Purpose</a></li>
+            <li><a class="toctree-l3" href="#core-features">2 Main Features</a></li>
+            <li><a class="toctree-l3" href="#voucher-types">3 Supported Vouchers</a></li>
+            <li><a class="toctree-l3" href="#reporting">5 Financial Reports</a></li>
+          </ul>
+        </li>
+
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/dashboard.html">1. Accounting Dashboard</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/coa.html">2. Chart of Accounts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/generate-vouchar.html">3. Generate Vouchers</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/bank.html">4. Bank Reconciliation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/income.html">5. Income & Expense Voucher</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/process.html">6. Process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pages/reports.html">7. Reports</a>
+	    </li>
+          
+       
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+
+  <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Overview</li>
+   
+  </ul>
+  <hr/>
+</div> -->
+
+   <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
+  <ul class="wy-breadcrumbs" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+    </li>
+    <li style="margin-left: 10px; color: #555;">overviews</li>
+    
+    <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <div class="logo-container" style="
+        background: white; 
+        padding: 5px; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e1e4e5;">
+      <img src="../assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
+          max-width: 100%; 
+          height: auto; 
+          display: block;
+          border-radius: 50%;">
+    </div>
+  </a>
+</li>
+  </ul>
+  <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+</div>
+
+      
+<div role="main" class="overview-container">
+    <div class="section">
+          <h1 id="1-overview"> Overview</h1>
+
+            <div class="admonition note">
+              <p class="admonition-title">About This System</p>
+              <p>
+                The Financial Accounting System is designed to record, control,
+                reconcile, and report organizational financial transactions
+                in a secure and auditable manner.
+              </p>
+            </div>
+
+        
+            <h2 id="purpose">1 Module Purpose</h2>
+        <div class="purpose-box">
+            <p>
+                The <strong>Financial Accounting System</strong>, developed by <strong>Tara Tech Ltd</strong>, is a comprehensive platform designed to manage organizational finances through the rigorous <em>double-entry accounting</em> method.
+            </p>
+            <p>
+                By centralizing account structures and automating validation workflows, the system ensures high data integrity, strict internal controls, and seamless generation of statutory financial statements.
+            </p>
+        </div>
+
+        <h2 id="directory">System Directory</h2>
+        <div class="toc-grid">
+            
+            <div class="toc-card">
+                <div class="toc-header"> Core Setup</div>
+                <ul class="toc-list">
+                    <li><strong>Accounting Dashboard</strong></li>
+                    <li><strong>Chart of Accounts (COA)</strong></li>
+                    <li><span class="toc-sub-item"> COA List Entry</span></li>
+                </ul>
+            </div>
+
+            <div class="toc-card">
+                <div class="toc-header"> Voucher Management</div>
+                <ul class="toc-list">
+                    <li><strong> Generate Vouchers</strong></li>
+                    <li><span class="toc-sub-item">  Debit Voucher Entry</span></li>
+                    <li><span class="toc-sub-item">  Credit Voucher Entry</span></li>
+                    <li><span class="toc-sub-item"> Journal Voucher Entry</span></li>
+                    <li><span class="toc-sub-item">  Contra Voucher Entry</span></li>
+                    <li><span class="toc-sub-item">  Fund Transfer Entry</span></li>
+                </ul>
+            </div>
+
+            <div class="toc-card">
+                <div class="toc-header"> Operations & Closing</div>
+                <ul class="toc-list">
+                    <li><strong> Bank Reconciliation</strong></li>
+                    <li><strong> Income & Expense Voucher</strong></li>
+                    <li><strong> Process</strong></li>
+                    <li><span class="toc-sub-item"> Opening Balance</span></li>
+                    <li><span class="toc-sub-item"> Day Close / 6.3 Month Close</span></li>
+                    <li><span class="toc-sub-item"> Year Close</span></li>
+                </ul>
+            </div>
+
+            <div class="toc-card">
+                <div class="toc-header"> Financial Reports</div>
+                <ul class="toc-list">
+                    <li><strong> Reports</strong></li>
+                    <li><span class="toc-sub-item"> General Ledgers</span></li>
+                    <li><span class="toc-sub-item"> Income Statement</span></li>
+                    <li><span class="toc-sub-item"> Trial Balance</span></li>
+                    <li><span class="toc-sub-item"> Financial Position</span></li>
+                    <li><span class="toc-sub-item"> Bank Reconciliation Report</span></li>
+                </ul>
+            </div>
+
+          </div>
+        
+         <h2 id="core-features">2 Main Features</h2>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+
+              <div class="card">
+                <h4>Chart of Accounts</h4>
+                <p>Hierarchical account structure for assets, liabilities, income, and expenses.</p>
+              </div>
+
+              <div class="card">
+                <h4>Voucher-Based Transactions</h4>
+                <p>Controlled transaction entry using standardized voucher types.</p>
+              </div>
+
+              <div class="card">
+                <h4>Authorization Workflow</h4>
+                <p>Authorized and unauthorized voucher states to ensure internal controls.</p>
+              </div>
+
+              <div class="card">
+                <h4>Bank Reconciliation</h4>
+                <p>Matching system records with bank statements to ensure accuracy.</p>
+              </div>
+
+              <div class="card">
+                <h4>Period Closing</h4>
+                <p>Day End, Month End, and Year End closing for data integrity.</p>
+              </div>
+
+              <div class="card">
+                <h4>Financial Reporting</h4>
+                <p>Real-time reports for monitoring, compliance, and audits.</p>
+              </div>
+
+            </div>
+
+            <h2 id="voucher-types">3 Supported Voucher Types</h2>
+
+            <table class="docutils">
+              <thead>
+                <tr>
+                  <th>Voucher Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Debit Voucher</strong></td><td>Cash or bank payments</td></tr>
+                <tr><td><strong>Credit Voucher</strong></td><td>Cash or bank receipts</td></tr>
+                <tr><td><strong>Journal Voucher</strong></td><td>Adjustments and corrections</td></tr>
+                <tr><td><strong>Contra Voucher</strong></td><td>Cash ↔ Bank transfers</td></tr>
+                <tr><td><strong>Fund Transfer</strong></td><td>Inter-branch fund movement</td></tr>
+                <tr><td><strong>Income & Expense</strong></td><td>Direct operational entries</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="reporting">4 Standard Financial Reports</h2>
+
+            <div class="admonition note">
+              <p class="admonition-title">Reporting Features</p>
+              <p>
+                All reports support filtering by branch, date range,
+                and account hierarchy with print and export options.
+              </p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px;">
+              <ul>
+                <li>General Ledger</li>
+                <li>Branch Wise Ledger</li>
+                <li>Cash & Bank Book</li>
+                <li>Trial Balance</li>
+              </ul>
+              <ul>
+                <li>Statement of Comprehensive Income</li>
+                <li>Statement of Financial Position</li>
+                <li>Receipt & Payment</li>
+                <li>Bank Reconciliation Report</li>
+              </ul>
+            </div>
+
+        <!-- <h2 id="core-features">1.2 Main Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Real-time Tracking</h4>
+                <p>Monitor all financial activities instantly through a centralized dashboard with drill-down capabilities.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Internal Control</h4>
+                <p>Standardized voucher workflows and multi-level authorization prevent unauthorized entries.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Data Integrity</h4>
+                <p>Automated period-closing routines ensure that financial data remains consistent and audit-ready.</p>
+            </div>
+        </div> -->
+    </div>
+</div>
+  
+        <footer>
+          <div class="rst-footer-buttons" role="navigation">
+            <a href="../pages/dashboard.html" class="btn btn-neutral float-right">
+              Next <span class="icon icon-circle-arrow-right"></span>
+            </a>
+          </div>
+
+          <hr>
+
+          <div role="contentinfo">
+            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <!-- <a href="https://github.com/thecreation/remark-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+       -->
+      
+        <span style="margin-left: 15px"><a href="../pages/dashboard.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+ <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/search/require.js"></script>
+      <script src="../assets/js/search/search.js"></script>
+</body>
+</html>

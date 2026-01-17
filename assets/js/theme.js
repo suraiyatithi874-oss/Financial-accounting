@@ -70,11 +70,8 @@ window.SphinxRtdTheme = (function (jquery) {
     };
 }($));
 
-// The code below is a copy of @seanmadsen code posted Jan 10, 2017 on issue 803.
-// https://github.com/mkdocs/mkdocs/issues/803
-// This just incorporates the auto scroll into the theme itself without
-// the need for additional custom.js file.
-//
+
+
 $(function() {
   $.fn.isFullyWithinViewport = function(){
       var viewport = {};
@@ -98,6 +95,11 @@ $(function() {
   }
 });
 
+
+// ==============================
+//  picture compoenets 
+// ================================
+
 function openModal(element) {
   var modal = document.getElementById("imageModal");
   var modalImg = document.getElementById("fullImg");
@@ -114,14 +116,6 @@ function closeModal() {
 }
 
 
-// document.getElementById('rtd-search-form').onsubmit = function(e) {
-//     var query = this.querySelector('input[name="q"]').value.toLowerCase();
-//     if (query === 'home') {
-//         window.location.href = 'index.html';
-//         return false;
-//     }
-    
-// };
 
 
 // ====================================
@@ -286,3 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// error
+

@@ -1,87 +1,103 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <meta name="author" content="thecreation">
- 
 
-
-<style>
+  <style>
     /* Professional Result Styling */
     .search-results-container {
-        margin-top: 20px;
-        font-family: 'Lato', sans-serif;
+      margin-top: 20px;
+      font-family: 'Lato', sans-serif;
     }
+
     .no-results-card {
-        background: #fff;
-        padding: 40px;
-        border-radius: 12px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        border: 1px solid #eee;
-        animation: fadeIn 0.5s ease;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eee;
+      animation: fadeIn 0.5s ease;
     }
+
     .no-results-card i {
-        font-size: 50px;
-        color: #ff6b6b;
-        margin-bottom: 15px;
-        display: block;
+      font-size: 50px;
+      color: #ff6b6b;
+      margin-bottom: 15px;
+      display: block;
     }
-    .no-results-card h2 { color: #2c3e50; margin-bottom: 10px; }
-    .no-results-card p { color: #7f8c8d; }
+
+    .no-results-card h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .no-results-card p {
+      color: #7f8c8d;
+    }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-</style>
-<!-- search data -->
-<script src="./assets/js/search_data.js"></script>
-<script>
+  </style>
+  <!-- search data -->
+  <script src="./assets/js/search_data.js"></script>
+  <script>
 
 
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q');
-    const resultsDiv = document.getElementById('mkdocs-search-results');
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      const resultsDiv = document.getElementById('mkdocs-search-results');
 
-    if (!query || query.trim() === "") {
+      if (!query || query.trim() === "") {
         resultsDiv.innerHTML = `
             <div class="no-results-card">
                 <h2>Ready to Search</h2>
                 <p>Please type a keyword above to find documentation.</p>
             </div>`;
         return;
-    }
+      }
 
-    const searchTerm = query.toLowerCase().trim();
+      const searchTerm = query.toLowerCase().trim();
 
-    // 1. Try to find an EXACT match first for immediate redirect
-    const exactMatch = searchData.find(item => 
-        item.title.toLowerCase() === searchTerm || 
+      // 1. Try to find an EXACT match first for immediate redirect
+      const exactMatch = searchData.find(item =>
+        item.title.toLowerCase() === searchTerm ||
         item.tags.toLowerCase().split(' ').includes(searchTerm)
-    );
+      );
 
-    if (exactMatch) {
+      if (exactMatch) {
         resultsDiv.innerHTML = `<div class="no-results-card"><h2>Redirecting to ${exactMatch.title}...</h2></div>`;
         window.location.href = exactMatch.url;
         return;
-    }
+      }
 
-    // 2. If no exact match, look for PARTIAL matches
-    const partialMatches = searchData.filter(item => 
-        item.title.toLowerCase().includes(searchTerm) || 
+      // 2. If no exact match, look for PARTIAL matches
+      const partialMatches = searchData.filter(item =>
+        item.title.toLowerCase().includes(searchTerm) ||
         item.tags.toLowerCase().includes(searchTerm)
-    );
+      );
 
-    if (partialMatches.length > 0) {
+      if (partialMatches.length > 0) {
         resultsDiv.innerHTML = '<h2>Suggested Results</h2>';
         partialMatches.forEach(res => {
-            resultsDiv.innerHTML += `
+          resultsDiv.innerHTML += `
                 <div style="margin-bottom: 15px; padding: 15px; border: 1px solid #eee; border-radius: 8px;">
                     <a href="${res.url}" style="font-size: 18px; color: #4d035e; font-weight: bold; text-decoration: none;">
                         ${res.title}
@@ -89,7 +105,7 @@ window.onload = function() {
                     <p style="margin: 5px 0 0; color: #666; font-size: 13px;">Path: ${res.url}</p>
                 </div>`;
         });
-    } else {
+      } else {
         // 3. SHOW THE BEAUTIFUL ERROR MESSAGE
         resultsDiv.innerHTML = `
             <div class="no-results-card">
@@ -102,104 +118,104 @@ window.onload = function() {
                     Try Again
                 </button>
             </div>`;
-    }
-};
-</script>
+      }
+    };
+  </script>
 
- <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="shortcut icon" href="./img/favicon.ico">
   <title>Financial Accounting Docs</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'> -->
 
- <link rel="stylesheet" href="./assets/css/fontawesome.min.css"> 
+  <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
 
-    <link rel="stylesheet" href="./assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./assets/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="./assets/css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="./assets/css/highlight.css">
-  
+
   <script src="./assets/js/jquery-2.1.1.min.js"></script>
   <script src="./assets/js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./assets/js/highlight.pack.js"></script> 
+  <script type="text/javascript" src="./assets/js/highlight.pack.js"></script>
 
-<script src="./assets/js/search_index-data.js"></script>
-  
+  <script src="./assets/js/search_index-data.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> FINANCIAL ACCOUNTING </a>
 
         <div class="user-manual-label">
-    User Manual
-  </div>
-      
+          User Manual
+        </div>
+
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
+          <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+            <input type="text" name="q" placeholder="Search docs" />
+          </form>
+        </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="index.html">Home</a>
-	    </li>
-          
-           
+        <ul class="current">
 
 
-       
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/overview.html"> Overview</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/dashboard.html">1. Accounting Dashboard</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/coa.html">2. Chart of Accounts</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/generate-vouchar.html">3. Generate Vouchers</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/bank.html">4. Bank Reconciliation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/income.html">5. Income & Expense Voucher</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/process.html">6. Process</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="./pages/reports.html">7. Reports</a>
-	    </li>
-          
-          
-          
+          <li class="toctree-l1">
+
+            <a class="" href="index.html">Home</a>
+          </li>
+
+
+
+
+
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/overview.html"> Overview</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/dashboard.html">1. Accounting Dashboard</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/coa.html">2. Chart of Accounts</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/generate-vouchar.html">3. Generate Vouchers</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/bank.html">4. Bank Reconciliation</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/income.html">5. Income & Expense Voucher</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/process.html">6. Process</a>
+          </li>
+
+          <li class="toctree-l1">
+
+            <a class="" href="./pages/reports.html">7. Reports</a>
+          </li>
+
+
+
         </ul>
       </div>
       &nbsp;
@@ -207,84 +223,70 @@ window.onload = function() {
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
         <a href="index.html">Financial Accountig Docs</a>
       </nav>
 
-      
+
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-    
-    <li style="margin-left: 10px; color: #555;">Search</li>
-    <!-- <li class="wy-breadcrumbs-aside">
-      
-    </li> -->
-     <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
-  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-    <div class="logo-container" style="
-        background: white; 
-        padding: 5px; 
-        border-radius: 50%; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-        display: flex; 
-        align-items: center; 
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        border: 1px solid #e1e4e5;">
-      <img src="./assets/images/others/logo-of-ttl.jpg" alt="TTL Logo" style="
-          max-width: 100%; 
-          height: auto; 
-          display: block;
-          border-radius: 50%;">
-    </div>
-  </a>
-</li>
-  </ul>
- <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;"/>
+            <ul class="wy-breadcrumbs">
+              <li><a href="index.html">Docs</a> &raquo;</li>
+
+              <li style="margin-left: 10px; color: #555;">Search</li>
+           
+              <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
+                <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer"
+                  style="text-decoration: none;">
+                  <div class="logo-container logo" >
+                    <img src="./assets/images/others/logo-of-ttl.jpg" class="logo-img" alt="TTL Logo" >
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;" />
 
 
-  
-</div>
+
+          </div>
           <div role="main">
             <div class="section">
-              
-
-  <h1 id="search">Search Results</h1>
-
-<form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" class="search_input search-query ui-autocomplete-input" name="q" placeholder="Search docs" />
-</form>
 
 
-  <div id="mkdocs-search-results" class="search-results">
-    Searching...
-  </div>
+              <h1 id="search">Search Results</h1>
+
+              <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+                <input type="text" class="search_input search-query ui-autocomplete-input" name="q"
+                  placeholder="Search docs" />
+              </form>
+
+
+              <div id="mkdocs-search-results" class="search-results">
+                Searching...
+              </div>
 
 
             </div>
           </div>
           <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
 
 
-          <div role="contentinfo">
-            <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
-          </div>
-</footer>
-      
+            <hr />
+
+            <div role="contentinfo">
+              <!-- Copyright etc -->
+
+            </div>
+
+
+            <div role="contentinfo">
+              <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+            </div>
+          </footer>
+
         </div>
       </div>
 
@@ -294,18 +296,19 @@ window.onload = function() {
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
-      
-         
+
+
     </span>
-</div>
+  </div>
 
 
 
-    <script>var base_url = '.';</script>
-   
-      <script src="./assets/js/theme.js"></script>
-      <script src="./assets/js/search/require.js"></script>
-      <script src="./assets/js/search/search.js"></script>
+  <script>var base_url = '.';</script>
+
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/search/require.js"></script>
+  <script src="./assets/js/search/search.js"></script>
 
 </body>
+
 </html>

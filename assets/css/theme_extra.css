@@ -27,6 +27,27 @@
    BASE FIXES & MKDOCS / RTD COMPATIBILITY
    ========================================================= */
 
+.logo{
+     background: white; 
+                    padding: 5px; 
+                    border-radius: 50%; 
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid #e1e4e5;
+}
+
+   .logo-img{
+      max-width: 100%; 
+                      height: auto; 
+                      display: block;
+                      border-radius: 50%;
+
+   }
+
 .wy-nav-side {
     height: calc(100% - 45px);
     overflow-y: auto;

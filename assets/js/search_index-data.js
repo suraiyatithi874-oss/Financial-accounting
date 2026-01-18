@@ -41,6 +41,9 @@ const searchData = [
 { title: "6.2 Day Close", url: "pages/process.html#day-close", tags: "p&l balance sheets day end dayclose close" },
 { title: "6.3 Month Close", url: "pages/process.html#month-close", tags: "p&l balance sheets month end month close" },
 { title: "6.4 Year Close", url: "pages/process.html#year-close", tags: "p&l balance sheets year year end close" },
+{ title: "6.5 Day back Script", url: "pages/process.html#day-back-script", tags: "p&l balance day back sheets year year end close" },
+{ title: "6.6 Day end script", url: "pages/process.html#day-end-script", tags: "p&l balance day end  sheets year year end close" },
+
 
 
     { title: "7. Reports", url: "pages/reports.html", tags: "p&l balance sheets reports transections " },

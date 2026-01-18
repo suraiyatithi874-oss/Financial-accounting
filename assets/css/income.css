@@ -1,0 +1,125 @@
+/* =========================== */
+/* how to use section */
+/* ========================= */
+
+/* Grid for the usage section */
+.usage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Base card style */
+.feature-card {
+    border: 1px solid #e1e4e5;
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    color: #4d035e;
+    margin-top: 0;
+}
+
+/* Text and List styles */
+.feature-card p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.feature-card ul {
+    font-size: 0.85em;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+/* Status Labels */
+.status-pending {
+    color: #f0ad4e;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: #5cb85c;
+    font-weight: bold;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .usage-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================ */
+/* Voucher management */
+/* ============================ */
+
+/* Management Grid Layout */
+.voucher-mgmt-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+/* Base Card Styling */
+.mgmt-card {
+    border: 1px solid #e1e4e5; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.mgmt-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Header & Typography */
+.mgmt-card h4 {
+    color: #4d035e; 
+    margin-top: 0; 
+    border-bottom: 2px solid #f4e8f7; 
+    padding-bottom: 8px;
+}
+
+.mgmt-card ol, .mgmt-card p {
+    font-size: 0.9em; 
+    padding-left: 20px; 
+    margin-top: 10px;
+}
+
+/* Danger/Delete Card Specifics */
+.mgmt-card-danger {
+    border: 1px solid #dc3545; 
+    background: #fff5f5;
+}
+
+.mgmt-card-danger h4 {
+    color: #c53030; 
+    border-bottom: 2px solid #feb2b2;
+}
+
+.mgmt-card-danger p {
+    color: #9b2c2c;
+    padding-left: 0;
+}
+
+/* Warning Note inside Delete Card */
+.delete-note {
+    background: #fff; 
+    padding: 8px; 
+    border-radius: 4px; 
+    border: 1px solid #feb2b2; 
+    font-size: 0.8em; 
+    color: #c53030; 
+    margin-top: 5px;
+}

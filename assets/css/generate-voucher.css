@@ -1,0 +1,259 @@
+/* operation overviews */
+
+/* Container for the operation cards */
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+/* Base style for the cards */
+.feature-card {
+    border: 1px solid #e1e4e5;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glass effect and Hover */
+.glass-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #4d035e;
+}
+
+/* Header styles inside cards */
+.feature-card h4 {
+    color: #4d035e;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Description text styles */
+.feature-card p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Animation class */
+.animate-slide-up {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* debit voucher entry */
+
+
+
+/* Section Headers */
+.voucher-sub-header {
+    color: #4d035e;
+    border-left: 5px solid #4d035e;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+/* Step Card Container */
+.step-card {
+    padding: 20px;
+    background: #fdfdff;
+    border: 1px solid #e1e4e5;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* List Styling */
+.step-list {
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 20px;
+    color: #333;
+}
+
+.step-list li {
+    margin-bottom: 8px;
+}
+
+/* Emphasize Save/Insert Buttons */
+.step-list strong {
+    /* 0.9 means 90% opacity */
+    color: rgba(51, 41, 58, 0.9); 
+}
+
+
+/* ========================== */
+/* credit voucher */
+/* =========================== */
+
+/* Section Headers */
+.voucher-sub-header {
+    color: #4d035e;
+    border-left: 5px solid #4d035e;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+/* Step Card Container */
+.step-card {
+    padding: 20px;
+    background: #fdfdff;
+    border: 1px solid #e1e4e5;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* List Styling */
+.step-list {
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Fix for the invisible strong text we discussed */
+
+/* voucher management action */
+
+/* Container for Management Cards */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Base Card Style */
+.action-card {
+    border: 1px solid #e1e4e5;
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Card Headers */
+.action-card h4 {
+    color: #4d035e;
+    margin-top: 0;
+    border-bottom: 2px solid #f4e8f7;
+    padding-bottom: 8px;
+}
+
+/* List and Text Styles */
+.action-card ol, .action-card p {
+    font-size: 0.9em;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Specialized Delete Card */
+.delete-card {
+    border-left: 4px solid #dc3545;
+}
+
+/* Warning Box inside Delete Card */
+.restriction-box {
+    background: #fff5f5;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #feb2b2;
+    font-size: 0.85em;
+    color: #c53030;
+    margin-top: 10px;
+}
+
+.restriction-box strong {
+    color: #c53030;
+}
+
+
+/* authorized workflow */
+
+
+/* Workflow Grid Layout */
+.workflow-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Base Workflow Card */
+.workflow-card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e1e4e5;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.workflow-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Unauthorized (Pending) Styling */
+.card-unauth {
+    border-top: 4px solid #f0ad4e;
+}
+
+.card-unauth h4 {
+    color: #8a6d3b;
+    margin-top: 0;
+}
+
+/* Authorized (Finalized) Styling */
+.card-auth {
+    border-top: 4px solid #5cb85c;
+}
+
+.card-auth h4 {
+    color: #3c763d;
+    margin-top: 0;
+}
+
+/* Text and List adjustments */
+.workflow-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.workflow-card ul {
+    font-size: 0.85em;
+    padding-left: 20px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .workflow-container {
+        grid-template-columns: 1fr;
+    }
+}

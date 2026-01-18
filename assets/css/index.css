@@ -1,0 +1,77 @@
+/* Breadcrumb Styles */
+.breadcrumb-container {
+    padding: 10px 0;
+}
+
+.wy-breadcrumbs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-home-link {
+    color: #4d035e;
+    font-weight: bold;
+}
+
+.breadcrumb-current {
+    margin-left: 10px;
+    color: #555;
+}
+
+.wy-breadcrumbs-aside {
+    margin-left: auto;
+}
+
+.breadcrumb-hr {
+    margin-top: 15px;
+    border-top: 1px solid #e1e4e5;
+}
+
+/* Card & Grid Adjustments */
+.card-delay {
+    animation-delay: 0.2s;
+}
+
+/* Footer Styles */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.support-phone {
+    margin-top: 10px;
+}
+
+/* Versioning Bar */
+.version-next {
+    margin-left: 15px;
+}
+
+.version-next a {
+    color: #f1eff1;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    font-size: large;
+    background: #eaebee;
+    color: rgb(253, 194, 1);
+    border: 2px solid #eef11c;
+    border-radius: 100px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Cursor pointer for version bar */
+.rst-versions {
+    cursor: pointer;
+}

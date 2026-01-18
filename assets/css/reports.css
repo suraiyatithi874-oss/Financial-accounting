@@ -1,0 +1,1066 @@
+/* Layout & Global Elements */
+/* Table Container and Base Styles */
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: left;
+    border: 1px solid #e1e4e5;
+}
+
+/* Header Styling */
+.reports-table thead tr {
+    background-color: #4e5c8b;
+    color: white;
+}
+
+.reports-table th {
+    padding: 12px;
+    border: 1px solid #e1e4e5;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Body Cell Styling */
+.reports-table td {
+    padding: 10px;
+    border: 1px solid #e1e4e5;
+    vertical-align: middle;
+}
+
+/* Specific Column Styling */
+.reports-table .ref-col {
+    font-weight: bold;
+    width: 60px;
+}
+
+.reports-table .module-name {
+    color: #445796;
+    font-weight: bold;
+}
+
+/* Zebra Striping for Readability */
+.reports-table tbody tr:nth-child(even) {
+    background-color: #fdfdff;
+}
+
+/* Hover Effect */
+.reports-table tbody tr:hover {
+    background-color: #f4e8f7;
+    transition: background-color 0.2s ease;
+}
+
+/* 7.1 */
+/* Section Header */
+.report-section-header {
+    color: #3b4a7a; 
+    border-left: 10px solid #3b4a7a; 
+    padding-left: 15px; 
+    margin-top: 50px;
+}
+
+/* Navigation Banner */
+.nav-banner {
+    background: #f4e8f7; 
+    padding: 12px 20px; 
+    border-radius: 8px; 
+    margin-bottom: 25px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+}
+
+.nav-tag {
+    background: #3b4a7a; 
+    color: white; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    font-size: 0.8em; 
+    font-weight: bold;
+}
+
+.nav-path {
+    font-family: monospace; 
+    color: #3b4a7a; 
+    font-weight: bold;
+}
+
+/* Grid for Info Cards */
+.report-info-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px; 
+    margin-bottom: 30px;
+}
+
+/* Card 1: Capabilities (Light) */
+.card-caps {
+    background: #ffffff; 
+    border: 1px solid #e1e4e5; 
+    border-radius: 12px; 
+    padding: 25px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.cap-item {
+    border-bottom: 1px solid #f0f0f0; 
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+
+.cap-item:last-child {
+    border-bottom: none;
+}
+
+/* Card 2: Filtering (Dark) */
+.card-filters {
+    background: #060b1b; 
+    color: #ffffff; 
+    border-radius: 12px; 
+    padding: 25px; 
+    box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.filter-list {
+    list-style: none; 
+    padding: 0; 
+    margin: 20px 0 0 0; 
+    font-size: 0.85em; 
+    line-height: 1.8;
+}
+
+.filter-keyword {
+    color: #d192e8;
+}
+
+/* Interface Mockup Window */
+.mockup-window {
+    margin: 40px 0; 
+    border: 1px solid #e1e4e5; 
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+.mockup-bar {
+    background: #f8f9fa; 
+    padding: 10px 20px; 
+    border-bottom: 1px solid #e1e4e5; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.dot-group {
+    display: flex; 
+    gap: 5px;
+}
+
+.dot {
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .report-info-grid { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+/* 7.2 */
+/* Add this to your existing ledgers-style.css */
+.filter-required {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+    border-left: 3px solid #ffc107;
+    margin-top: 8px;
+}
+
+/* 7.1 */
+
+/* ===== Report Info Section Wrapper ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ===== Core Capabilities Card ===== */
+.card-caps {
+  background: #ffffff;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-caps h4 {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+/* Capability Items */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  color: #333;
+  display: block;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* ===== Smart Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+.filter-keyword {
+  color: #d192e8;
+}
+
+/* ===== Interface Mockup Window ===== */
+.mockup-window {
+  margin: 40px 0;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.mockup-bar {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1e4e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Title */
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Window Dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #ff5f56;
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+.dot-green {
+  background: #27c93f;
+}
+
+
+/* 7.2 */
+
+/* ===== Grid Layout ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ===== Includes / Features Card ===== */
+.card-caps {
+  background: #ffffff;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-caps h4 {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+/* Feature Items */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  color: #333;
+  display: block;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* ===== Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+/* Normal filter keywords */
+.filter-keyword {
+  color: #b3d7ff;
+}
+
+/* Required filters */
+.filter-required b {
+  color: #ffc107;
+}
+
+/* ===== Mockup Window ===== */
+.mockup-window {
+  margin: 40px 0;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.mockup-bar {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1e4e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mockup Title */
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3b4a7a;
+}
+
+/* Window Dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background: #ccd5ae;
+}
+
+.dot-2 {
+  background: #e9edc9;
+}
+
+.dot-3 {
+  background: #3b4a7a;
+}
+
+
+/* 7.2 */
+
+/* ===== Grid Layout ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ===== Includes / Features Card ===== */
+.card-caps {
+  background: #ffffff;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-caps h4 {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+/* Feature Items */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  display: block;
+  color: #333;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 3px 0;
+}
+
+/* ===== Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+/* Filter Keywords */
+.filter-keyword {
+  color: #b3d7ff;
+}
+
+/* Required Filters */
+.filter-required b {
+  color: #ffc107;
+}
+
+/* Search Info Box */
+.search-note {
+  margin-top: 20px;
+  font-size: 0.8em;
+  opacity: 0.9;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* ===== Mockup Window ===== */
+.mockup-window {
+  margin: 40px 0;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.mockup-bar {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1e4e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mockup Title */
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3b4a7a;
+}
+
+/* Window Dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background: #ccd5ae;
+}
+
+.dot-2 {
+  background: #e9edc9;
+}
+
+.dot-3 {
+  background: #3b4a7a;
+}
+
+
+/* 7.3 */
+/* ===== Grid Layout ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ===== Includes / Features Card ===== */
+.card-caps {
+  background: #ffffff;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-caps h4 {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+/* Feature Items */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  display: block;
+  color: #333;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 3px 0;
+}
+
+/* ===== Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+/* Filter Keywords */
+.filter-keyword {
+  color: #b3d7ff;
+}
+
+/* Required Filters */
+.filter-required b {
+  color: #ffc107;
+}
+
+/* Search Info Box */
+.search-note {
+  margin-top: 20px;
+  font-size: 0.8em;
+  opacity: 0.9;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* ===== Mockup Window ===== */
+.mockup-window {
+  margin: 40px 0;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.mockup-bar {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1e4e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mockup Title */
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3b4a7a;
+}
+
+/* Window Dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background: #ccd5ae;
+}
+
+.dot-2 {
+  background: #e9edc9;
+}
+
+.dot-3 {
+  background: #3b4a7a;
+}
+
+/* 7.4 */
+
+/* ===== Grid Layout ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ===== Includes / Features Card ===== */
+.card-caps {
+  background: #ffffff;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card-caps h4 {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+/* Feature Items */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  display: block;
+  color: #333;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 3px 0;
+}
+
+/* Remove divider for last item (if used globally later) */
+.cap-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+/* Filter Keywords */
+.filter-keyword {
+  color: #b3d7ff;
+}
+
+/* Search Info Box */
+.search-info {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.search-info span {
+  font-size: 0.85em;
+}
+
+
+/* 7.5 */
+
+/* ===== Feature Items ===== */
+.cap-item {
+  margin-top: 15px;
+}
+
+.cap-item strong {
+  display: block;
+  color: #333;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 3px 0;
+}
+
+/* Remove divider if last item needs no border */
+.cap-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== Filters Card ===== */
+.card-filters {
+  background: #060b1b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(77, 3, 94, 0.15);
+}
+
+.card-filters h4 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Filter List */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+/* Filter keywords */
+.filter-keyword {
+  color: #b3d7ff;
+}
+
+/* Search note box */
+.search-note {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.search-note span {
+  font-size: 0.85em;
+}
+
+/* ===== Mockup Window ===== */
+.mockup-window {
+  margin: 40px 0;
+  border: 1px solid #e1e4e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mockup-bar {
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e1e4e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3b4a7a;
+}
+
+/* Window dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background: #ccd5ae;
+}
+
+.dot-2 {
+  background: #e9edc9;
+}
+
+.dot-3 {
+  background: #3b4a7a;
+}
+
+/* 7.6 */
+/* ===== REPORT INFO GRID ===== */
+.report-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 30px 0;
+}
+
+/* ===== COMMON CARD STYLE ===== */
+.card-caps,
+.card-filters {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e9f0;
+}
+
+/* ===== CARD HEADINGS ===== */
+.card-caps h4,
+.card-filters h4 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e6e9f0;
+  padding-bottom: 8px;
+}
+
+/* ===== CAP ITEMS ===== */
+.cap-item {
+  padding: 10px 0;
+  border-bottom: 1px dashed #d9dce7;
+}
+
+.cap-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #2f3a6b;
+}
+
+.cap-item p {
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+
+/* ===== FILTER LIST ===== */
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  font-size: 0.9rem;
+  padding: 8px 0;
+  line-height: 1.6;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Keyword highlight */
+.filter-keyword {
+  font-weight: 600;
+}
+
+/* ===== FILTER CARD COLOR VARIANT ===== */
+.card-filters {
+  background: linear-gradient(135deg, #3b4a7a, #2c355f);
+  color: #ffffff;
+}
+
+.card-filters h4 {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== MOCKUP WINDOW ===== */
+.mockup-window {
+  margin: 35px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8f9fc;
+  border: 1px solid #e1e5f0;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Top bar */
+.mockup-bar {
+  background: #eef1fb;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe3f3;
+}
+
+/* Dots */
+.dot-group {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .report-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 7.7 */
+.card-title {
+  color: #3b4a7a;
+  margin-top: 0;
+}
+
+.cap-item p {
+  font-size: 0.85em;
+  color: #666;
+  margin: 3px 0;
+}
+
+.cap-item.no-border {
+  border-bottom: none;
+}
+
+.filter-note {
+  margin-top: 20px;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.filter-note.dashed {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.mockup-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #3b4a7a;
+}
+
+.dot:nth-child(1) { background: #ccd5ae; }
+.dot:nth-child(2) { background: #e9edc9; }
+.dot:nth-child(3) { background: #3b4a7a; }
+

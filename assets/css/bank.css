@@ -1,0 +1,57 @@
+/* Breadcrumb & Global Helpers */
+
+.htu-bank{
+    border: 1px solid #e1e4e5;
+     padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+}
+
+
+
+.htu-p{
+     margin-bottom: 10px;
+}
+
+.htu-ul{
+    line-height: 1.8; margin-bottom: 20px;
+}
+
+.htu-span{
+  color: #4d035e; font-weight: bold;
+}
+
+.brm-div{
+   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px;
+}
+
+.brm-card{
+     border: 1px solid #e1e4e5;
+      padding: 20px; 
+     border-radius: 8px; 
+     background: #fff; border-top: 4px solid #4d035e;
+}
+ .brm-card-l{
+     border: 1px solid #dc3545; padding: 20px; border-radius: 8px; background: #fff5f5;
+ }
+
+.brm-h4{
+    color: #4d035e; margin-top: 0;
+}
+.brm-h4-l{
+   color: #c53030; margin-top: 0;
+}
+
+.brm-p{
+    font-size: 0.9em;
+}
+.brm-p-l{
+
+   font-size: 0.9em ; 
+   color:  #9b2c2c;
+}
+
+.bank-f{
+   margin-top: 10px;
+}
+

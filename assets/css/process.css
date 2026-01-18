@@ -1,0 +1,227 @@
+/* ====================================
+opening balance
+======================================= */
+/* Container for Opening Balance cards */
+.balance-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 30px;
+}
+
+/* Base card styling */
+.balance-card {
+    border: 1px solid #e1e4e5; 
+    padding: 15px; 
+    border-radius: 8px; 
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Header styles */
+.balance-card h4 {
+    color: #4d035e; 
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* List and paragraph text */
+.balance-card ol {
+    font-size: 0.85em; 
+    padding-left: 18px;
+    line-height: 1.6;
+}
+
+.balance-card p {
+    font-size: 0.85em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Delete/Danger specific card */
+.balance-card-danger {
+    border: 1px solid #dc3545; 
+    background: #fff5f5;
+}
+
+.balance-card-danger h4 {
+    color: #c53030;
+}
+
+.balance-card-danger p {
+    color: #9b2c2c;
+}
+
+/* Bold emphasis for UI buttons */
+.balance-card strong {
+    color: #4d035e;
+}
+
+
+/* ==================================
+Day close
+=================================== */
+
+/* Section Header */
+.process-header {
+    margin-top: 40px; 
+    color: #4d035e; 
+    border-bottom: 2px solid #f4e8f7; 
+    padding-bottom: 10px;
+}
+
+/* Main Process Card */
+.process-card {
+    border-left: 5px solid #4d035e; 
+    padding: 20px; 
+    background: #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    margin-bottom: 20px;
+}
+
+/* Navigation Breadcrumb inside card */
+.nav-path-box {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.nav-code {
+    background: #f4e8f7; 
+    color: #4d035e; 
+    padding: 2px 5px; 
+    border-radius: 4px;
+}
+
+/* 2-Column Grid Layout */
+.process-grid {
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+}
+
+.process-steps {
+    font-size: 0.9em; 
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.process-steps strong, .process-highlight {
+    color: #4d035e; 
+    font-weight: bold;
+}
+
+/* Side Info / Delete Box */
+.delete-info-box {
+    background: #f8f9fa; 
+    padding: 15px; 
+    border-radius: 6px; 
+    font-size: 0.85em; 
+    border: 1px solid #e1e4e5;
+}
+
+.delete-info-box h4 {
+    margin-top: 0; 
+    font-size: 1em; 
+    color: #c53030;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* day back script */
+/* Header Styles */
+.process-header {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Card Container */
+.process-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Navigation Path Styling */
+.nav-path-box {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-left: 4px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.nav-code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e83e8c;
+}
+
+/* Grid and List Layout */
+.process-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.process-steps {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.process-steps li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.process-highlight {
+    background-color: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Info Box Styling */
+.delete-info-box {
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+    padding: 15px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.delete-info-box h4 {
+    margin-top: 0;
+    color: #c53030;
+    font-size: 1.1rem;
+}
+
+.delete-info-box p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -48,6 +48,38 @@
 
    }
 
+   .docs{
+  color: #31083a;
+   font-weight: bold;
+   }
+
+.docs-text{
+    margin-left: 10px;
+     color: #555;
+}
+
+.navigation-pad {
+    padding: 10px;
+
+}
+.square{
+   display: flex; 
+   align-items: center;
+    list-style: none;
+     padding: 0;
+      margin: 0;
+}
+.ttl{
+ text-decoration: none;
+}
+.ttl-logo-li{
+     margin-left: auto;
+}
+.all-hr{
+   margin-top: 15px; border-top: 1px solid #e1e4e5;
+}
+
+
 .wy-nav-side {
     height: calc(100% - 45px);
     overflow-y: auto;
@@ -950,3 +982,37 @@ figcaption:hover {
 .v-card.debit:hover .v-icon { background: #feebe9; }
 .v-card.credit:hover .v-icon { background: #eef7ee; }
 .v-card.journal:hover .v-icon { background: #fff4e5; }
+
+
+/* ====bank reconciliation */
+/* ================================ */
+
+.manu-path{
+   background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;
+}
+
+.warn-div{
+   margin-top: 30px;
+}
+
+.nav-next{
+   color: #f1eff1;
+}
+
+.next-span{
+    margin-left: 15px;
+}
+
+.top-button{
+   position: fixed; bottom: 20px; right: 20px;
+    display: none; 
+   font-size: large; 
+               background: #eaebee; 
+               color: rgb(253, 194, 1);
+                border: none; 
+               padding: 10px 15px;
+                border: 2px solid #eef11c; 
+               border-radius: 100px;  
+               cursor: pointer; 
+               z-index: 1000;
+}

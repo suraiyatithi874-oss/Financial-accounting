@@ -14,12 +14,10 @@
   <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../assets/css/highlight.css">
+  <link rel="stylesheet" href="../assets/css/process.css">
 
 
-  <script src="../assets/js/search_index-data.js"></script>
-  <script src="../assets/js/jquery-2.1.1.min.js"></script>
-  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -87,9 +85,10 @@
             <ul>
               <li><a href="#opening-balance">6.1 Opening Balance</a></li>
               <li><a href="#day-close">6.2 Day Close</a></li>
-
               <li><a href="#month-close">6.3 Month Close</a></li>
               <li><a href="#year-close">6.4 Year Close</a></li>
+              <li><a href="#day-back-script">6.5 Day back Script</a></li>
+              <li><a href="#day-end-script">6.4 Day End Script</a></li>
             </ul>
           </li>
 
@@ -109,24 +108,23 @@
         <div class="rst-content">
 
 
-          <div role="navigation" aria-label="breadcrumbs navigation" style="padding: 10px 0;">
-            <ul class="wy-breadcrumbs"
-              style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+          <div role="navigation" aria-label="breadcrumbs navigation" class="navigation-pad">
+            <ul class="wy-breadcrumbs square">
               <li>
-                <a href="index.html" class="icon icon-home" style="color: #4d035e; font-weight: bold;"> Docs</a> &raquo;
+                <a href="../index.html" class="icon icon-home docs"> Docs</a> &raquo;
               </li>
-              <li style="margin-left: 10px; color: #555;">Process</li>
+              <li class="docs-text">Process</li>
 
-             
-              <li class="wy-breadcrumbs-aside" style="margin-left: auto;">
-  <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-    <div class="logo-container logo" >
-      <img src="../assets/images/others/logo-of-ttl.jpg" class="logo-img" alt="TTL Logo" >
-    </div>
-  </a>
-</li>
+              <li class="wy-breadcrumbs-aside ttl-logo-li">
+                <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" class="ttl">
+                  <div class="logo-container logo">
+                    <img src="../assets/images/others/logo-of-ttl.jpg" class="logo-img" alt="TTL Logo">
+                  </div>
+                </a>
+              </li>
             </ul>
-            <hr style="margin-top: 15px; border-top: 1px solid #e1e4e5;" />
+            <hr class="all-hr">
+
           </div>
 
           <div role="main">
@@ -135,10 +133,10 @@
 
 
 
-<!-- ========================================== -->
-    <!-- 6.1 Opening Balance  start -->
-<!-- =========================================== -->
-   
+              <!-- ========================================== -->
+              <!-- 6.1 Opening Balance  start -->
+              <!-- =========================================== -->
+
 
 
               <h2 id="opening-balance">6.1 Opening Balance</h2>
@@ -150,7 +148,7 @@
                   financial positions from day one.
                 </p>
               </div>
-             
+
               <div class="image-container">
                 <figure class="custom-figure">
                   <div class="img-wrapper">
@@ -168,42 +166,45 @@
                 <img class="modal-content" id="fullImg">
                 <div id="caption"></div>
               </div>
-        
 
 
 
-              <div class="card" style="margin-bottom: 20px;">
+
+              <div class="card">
                 <p><strong>Navigation:</strong> <code
-                    style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Menu &rarr; Process &rarr; Opening Balance</code>
+                    class="manu-path">Menu &rarr; Process &rarr; Opening Balance</code>
                 </p>
               </div>
 
-              <div class="features-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 30px;">
-                <div class="feature-card glass-card animate-slide-up"
-                  style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
-                  <h4 style="color: #4d035e; margin-top: 0;">✨ New Opening Balance</h4>
-                  <ol style="font-size: 0.85em; padding-left: 18px;">
+
+
+              <h2 id="opening-balance-actions">Opening Balance Management</h2>
+              <div class="balance-grid">
+
+                <div class="balance-card glass-card animate-slide-up">
+                  <h4>✨ New Opening Balance</h4>
+                  <ol>
                     <li>Click the <strong>New Entry</strong> button.</li>
                     <li>Select Project, Project Type, and Branch.</li>
                     <li>Enter the <strong>Debit</strong> or <strong>Credit</strong> amount.</li>
                     <li>Click <strong>Save</strong> to insert.</li>
                   </ol>
                 </div>
-                <div class="feature-card glass-card animate-slide-up"
-                  style="border: 1px solid #e1e4e5; padding: 15px; border-radius: 8px; background: #fff;">
-                  <h4 style="color: #4d035e; margin-top: 0;">📝 Update & View</h4>
-                  <p style="font-size: 0.85em;">Use the <strong>Edit (📝)</strong> icon to modify amounts or the
-                    <strong>View (👁️)</strong> icon for a read-only detailed profile of the account balance.</p>
+
+                <div class="balance-card glass-card animate-slide-up">
+                  <h4>📝 Update & View</h4>
+                  <p>Use the <strong>Edit (📝)</strong> icon to modify amounts or the
+                    <strong>View (👁️)</strong> icon for a read-only detailed profile of the account balance.
+                  </p>
                 </div>
-                <div class="feature-card glass-card animate-slide-up"
-                  style="border: 1px solid #dc3545; padding: 15px; border-radius: 8px; background: #fff5f5;">
-                  <h4 style="color: #c53030; margin-top: 0;">🗑️ Delete Balance</h4>
-                  <p style="font-size: 0.85em; color: #9b2c2c;">Click the <strong>Trash</strong> icon and confirm the
-                    popup dialog to remove an entry.</p>
+
+                <div class="balance-card balance-card-danger glass-card animate-slide-up">
+                  <h4>🗑️ Delete Balance</h4>
+                  <p>Click the <strong>Trash</strong> icon and confirm the popup dialog to remove an entry.</p>
                 </div>
+
               </div>
-             
+
 
               <div class="image-container">
                 <figure class="custom-figure">
@@ -222,48 +223,47 @@
                 <img class="modal-content" id="fullImg">
                 <div id="caption"></div>
               </div>
-          
-
-              <hr style="margin: 40px 0; border-top: 1px dotted #e1e4e5;">
 
 
-              
-<!-- ========================================== -->
-    <!-- 6.2 Day Close -->
-<!-- =========================================== -->
-   
+              <hr class="all-hr">
 
 
-              <h2 id="day-close"
-                style="margin-top: 40px; color: #4d035e; border-bottom: 2px solid #f4e8f7; padding-bottom: 10px;">6.2
-                Day Close</h2>
+
+              <!-- ========================================== -->
+              <!-- 6.2 Day Close -->
+              <!-- =========================================== -->
+
+
+              <h2 id="day-close" class="process-header">6.2 Day Close</h2>
               <p>The Day Close process locks all financial activities for a specific date to ensure daily data
                 integrity.</p>
 
-              <div class="card"
-                style="border-left: 5px solid #4d035e; padding: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <p style="font-size: 0.9em;"><strong>Navigation Path:</strong> <code
-                    style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Process &rarr; Day End</code>
+
+
+              <div class="process-card">
+                <p class="nav-path-box">
+                  <strong>Navigation Path:</strong>
+                  <code class="nav-code">Process &rarr; Day End</code>
                 </p>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
-                  <ul style="font-size: 0.9em; line-height: 1.8;">
+
+                <div class="process-grid">
+                  <ul class="process-steps">
                     <li>Select the relevant <strong>Branch</strong> and <strong>Date Range</strong> from the filters.
                     </li>
                     <li>Click <strong>Search</strong> to display all day-end records for the selected period.</li>
                     <li>Review the grid to confirm <strong>SL, Branch, and Branch Date</strong>.</li>
-                    <li>Click the <span style="color: #4d035e; font-weight: bold;">Process</span> button to finalize and
-                      lock transactions.</li>
+                    <li>Click the <span class="process-highlight">Process</span> button to finalize and lock
+                      transactions.</li>
                   </ul>
-                  <div
-                    style="background: #f8f9fa; padding: 15px; border-radius: 6px; font-size: 0.85em; border: 1px solid #e1e4e5;">
-                    <h4 style="margin-top: 0; font-size: 1em; color: #c53030;">🗑️ Delete Option</h4>
+
+                  <div class="delete-info-box">
+                    <h4>🗑️ Delete Option</h4>
                     <p>Allows users to remove specific Day End records if adjustments are needed. Represented by the
                       trash can icon in the Action column.</p>
                   </div>
                 </div>
               </div>
 
-         
 
               <div class="image-container">
                 <figure class="custom-figure">
@@ -282,44 +282,42 @@
                 <img class="modal-content" id="fullImg">
                 <div id="caption"></div>
               </div>
-           
 
 
 
-<!-- ========================================== -->
-    <!-- 6.3 Month Close-->
-<!-- =========================================== -->
-   
 
+              <!-- ========================================== -->
+              <!-- 6.3 Month Close-->
+              <!-- =========================================== -->
 
-              <h2 id="month-close"
-                style="margin-top: 50px; color: #4d035e; border-bottom: 2px solid #f4e8f7; padding-bottom: 10px;">6.3
-                Month Close</h2>
+              <h2 id="month-close" class="process-header">6.3 Month Close</h2>
               <p>Month-end closing is required to generate finalized monthly Trial Balances and P&L Statements.</p>
 
-              <div class="card"
-                style="border-left: 5px solid #4d035e; padding: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <p style="font-size: 0.9em;"><strong>Navigation Path:</strong> <code
-                    style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Process &rarr; Month End</code>
+
+
+              <div class="process-card">
+                <p class="nav-path-box">
+                  <strong>Navigation Path:</strong>
+                  <code class="nav-code">Process &rarr; Month End</code>
                 </p>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
-                  <ul style="font-size: 0.9em; line-height: 1.8;">
+
+                <div class="process-grid">
+                  <ul class="process-steps">
                     <li>Choose the appropriate <strong>Branch</strong> and <strong>Date Range</strong> from the dropdown
                       filters.</li>
                     <li>Review records to confirm all entries for the month are finalized.</li>
-                    <li>Click the <span style="color: #4d035e; font-weight: bold;">Process</span> button to close the
-                      month.</li>
+                    <li>Click the <span class="process-highlight">Process</span> button to close the month.</li>
                   </ul>
-                  <div
-                    style="background: #f8f9fa; padding: 15px; border-radius: 6px; font-size: 0.85em; border: 1px solid #e1e4e5;">
-                    <h4 style="margin-top: 0; font-size: 1em; color: #c53030;">🗑️ Delete Option</h4>
+
+                  <div class="delete-info-box">
+                    <h4>🗑️ Delete Option</h4>
                     <p>Use the trash can icon in the Action column to remove Month End records if the month needs to be
                       re-opened for adjustments.</p>
                   </div>
                 </div>
               </div>
 
-         
+
 
               <div class="image-container">
                 <figure class="custom-figure">
@@ -340,39 +338,41 @@
               </div>
 
 
-              
-<!-- ========================================== -->
-    <!-- 6.4 Year Close start -->
-<!-- =========================================== -->
-   
 
-              <h2 id="year-close"
-                style="margin-top: 50px; color: #4d035e; border-bottom: 2px solid #f4e8f7; padding-bottom: 10px;">6.4
-                Year Close</h2>
+              <!-- ========================================== -->
+              <!-- 6.4 Year Close start -->
+              <!-- =========================================== -->
+
+
+
+              <h2 id="year-close" class="process-header">6.4 Year Close</h2>
               <p>The Year Close is the final process that prepares the system for the next financial year.</p>
 
-              <div class="card"
-                style="border-left: 5px solid #4d035e; padding: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <p style="font-size: 0.9em;"><strong>Navigation Path:</strong> <code
-                    style="background: #f4e8f7; color: #4d035e; padding: 2px 5px; border-radius: 4px;">Process &rarr; Year End</code>
+
+
+              <div class="process-card">
+                <p class="nav-path-box">
+                  <strong>Navigation Path:</strong>
+                  <code class="nav-code">Process &rarr; Year End</code>
                 </p>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
-                  <ul style="font-size: 0.9em; line-height: 1.8;">
+
+                <div class="process-grid">
+                  <ul class="process-steps">
                     <li>Select the <strong>Branch</strong> and <strong>Date Range</strong>.</li>
                     <li>Confirm that <strong>all financial modules</strong> (vouchers, reconciliations, etc.) are fully
                       closed.</li>
-                    <li>Click the <span style="color: #4d035e; font-weight: bold;">Process</span> button to execute the
-                      final closure.</li>
+                    <li>Click the <span class="process-highlight">Process</span> button to execute the final closure.
+                    </li>
                   </ul>
-                  <div
-                    style="background: #f8f9fa; padding: 15px; border-radius: 6px; font-size: 0.85em; border: 1px solid #e1e4e5;">
-                    <h4 style="margin-top: 0; font-size: 1em; color: #c53030;">🗑️ Delete Option</h4>
+
+                  <div class="delete-info-box">
+                    <h4>🗑️ Delete Option</h4>
                     <p>Allows users to remove specific Year End records via the trash can icon in the Action column.</p>
                   </div>
                 </div>
               </div>
 
-             
+
               <div class="image-container">
                 <figure class="custom-figure">
                   <div class="img-wrapper">
@@ -396,6 +396,124 @@
                 <p class="admonition-title">Critical Requirement</p>
                 <p>Closing operations are sequential. You cannot perform a <strong>Month Close</strong> until all days
                   within that month have been successfully <strong>Day Closed</strong>.</p>
+              </div>
+
+              <!-- ======================================= -->
+              <!-- day back script -->
+              <!-- ========================================= -->
+
+              <h2 id="day-back-script" class="process-header">6.5 Day Back Script</h2>
+              <p>The Day Back Script allows users to shift a specific branch's operating date backward for
+                administrative adjustments.</p>
+
+              <div class="process-card">
+                <p class="nav-path-box">
+                  <strong>Navigation Path:</strong>
+                  <code class="nav-code">Menu &rarr; Process &rarr; Day Back Script</code>
+                </p>
+
+                <div class="process-grid">
+                  <ul class="process-steps">
+                    <li>
+                      <strong>Select Branch and Back Type:</strong>
+                      Choose the target outlet (e.g., 0001 - Outlet 01) and select <strong>Day Back</strong> to shift
+                      the date.
+                    </li>
+                    <li>
+                      <strong>Choose the Date:</strong>
+                      Enter the "From" date to reset the branch (e.g., 16-07-2025). The system displays the current date
+                      for reference.
+                    </li>
+                    <li>
+                      <strong>Apply the Change:</strong>
+                      Click the <span class="process-highlight">Back to Date</span> button to confirm and execute the
+                      date reset.
+                    </li>
+                  </ul>
+
+                  <div class="delete-info-box">
+                    <h4>💡 Reference Info</h4>
+                    <p>Always verify the current branch date displayed by the system before executing the reset to avoid
+                      data overlaps.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="image-container">
+                <figure class="custom-figure">
+                  <div class="img-wrapper">
+                    <img src="../assets/images/process/day-back-script/index.JPG" alt="Accounting Dashboard"
+                      class="preview-img">
+                    <div class="img-overlay" onclick="openModal(this)">
+                      <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+                    </div>
+                  </div>
+                  <figcaption>Figure 6.5: Summary view of Day Back Script </figcaption>
+                </figure>
+              </div>
+              <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="fullImg">
+                <div id="caption"></div>
+              </div>
+              <!-- ============================== -->
+              <!-- Day End Script -->
+              <!-- ============================== -->
+
+              <h2 id="day-end-script" class="process-header">6.6 Day End Script</h2>
+              <p>The Day End Script is used to finalize daily operations, locking transactions to ensure data integrity
+                for the selected period.</p>
+
+              <div class="process-card">
+                <p class="nav-path-box">
+                  <strong>Navigation Path:</strong>
+                  <code class="nav-code">Menu &rarr; Process &rarr; Day End Script</code>
+                </p>
+
+                <div class="process-grid">
+                  <ul class="process-steps">
+                    <li>
+                      <strong>Select Branch and End Type:</strong>
+                      Choose the outlet you want to close (e.g., 0002 - Outlet 02) and select <strong>Day End</strong>
+                      to initiate the process.
+                    </li>
+                    <li>
+                      <strong>Set the Target Date:</strong>
+                      Enter the <strong>To Date</strong> you want to close up to (e.g., 17-07-2025). The system will
+                      display the current branch date for reference.
+                    </li>
+                    <li>
+                      <strong>Confirm the Day End:</strong>
+                      Click the <span class="process-highlight">End to Date</span> button. Once finalized, <strong>all
+                        transactions</strong> up to this date will be locked.
+                    </li>
+                  </ul>
+
+                  <div class="delete-info-box">
+                    <h4>🔒 Security Note</h4>
+                    <p>Performing a Day End prevents any further modifications to vouchers or sales for the closed
+                      period. Ensure all entries are audited before proceeding.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="image-container">
+                <figure class="custom-figure">
+                  <div class="img-wrapper">
+                    <img src="../assets/images/process/day-end-script/index.JPG" alt="Accounting Dashboard"
+                      class="preview-img">
+                    <div class="img-overlay" onclick="openModal(this)">
+                      <span class="view-btn"><i class="fa fa-search-plus"></i> View Full Image</span>
+                    </div>
+                  </div>
+                  <figcaption>Figure 6.6: Summary view of Day end script </figcaption>
+                </figure>
+              </div>
+              <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="fullImg">
+                <div id="caption"></div>
               </div>
 
 
@@ -428,35 +546,37 @@
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
 
-   
 
-      <span style="margin-left: 15px"><a href="../pages/reports.html" style="color: #f1eff1">Next &raquo;</a></span>
+
+      <span class="next-span""><a href=" ../pages/reports.html" class="nav-next">Next &raquo;</a></span>
 
     </span>
   </div>
- 
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop" class="top-button">
+    ↑
+  </button>
+
+  <script src="../assets/js/search_index-data.js"></script>
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
 
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/search/require.js"></script>
   <script src="../assets/js/search/search.js"></script>
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-        id="backToTop" 
-        style="position: fixed; bottom: 20px; right: 20px; display: none; font-size: large; 
-               background: #eaebee; color: rgb(253, 194, 1); border: none; 
-               padding: 10px 15px; border: 2px solid #eef11c; border-radius: 100px;  cursor: pointer; z-index: 1000;">
-    ↑ 
-</button>
 
-<script>
-window.onscroll = function() {
-    const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+
+
+  <script>
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         btn.style.display = "block";
-    } else {
+      } else {
         btn.style.display = "none";
-    }
-};
-</script>
+      }
+    };
+  </script>
 </body>
 
 </html>

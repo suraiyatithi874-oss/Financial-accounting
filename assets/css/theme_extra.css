@@ -92,8 +92,31 @@
     .wy-nav-side { height: 100%; }
 }
 
-.rst-versions { height: 45px; border-top: 0; }
 
+
+.rst-versions { 
+
+    cursor: pointer;
+
+    height: 45px; 
+    border-top: 0;
+color: whitesmoke;
+}
+
+
+/* Target both prev and next links specifically within the rst-versions container */
+.rst-current-version .nav-next a, 
+.rst-current-version a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Ensure they stay white even after being clicked (visited) or hovered */
+.rst-current-version a:visited, 
+.rst-current-version a:hover, 
+.rst-current-version a:active {
+    color: #ffffff !important;
+}
 /* Code wrapping */
 code {
     white-space: pre-wrap;
@@ -995,9 +1018,7 @@ figcaption:hover {
    margin-top: 30px;
 }
 
-.nav-next{
-   color: #f1eff1;
-}
+
 
 .next-span{
     margin-left: 15px;

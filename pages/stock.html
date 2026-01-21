@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../assets/css/highlight.css">
    <link rel="stylesheet" href="../assets/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/purchase.css">
+<link rel="stylesheet" href="../assets/css/stock.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -67,7 +67,7 @@
           </li>
         
         
-          <li class="toctree-l1"><a href="../pages/income.html">5. Accounts</a></li>
+          <li class="toctree-l1"><a href="../pages/account.html">5. Accounts</a></li>
           <li class="toctree-l1"><a href="../pages/process.html">6. Gold Module</a></li>
           <li class="toctree-l1"><a href="../pages/reports.html">7. Waiver or Gift or Damage</a></li>
           <li class="toctree-l1"><a href="../pages/reports.html">8. Product Management</a></li>
@@ -99,7 +99,7 @@
               <li>
                 <a href="../index.html" class="icon icon-home docs"> Docs</a> &raquo;
               </li>
-              <li class="docs-text">Dashboard</li>
+              <li class="docs-text">Stock Transfer</li>
 
               <li class="wy-breadcrumbs-aside ttl-logo-li">
                 <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" class="ttl">
@@ -115,178 +115,24 @@
     
 <div class="doc-container">
     <div class="section-wrapper">
-    <h2 class="text">3.Purchase Management</h2>
-        <h2 class="main-title">3.1 Purchase Order</h2>
+    <h2 class="text">4. Stock Transfer</h2>
+       
         
        
 
-   <!-- Purpose -->
-                <div class="info-box purpose">
-                    <span class="info-title">
-                        <i class="fas fa-bullseye"></i> Purpose
-                    </span>
-                    <p>
-                        To create, track, and manage purchase orders—ensuring timely procurement,
-                        supplier coordination, and effective inventory planning across branches.
-                    </p>
-                </div>
-
-                <!-- Navigation -->
-                <div class="nav-path">
-                    <i class="fas fa-map-signs"></i>
-                    <strong>Navigation:</strong>
-                    <span>
-                        Menu <i class="fas fa-chevron-right"></i>
-                        Purchase Management <i class="fas fa-chevron-right"></i>
-                        Purchase Orders
-                    </span>
-                </div>
-
-                <!-- How to Use -->
-                <div class="usage-section">
-                    <h4 class="sub-title">
-                        <i class="fas fa-list-check"></i> How to Use
-                    </h4>
-
-                    <div class="step">
-                        <span class="step-count">1</span>
-                        <p>Apply filters to locate specific purchase orders.</p>
-                    </div>
-
-                    <div class="step">
-                        <span class="step-count">2</span>
-                        <p>
-                            Click the <strong>Search</strong>
-                            <i class="fas fa-search action-icon"></i>
-                            button to load matching entries.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <span class="step-count">3</span>
-                        <p>Review the table, which includes:</p>
-                        <ul class="data-list">
-                            <li>Order No, Product Name, Quantity</li>
-                            <li>Supplier, Ordered Date, Delivery Date</li>
-                            <li>Status (Approved, Completed, Pending)</li>
-                        </ul>
-                    </div>
-
-                    <div class="step">
-                        <span class="step-count">4</span>
-                        <p>Use the <strong>Action icons</strong> beside each entry:</p>
-                        <ul class="action-list">
-                            <li>
-                                <i class="fas fa-edit edit"></i>
-                                <strong>Edit:</strong> Modify order details
-                            </li>
-                            <li>
-                                <i class="fas fa-eye view"></i>
-                                <strong>View:</strong> See full order information
-                            </li>
-                            <li>
-                                <i class="fas fa-trash delete"></i>
-                                <strong>Delete:</strong> Remove incorrect entries
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-    <!-- purchase entry -->
-
-    <div class="doc-container">
+ <div class="doc-container">
     <section class="section-wrapper">
-        <h2 class="main-title">3.1 Purchase Order Entry</h2>
-
-        <div class="nav-hint">
-            <div class="nav-label"><i class="fa fa-file-contract"></i> <strong>Navigation:</strong></div>
-            <div class="breadcrumb-trail">
-                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Orders</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link current-path">New Entry</span>
-            </div>
-        </div>
-
-        <div class="features-header">
-            <i class="fa fa-edit"></i>
-            <h3>Order Composition Steps</h3>
-        </div>
-
-        <div class="workflow-container">
-            <div class="workflow-step">
-                <div class="step-marker">1</div>
-                <div class="step-details">
-                    <h4>Order Details</h4>
-                    <ul class="phase-list">
-                        <li><strong>Order No:</strong> Auto-generated system ID or manual entry.</li>
-                        <li><strong>Supplier:</strong> Choose from the registered supplier database.</li>
-                        <li><strong>Delivery:</strong> Specify the <strong>Delivery Place</strong> and <strong>Expected Date</strong>.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="workflow-step">
-                <div class="step-marker">2</div>
-                <div class="step-details">
-                    <h4>Letter Body</h4>
-                    <p>Provide a <strong>Subject</strong> line and customize the <strong>Letter Body</strong>. This is the formal communication that will be sent to the supplier.</p>
-                </div>
-            </div>
-
-            <div class="workflow-step">
-                <div class="step-marker">3</div>
-                <div class="step-details">
-                    <h4>Product Selection</h4>
-                    <p>Filter items by Group, Category, or Model. Select the <strong>Product Name</strong> and enter the <strong>Quantity</strong>.</p>
-                    <div class="auto-calc-grid">
-                        <span><i class="fa fa-plus"></i> New Product Button</span>
-                        <span><i class="fa fa-copy"></i> Duplicate Product Button</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="workflow-step">
-                <div class="step-marker">4</div>
-                <div class="step-details">
-                    <h4>Terms & Conditions</h4>
-                    <div class="highlight-info-box">
-                        <i class="fa fa-gavel"></i> Review VAT, Payment Methods, Warranty, and Delivery Timelines.
-                    </div>
-                </div>
-            </div>
-
-            <div class="workflow-step finish">
-                <div class="step-marker"><i class="fa fa-check"></i></div>
-                <div class="step-details">
-                    <h4>Remarks & Signature</h4>
-                    <p>Add final <strong>Remarks</strong>. The <strong>Signature Block</strong> auto-fills based on your authorized user profile.</p>
-                    <button class="btn-save-print"><i class="fa fa-save"></i> SAVE PURCHASE ORDER</button>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-
-
-    <hr class="section-divider" />
-
-<div class="doc-container">
-    <section class="section-wrapper">
-        <h2 class="main-title">3.2 Purchase Receive</h2>
+        <h2 class="main-title">4.1 Requisition from Branch</h2>
 
         <div class="purpose-box pb-m">
             <div class="purpose-container">
                 <div class="purpose-icon">
-                    <i class="fa fa-info-circle"></i>
+                    <i class="fa fa-shuttle-van"></i>
                 </div>
                 <div class="purpose-content">
                     <h3 class="purpose-title">Purpose</h3>
                     <p class="purpose-description">
-                        To record and verify goods received against purchase orders—ensuring accurate inventory updates, supplier accountability, and financial tracking.
+                        The Stock Requisition interface manages and tracks requests for transferring products between branches. It ensures proper inventory distribution, monitors workflow statuses, and maintains accurate records for auditing.
                     </p>
                 </div>
             </div>
@@ -294,74 +140,76 @@
 
         <div class="nav-hint">
             <div class="nav-label">
-                <i class="fa fa-truck-loading"></i> <strong>Navigation:</strong>
+                <i class="fa fa-map-signs"></i> <strong>Navigation:</strong>
             </div>
             <div class="breadcrumb-trail">
                 <span class="path-link">Menu</span>
                 <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Management</span>
+                <span class="path-link">Stock Transfer</span>
                 <i class="fa fa-angle-right"></i>
-                <span class="path-link current-path">Purchase Receive</span>
+                <span class="path-link current-path">Requisition from Branch</span>
             </div>
         </div>
 
         <div class="usage-guide-container">
             <div class="features-header">
-                <i class="fa fa-clipboard-check"></i>
-                <h3>Managing Purchase Receipts</h3>
+                <i class="fa fa-filter"></i>
+                <h3>Managing Stock Requisitions</h3>
             </div>
 
             <div class="process-flow">
                 <div class="step-item">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <strong>Locate Records</strong>
-                        <p>Apply filters to locate specific purchase receipts within the system database.</p>
+                        <strong>Apply Filters</strong>
+                        <p>Refine your search by <strong>Region/Branch</strong>, <strong>Product Category</strong>, or <strong>Model</strong>. Click the <span class="badge-search">SEARCH</span> button to load the list.</p>
                     </div>
                 </div>
 
                 <div class="step-item">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <strong>Load Entries</strong>
-                        <p>Click the <span class="badge-search">SEARCH</span> button to load all matching entries into the data table.</p>
+                        <strong>Review Requisition Records</strong>
+                        <p>Scan the table for <strong>Requisition No</strong>, requesting branch, and <strong>Total Quantity</strong>. Check the current lifecycle stage in the <strong>Status</strong> column.</p>
                     </div>
                 </div>
 
                 <div class="step-item">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <strong>Review Receipt Data</strong>
-                        <p>Verify the table information, including <strong>Bill No</strong>, <strong>Order No</strong>, Supplier, Product Name, and <strong>Quantity Received</strong>.</p>
-                        <div class="highlight-info-box">
-                            <i class="fa fa-exclamation-circle"></i> Monitor the <strong>Status</strong> column (e.g., Incomplete) to track pending financial settlements.
-                        </div>
+                        <strong>Manage Status Lifecycle</strong>
+                        <p>Track progress through three main stages:</p>
+                        <ul class="status-indicator-list">
+                            <li><span class="status-dot unapproved"></span> <strong>Unapproved:</strong> Newly created, pending review.</li>
+                            <li><span class="status-dot approved"></span> <strong>Approved:</strong> Verified by the inventory team.</li>
+                            <li><span class="status-dot completed"></span> <strong>Completed:</strong> Stock has been fulfilled.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <div class="action-legend-box">
-                <h4 class="legend-title">Receipt Actions</h4>
+                <h4 class="legend-title">Requisition Actions</h4>
                 <div class="action-grid">
-                    <div class="action-card">
-                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
-                        <div class="action-info">
-                            <strong>Edit</strong>
-                            <span>Update receipt details</span>
-                        </div>
-                    </div>
                     <div class="action-card">
                         <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
                         <div class="action-info">
                             <strong>View</strong>
-                            <span>See full receipt info</span>
+                            <span>See full details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-check-circle"></i></div>
+                        <div class="action-info">
+                            <strong>Approve</strong>
+                            <span>Verify and move to Approved</span>
                         </div>
                     </div>
                     <div class="action-card">
                         <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
                         <div class="action-info">
                             <strong>Delete</strong>
-                            <span>Remove incorrect entries</span>
+                            <span>Remove unapproved requests</span>
                         </div>
                     </div>
                 </div>
@@ -371,80 +219,256 @@
 
     <div class="doc-container">
     <section class="section-wrapper">
-        <h2 class="main-title"> Purchase Receive Entry</h2>
+        <h2 class="main-title">4.1 Requisition Entry</h2>
 
         <div class="nav-hint">
-            <div class="nav-label"><i class="fa fa-file-import"></i> <strong>Navigation:</strong></div>
+            <div class="nav-label"><i class="fa fa-plus-square"></i> <strong>Navigation:</strong></div>
             <div class="breadcrumb-trail">
                 <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Receive</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Requisition from Branch</span> <i class="fa fa-angle-right"></i>
                 <span class="path-link current-path">New Entry</span>
             </div>
         </div>
 
         <div class="features-header">
-            <i class="fa fa-list-ul"></i>
-            <h3>Entry Steps</h3>
+            <i class="fa fa-file-signature"></i>
+            <h3>New Requisition Process</h3>
         </div>
 
         <div class="workflow-container">
             <div class="workflow-step">
                 <div class="step-marker">1</div>
                 <div class="step-details">
-                    <h4>Header Information</h4>
-                    <ul class="phase-list">
-                        <li><strong>Supplier:</strong> Select from the list or add a new supplier record.</li>
-                        <li><strong>Order No:</strong> Link to the corresponding Purchase Order.</li>
-                        <li><strong>Reference:</strong> Enter Invoice, LC, or Challan numbers.</li>
-                        <li><strong>Tracking:</strong> Input <strong>Bill No</strong> (Auto/Manual), Date, and <strong>Delivery No</strong>.</li>
-                    </ul>
+                    <h4>Requisition Source</h4>
+                    <p>In the <strong>Requisition From*</strong> field, choose the specific branch or outlet requesting the stock. This selection defines the destination for the inventory movement.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-marker">2</div>
                 <div class="step-details">
-                    <h4>Narration</h4>
-                    <p>Use the <strong>Enter Remarks</strong> field to document any specific notes, observations, or instructions regarding this shipment.</p>
+                    <h4>Apply Product Filters</h4>
+                    <p>Narrow down your product list using the dropdowns for Group, Category, Sub-Category, and Model. Click <span class="badge-search">SEARCH</span> to populate matching items.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-marker">3</div>
                 <div class="step-details">
-                    <h4>Financial Breakdown</h4>
-                    <p>Input <strong>Discount</strong> and <strong>VAT</strong> percentages. Enter the <strong>Paid Amount</strong> and select the <strong>Payment System</strong> (Cash/Bank/Mobile).</p>
+                    <h4>Add Products & Quantities</h4>
+                    <p>Select the <strong>Product Name*</strong> from the table dropdown and enter the <strong>Quantity*</strong> required.</p>
                     <div class="auto-calc-grid">
-                        <span><i class="fa fa-calculator"></i> T/A After Discount</span>
-                        <span><i class="fa fa-calculator"></i> Total Payable Amount</span>
-                        <span><i class="fa fa-calculator"></i> Due Amount</span>
+                        <span><i class="fa fa-plus-circle"></i> Use the <strong>+</strong> button for multiple products</span>
+                        <span><i class="fa fa-calculator"></i> Totals are calculated automatically</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">4</div>
+                <div class="step-details">
+                    <h4>Review & Remarks</h4>
+                    <p>Verify the <strong>TOTAL Quantity</strong> field at the bottom. Enter any notes (e.g., urgency or special instructions) in the <strong>Remarks</strong> field.</p>
                 </div>
             </div>
 
             <div class="workflow-step finish">
                 <div class="step-marker"><i class="fa fa-check"></i></div>
                 <div class="step-details">
-                    <h4>Finalize & Complete</h4>
-                    <p>Conduct a final review of all financial and tracking fields for accuracy.</p>
-                    <button class="btn-save-print"><i class="fa fa-save"></i> SAVE RECEIVE ENTRY</button>
+                    <h4>Finalize the Entry</h4>
+                    <p>Upon saving, the system generates a unique <strong>Requisition No</strong> (e.g., REQ000000001).</p>
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-arrow-left"></i> BACK</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+</div>
 
 </div>
-</div>
+
+    <!-- purchase entry -->
+
+
+
+    <hr class="section-divider" />
+
 
 
 
 
 <!-- ===========================
- 3.3 purchase receive
+ 4.2 Issues Branch
  =============================== -->
 
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">4.2 Issue to Branch</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-dolly-flatbed"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface manages and records the transfer of stock items from the warehouse or Head Office (HO) to various branches. It ensures accurate tracking of products and quantities while maintaining proper documentation for auditing and branch supply management.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-shipping-fast"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Issue to Branch</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-search-location"></i>
+                <h3>Managing Transfer Records</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Refine Search with Filters</strong>
+                        <p>Use the dropdowns to filter by <strong>Region, Area, or Branch To</strong>. You can also narrow results by product attributes like <strong>Brand, Model, Color, or Size</strong>.</p>
+                        <div class="highlight-info-box">
+                            <i class="fa fa-keyboard"></i> Use the search bar for specific keywords, products, or Bill Numbers.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Execute Search</strong>
+                        <p>Click the <span class="badge-search">SEARCH</span> button to load matching transfer records into the table.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <strong>Analyze Transfer Table</strong>
+                        <p>Review columns for <strong>Bill No</strong>, <strong>Requisition No</strong>, and the <strong>Total Amount</strong>. Each row confirms a supply movement from the HO/Warehouse to a branch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Transfer Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>Open detailed transfer info</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info">
+                            <strong>Edit</strong>
+                            <span>Update transfer details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove erroneous entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">4.2 Issue to Branch Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-share-square"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Issue to Branch</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-boxes"></i>
+            <h3>Stock Issuance Process</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Destination Branch</h4>
+                    <p>In the <strong>Issue To (Branch)</strong> field, select the receiving branch or outlet. This ensures the inventory is correctly deducted from the source and added to the correct destination.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Link Requisition (Optional)</h4>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-link"></i> Select a <strong>Requisition No</strong> from the dropdown to link this transfer to an existing branch request.
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Add Product Details</h4>
+                    <p>Select the <strong>Product Name</strong> and enter the <strong>Quantity</strong> for transfer. Use the <i class="fa fa-plus-circle"></i> <strong>Add Row (+)</strong> button for multi-product shipments.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">4</div>
+                <div class="step-details">
+                    <h4>Review & Remarks</h4>
+                    <p>Verify the <strong>TOTAL Quantity</strong> at the bottom. Use the <strong>Remarks</strong> field for notes such as carrier details, urgency, or specific instructions.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize Entry</h4>
+                    <p>Upon clicking save, the system generates a unique <strong>Bill No</strong> (e.g., IS000006266) to track the issue.</p>
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-arrow-left"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</div>
 
 <!-- ============================
  3.3 purchase
@@ -625,61 +649,146 @@
 </div>
 
 <!-- =============================
- purchase return
+ 4.3 issues  return to warehouse
  =================================== -->
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">4.3 Issue Return to Warehouse</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-reply-all"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface records and manages inventory transfers from branches back to the warehouse or head office. It ensures proper tracking of quantities during returns, maintains accurate stock levels across locations, and provides documentation for auditing and reporting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-history"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Issue Return to Warehouse</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-clipboard-list"></i>
+                <h3>Managing Return Records</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Apply Granular Filters</strong>
+                        <p>Utilize the dropdowns to filter by <strong>Branch From</strong> or specific product attributes like <strong>Color, Size, and Model</strong>. This is essential for locating specific return batches.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Populate Table</strong>
+                        <p>Click the <span class="badge-search">SEARCH</span> button. The table will display details including <strong>Bill No</strong>, <strong>Branch From</strong>, <strong>Quantity</strong>, and <strong>Total Amount</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <strong>Verify Row Data</strong>
+                        <p>Review each row to confirm the transfer transaction details. Each entry represents a formal stock reversal from a branch to the central hub.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Return Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>Full return summary</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info">
+                            <strong>Edit</strong>
+                            <span>Modify return details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove erroneous returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 <div class="doc-container">
     <section class="section-wrapper">
-        <h2 class="main-title">3.4 Purchase Return Entry</h2>
+        <h2 class="main-title">4.3 Issue Return Entry</h2>
 
         <div class="nav-hint">
-            <div class="nav-label"><i class="fa fa-undo-alt"></i> <strong>Navigation:</strong></div>
+            <div class="nav-label"><i class="fa fa-arrow-circle-left"></i> <strong>Navigation:</strong></div>
             <div class="breadcrumb-trail">
                 <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Return</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Issue Return to Warehouse</span> <i class="fa fa-angle-right"></i>
                 <span class="path-link current-path">New Entry</span>
             </div>
         </div>
 
         <div class="features-header">
-            <i class="fa fa-file-invoice-dollar"></i>
-            <h3>Return Process Steps</h3>
+            <i class="fa fa-file-export"></i>
+            <h3>Return Entry Process</h3>
         </div>
 
         <div class="workflow-container">
             <div class="workflow-step">
                 <div class="step-marker">1</div>
                 <div class="step-details">
-                    <h4>Select Supplier & Filters</h4>
-                    <p>Identify the origin of the goods and the specific item details:</p>
-                    <ul class="phase-list">
-                        <li><strong>Supplier:</strong> Choose the supplier from the dropdown list.</li>
-                        <li><strong>Product Filters:</strong> Narrow down items by Group, Category, Sub-Category, or Model.</li>
-                        <li><strong>Tracking:</strong> Review the auto-generated <strong>Bill No</strong> and adjust the <strong>Return Date</strong> if needed.</li>
-                    </ul>
+                    <h4>Identify Source Branch</h4>
+                    <p>In the <strong>Branch From*</strong> field, choose the branch or outlet that is returning stock. This is critical for the system to credit the correct inventory location.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-marker">2</div>
                 <div class="step-details">
-                    <h4>Add Product Information</h4>
-                    <p>Select the <strong>Product Name</strong> and enter the <strong>Quantity</strong> and <strong>Cost Price</strong>.</p>
-                    <div class="auto-calc-grid">
-                        <span><i class="fa fa-calculator"></i> Total: Quantity × Cost Price</span>
+                    <h4>Product Details</h4>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-search"></i> <strong>Search Tip:</strong> Start typing at least <strong>3 characters</strong> in the Product Name field to search and select items.
                     </div>
+                    <p style="margin-top: 10px;">Enter the <strong>Quantity*</strong> to be returned. Use the <i class="fa fa-plus-circle"></i> <strong>(+)</strong> button to include multiple products in one bill.</p>
                 </div>
             </div>
 
             <div class="workflow-step">
                 <div class="step-marker">3</div>
                 <div class="step-details">
-                    <h4>Review & Adjustments</h4>
-                    <p>Confirm the <strong>Total Amount</strong> and <strong>Total Payable Amount</strong>. Select the <strong>Return Type</strong>:</p>
-                    <div class="highlight-info-box">
-                        <i class="fa fa-exchange-alt"></i> <strong>Return vs. Return Adjustment:</strong> Choose based on whether it is a direct return or an adjustment against previous balances.
-                    </div>
+                    <h4>Review Totals & Notes</h4>
+                    <p>Check the <strong>TOTAL Quantity</strong> field at the footer. Use the <strong>Remarks</strong> field to document the reason for the return (e.g., damaged goods, overstock, or seasonal return).</p>
                 </div>
             </div>
 
@@ -687,7 +796,7 @@
                 <div class="step-marker"><i class="fa fa-check"></i></div>
                 <div class="step-details">
                     <h4>Finalize the Entry</h4>
-                    <p>Commit the changes to the system or cancel the action.</p>
+                    <p>Upon saving, the system generates an <strong>Issue Return Bill No</strong> (e.g., IR000000001).</p>
                     <div class="btn-group-row">
                         <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
                         <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
@@ -696,36 +805,139 @@
             </div>
         </div>
     </section>
+</div>
+
+</div>
+
+
+
+<!-- ==========================
+ 4.4  Branch Transfer
+ ============================ -->
+
+
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">4.4 Branch to Branch Transfer</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-exchange-alt"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface manages and records inventory movement directly between branches or outlets. It ensures accurate tracking of products and quantities while documenting the transfer status to maintain inventory control and auditing standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sync-alt"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Branch to Branch Transfer</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-truck-moving"></i>
+                <h3>Managing Inter-Branch Transfers</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Apply Location Filters</strong>
+                        <p>Use the <strong>Branch From</strong> and <strong>Branch To</strong> dropdowns to narrow results by specific transfer routes. You can also filter by date and product attributes.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Review Transfer Table</strong>
+                        <p>Click <span class="badge-search">SEARCH</span> to view records. The table displays <strong>Transfer From/To</strong> locations and the <strong>Total Quantity</strong> shipped.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <strong>Monitor Receive Status</strong>
+                        <div class="highlight-info-box">
+                            <i class="fa fa-info-circle"></i> <strong>Status Tracking:</strong> Identify if a transfer is <strong>Pending</strong> (shipped but not acknowledged) or <strong>Received</strong> (confirmed by the destination branch).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Transfer Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>See full transfer details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info">
+                            <strong>Edit</strong>
+                            <span>Update transfer data</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove erroneous entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="doc-container">
     <section class="section-wrapper">
-        <h2 class="main-title">3.4 Purchase Return Entry</h2>
+        <h2 class="main-title">4.4 Branch to Branch Entry</h2>
 
         <div class="nav-hint">
-            <div class="nav-label"><i class="fa fa-undo-alt"></i> <strong>Navigation:</strong></div>
+            <div class="nav-label"><i class="fa fa-exchange-alt"></i> <strong>Navigation:</strong></div>
             <div class="breadcrumb-trail">
                 <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
-                <span class="path-link">Purchase Return</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Branch to Branch Transfer</span> <i class="fa fa-angle-right"></i>
                 <span class="path-link current-path">New Entry</span>
             </div>
         </div>
 
         <div class="features-header">
-            <i class="fa fa-file-invoice-dollar"></i>
-            <h3>Return Process Workflow</h3>
+            <i class="fa fa-dolly"></i>
+            <h3>Inter-Branch Transfer Process</h3>
         </div>
 
         <div class="workflow-container">
             <div class="workflow-step">
                 <div class="step-marker">1</div>
                 <div class="step-details">
-                    <h4>Select Supplier & Product Details</h4>
-                    <p>Identify the origin of the return and filter the catalog:</p>
+                    <h4>Define Transfer Route</h4>
                     <ul class="phase-list">
-                        <li><strong>Supplier:</strong> Select the supplier from the dropdown.</li>
-                        <li><strong>Categorization:</strong> Narrow products by Group, Category, Sub-Category, or Model.</li>
-                        <li><strong>Record Info:</strong> Note the <strong>Bill No</strong> (e.g., PR000000129) and verify the <strong>Return Date</strong>.</li>
+                        <li><strong>Branch From:</strong> Choose the source branch sending the stock.</li>
+                        <li><strong>Transfer To (Branch):</strong> Select the destination outlet receiving the items.</li>
                     </ul>
                 </div>
             </div>
@@ -733,15 +945,10 @@
             <div class="workflow-step">
                 <div class="step-marker">2</div>
                 <div class="step-details">
-                    <h4>Add Product Information</h4>
-                    <p>Input the specific item data for the return:</p>
-                    <ul class="phase-list">
-                        <li><strong>Product Name:</strong> Select the item to be returned.</li>
-                        <li><strong>Quantity:</strong> Enter the number of units.</li>
-                        <li><strong>Cost Price:</strong> Input the unit cost price.</li>
-                    </ul>
-                    <div class="auto-calc-grid">
-                        <span><i class="fa fa-calculator"></i> Total: Automatically calculated (Qty × Cost)</span>
+                    <h4>Enter Order Information</h4>
+                    <p>Input the <strong>Order No</strong> if this transfer is linked to a specific requisition. The system automatically generates the <strong>Bill No</strong> (e.g., TRA000000001).</p>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-calendar-alt"></i> The <strong>Transfer Date</strong> defaults to today but can be manually adjusted for back-dated entries.
                     </div>
                 </div>
             </div>
@@ -749,14 +956,10 @@
             <div class="workflow-step">
                 <div class="step-marker">3</div>
                 <div class="step-details">
-                    <h4>Review Totals & Type</h4>
-                    <p>Verify the financial summaries before finalizing:</p>
-                    <div class="summary-table">
-                        <div class="s-row"><span>Total Amount</span><strong>Sum of Entries</strong></div>
-                        <div class="s-row total"><span>Total Payable</span><strong>Final Amount</strong></div>
-                    </div>
-                    <div class="highlight-info-box" style="margin-top:10px;">
-                        <i class="fa fa-exchange-alt"></i> <strong>Return Type:</strong> Choose <em>Return</em> (direct) or <em>Return Adjustment</em> (against previous balance).
+                    <h4>Product Details</h4>
+                    <p>Search for products by typing at least <strong>3 characters</strong>. Enter the <strong>Quantity</strong> for each item.</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-plus-circle"></i> Use the <strong>+</strong> button to add multiple products</span>
                     </div>
                 </div>
             </div>
@@ -764,19 +967,12 @@
             <div class="workflow-step finish">
                 <div class="step-marker"><i class="fa fa-check"></i></div>
                 <div class="step-details">
-                    <h4>Finalize the Entry</h4>
-                    <p>Commit the transaction or cancel the changes.</p>
-                   
-
+                    <h4>Review Totals & Save</h4>
+                    <p>Verify the <strong>TOTAL Quantity</strong> field. Click save to record the transaction and update stock levels across both locations.</p>
                     <div class="btn-group-row">
-    <button class="btn-save-print">
-        <i class="fa fa-save"></i> SAVE
-    </button>
-    
-    <button class="btn-back">
-        <i class="fa fa-arrow-left"></i> BACK
-    </button>
-</div>
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -784,7 +980,110 @@
 </div>
 </div>
 
+<!-- ==========================
+ 4.5 transfer-
+ ======================== -->
 
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">4.5 Transfer Receive</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-hand-holding-box"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface allows branches to manage and confirm the receipt of inventory items transferred from other locations. It ensures accountability by tracking "Pending" vs "Received" statuses, maintaining accurate real-time stock levels across the entire organization.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-check-double"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Stock Transfer</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Transfer Receive</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-warehouse"></i>
+                <h3>Receiving Stock & Confirmation</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Filter Incoming Stock</strong>
+                        <p>Use the <strong>Branch</strong> and <strong>Reporting Date</strong> filters to find transfers destined for your location. Click <span class="badge-search">SEARCH</span> to load the incoming list.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Check Receive Status</strong>
+                        <p>Identify the current state of each bill in the table:</p>
+                        <ul class="status-indicator-list">
+                            <li><span class="status-dot unapproved"></span> <strong>Pending:</strong> Initiated by the sender; waiting for your confirmation.</li>
+                            <li><span class="status-dot completed"></span> <strong>Received:</strong> Already acknowledged and added to your local stock.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <strong>Confirm Receipt</strong>
+                        <p>Use the <strong>Action</strong> column to open the entry. Verifying the quantity and saving will update your branch inventory immediately.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Receive Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>See full transfer details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-check-circle"></i></div>
+                        <div class="action-info">
+                            <strong>Confirm</strong>
+                            <span>Acknowledge & receive stock</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove erroneous records</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
 
 </div>
 </div>

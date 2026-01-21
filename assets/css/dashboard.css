@@ -1,5 +1,5 @@
 /* Container & Main Titles */
-.doc-container { padding: 20px; max-width: 1000px; margin: auto; font-family: 'Segoe UI', sans-serif; }
+.doc-container { max-width: 1000px; margin: auto; font-family: 'Segoe UI', sans-serif; }
 .main-title { color: #2c3e50; font-size: 1.5rem; margin-bottom: 20px; margin-top: 20px; }
 
 /* Purpose Box Styles */

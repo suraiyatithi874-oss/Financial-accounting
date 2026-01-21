@@ -1,5 +1,5 @@
 /* Container & Main Titles */
-.doc-container { padding: 20px; max-width: 1000px; margin: auto; font-family: 'Segoe UI', sans-serif; }
+.doc-container {  max-width: 1000px; margin: auto; font-family: 'Segoe UI', sans-serif; }
 .main-title { color: #2c3e50; font-size: 1.5rem; margin-bottom: 20px; margin-top: 20px; }
 
 /* Purpose Box Styles */
@@ -648,3 +648,58 @@
 /* Reusing your existing workflow and auto-calc-grid styles from the Retail Sales portion */
 
 
+/* Container for alignment */
+.btn-group-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* Common button base */
+.btn-save-print, .btn-back {
+    height: 42px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+/* Primary SAVE Button - Solid & Strong */
+.btn-save-print {
+    background-color: #1a73e8; /* Professional Blue */
+    color: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(26, 115, 232, 0.2);
+}
+
+.btn-save-print:hover {
+    background-color: #1557b0;
+    box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+}
+
+/* NEW SECONDARY BACK BUTTON - Clean Outline Style */
+.btn-back {
+    background-color: transparent;
+    color: #5f6368; /* Slate Grey Text */
+    border: 1.5px solid #dadce0; /* Light Border */
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background-color: #f8f9fa; /* Very Light Grey Background */
+    border-color: #bdc1c6;
+    color: #202124; /* Darker text on hover */
+}
+
+/* Icon Sizing */
+.btn-save-print i, .btn-back i {
+    font-size: 15px;
+}

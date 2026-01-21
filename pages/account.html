@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>5. Accounts - Point of Sales System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+   <link rel="stylesheet" href="../assets/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <!-- SIDEBAR -->
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home">
+          POINT OF SALES
+        </a>
+
+        <div class="user-manual-label">
+          User Manual
+        </div>
+        <div role="search">
+          <form class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search documentation">
+          </form>
+        </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+        <ul class="current">
+
+          <li class="toctree-l1">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li class="toctree-l1">
+            <a href="../pages/overview.html"> Overview</a>
+          </li>
+
+          <li class="toctree-l1"><a href="../pages/income.html">1.  Dashboard</a></li>
+        
+
+          <li class="toctree-l1"><a href="../pages/sales.html">2. Sales & Invoice</a></li>
+          <li class="toctree-l1"><a href="../pages/generate-vouchar.html">3. Purchase Management</a></li>
+          <li class="toctree-l1"><a href="../pages/bank.html">4. Stock Transfer</a></li>
+            <li class="toctree-l1 current">
+            <a class="current" href=" ">5.  Accounts</a>
+            <ul>
+              <li><a href="#prerequisites">5.1  Accounts Head</a></li>
+              <li><a href="#navigation-overview">5.2 Daily Receive</a></li>
+              <li><a href="#first-login">5.3  Daily Expense</a></li>
+              <li><a href="#initial-setup">5.4 Oppening Balance</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="toctree-l1"><a href="../pages/process.html">6. Gold Module</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">7. Waiver or Gift or Damage</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">8. Product Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">9. BarCode Print</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">10. Discount Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">11. Customer Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">12. Supplier Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">13. Day close</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">14. Stock Audit</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">15. Necessity file</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">16. All Reports</a></li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+          <div role="navigation" aria-label="breadcrumbs navigation" class="navigation-pad">
+            <ul class="wy-breadcrumbs square">
+              <li>
+                <a href="../index.html" class="icon icon-home docs"> Docs</a> &raquo;
+              </li>
+              <li class="docs-text">Account</li>
+
+              <li class="wy-breadcrumbs-aside ttl-logo-li">
+                <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" class="ttl">
+                  <div class="logo-container logo">
+                    <img src="../assets/images/others/logo-of-ttl.jpg" class="logo-img" alt="TTL Logo">
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <hr class="all-hr">
+          </div>
+
+    
+<div class="doc-container">
+    <div class="section-wrapper">
+    <h2 class="text">Accounts</h2>
+        <h2 class="main-title">5.1 Accounts Head</h2>
+        
+        <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.1 Investment Head</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-chart-line"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface manages and organizes investment categories (heads) within the system. It allows for structured record-keeping with unique codes, ensuring accurate classification for financial reporting and investment analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sitemap"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Investment Head</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-list-ul"></i>
+                <h3>Managing Investment Heads</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>View & Filter</strong>
+                        <p>The table displays <strong>Head Name</strong> and <strong>Code</strong>. Use the search bar to find specific heads instantly. Adjust entries-per-page to view more records at once.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Available Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>See full details</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Update name/code</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove entry</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon" style="background:#f39c12; color:white;"><i class="fa fa-bullhorn"></i></div>
+                        <div class="action-info"><strong>Publish</strong><span>Approve/Confirm head</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="features-header">
+            <i class="fa fa-plus-circle"></i>
+            <h3>Creating a New Investment Head</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Head Identification</h4>
+                    <ul class="phase-list">
+                        <li><strong>Head Name:</strong> Enter a descriptive name (e.g., Fixed Assets, Equity).</li>
+                        <li><strong>Head Code:</strong> Assign a unique alphanumeric code for reporting references.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-save"></i></div>
+                <div class="step-details">
+                    <h4>Finalize Entry</h4>
+                    <p>Review the name and code accuracy before saving.</p>
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ===============================
+ 5.1.2
+ ============================= -->
+
+
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.2 Receive Heads (Income)</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-hand-holding-usd"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface defines and manages income categories (heads) within the accounting system. By organizing sources such as Product Sales, Service Income, and Commissions under unique codes, the system ensures precise financial tracking and revenue analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sitemap"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Receive Heads</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-search-dollar"></i>
+                <h3>Managing Income Heads</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Search & Filter</strong>
+                        <p>Locate specific income categories instantly using the search bar. You can search by <strong>Head Name</strong> (e.g., Rental Income) or <strong>Code</strong>. Adjust the display limit to manage large lists efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Create New Entry</strong>
+                        <p>Click the <span class="badge-add"><i class="fa fa-plus"></i> NEW</span> button. Provide a descriptive <strong>Head Name</strong> and assign a unique <strong>Code</strong> to ensure no overlap in financial reporting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Receive Head Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>Details of the head</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Modify name/code</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove entry</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon" style="background:#8e44ad; color:white;"><i class="fa fa-toggle-on"></i></div>
+                        <div class="action-info"><strong>Publish</strong><span>Toggle Active/Inactive</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.2 Receive Heads Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Receive Heads</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-invoice-dollar"></i>
+            <h3>Creating a New Income Source</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Head Identification</h4>
+                    <p>Provide the basic identifiers for the new income category:</p>
+                    <ul class="phase-list">
+                        <li><strong>Head Name:</strong> Type a descriptive name for the income source (e.g., "Product Sales" or "Service Income").</li>
+                        <li><strong>Head Code:</strong> Assign a unique numeric or alphanumeric code. This code will be used to reference this specific head in financial statements and audits.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize & Record</h4>
+                    <p>Review the name and code for accuracy. Errors in the Head Code can lead to inconsistencies in ledger reporting.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+
+<!-- =============================
+ 5.1.3
+ =============================== -->
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.3 Expense Heads</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-file-invoice"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface defines and manages expense categories (heads) within the accounting system. Each head represents a type of expenditure, such as Office Maintenance, IT Costs, or Rent. Proper organization under unique codes ensures accurate financial tracking and reliable reporting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sitemap"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Expense Heads</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-search-minus"></i>
+                <h3>Managing Expense Categories</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Review Existing Records</strong>
+                        <p>The table lists all current expense categories. Each entry displays the <strong>Head Name</strong> (e.g., Marketing, Showroom Rent) and its corresponding <strong>Code</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Search & Filter</strong>
+                        <p>Quickly locate specific heads using the search bar at the top of the table. You can search by either name or unique numeric code. Use the "Show Entries" dropdown to expand your view.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Expense Head Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>Details of the head</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Update name/code</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove entry</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon" style="background:#e67e22; color:white;"><i class="fa fa-power-off"></i></div>
+                        <div class="action-info"><strong>Status</strong><span>Publish or Unpublish</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.3 Expense Heads Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Expense Heads</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-calculator"></i>
+            <h3>Setup New Expense Category</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Expense Identification</h4>
+                    <p>Provide the basic details required to categorize your expenditures:</p>
+                    <ul class="phase-list">
+                        <li><strong>Head Name:</strong> Type the name of the expense (e.g., <strong>"Office Maintenance," "Marketing,"</strong> or <strong>"Utilities"</strong>).</li>
+                        <li><strong>Head Code:</strong> Assign a unique numeric or alphanumeric code. This code serves as the primary reference for this category in your financial audits.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-save"></i></div>
+                <div class="step-details">
+                    <h4>Review & Finalize</h4>
+                    <p>Ensure the code assigned does not conflict with existing heads. Once saved, this category will be available across the accounting module for ledger entries.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+
+
+<!-- ============================
+ 5.1.4
+ ============================== -->
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.4 Withdraw Heads</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-external-link-alt"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface is used to define and manage various withdrawal categories within the accounting system. Each head represents a specific type of outflow—such as cash withdrawals, bank transfers, or owner drawings. Organizing these under unique codes ensures reliable reporting and accurate financial classification.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sitemap"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Withdraw Heads</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-money-bill-wave"></i>
+                <h3>Managing Withdraw Categories</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Search & Filter</strong>
+                        <p>Quickly find a specific category by typing the name or code into the search bar. This is helpful for managing diverse withdrawal types like <strong>Bank Transfers</strong> or <strong>Expense Payouts</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Adjust Display</strong>
+                        <p>Use the "Show entries" dropdown to change the number of records visible on the screen at once, allowing for faster bulk review.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Withdraw Head Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>Details of the head</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Update name/code</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove entry</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon" style="background:#2c3e50; color:white;"><i class="fa fa-check-square"></i></div>
+                        <div class="action-info"><strong>Status</strong><span>Publish or Unpublish</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.1.4 Withdraw Heads Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts Head</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Withdraw Heads</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-money-check-alt"></i>
+            <h3>Setup New Withdrawal Category</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Head Identification</h4>
+                    <p>Enter the primary details for the withdrawal category to ensure it is tracked correctly in your ledger:</p>
+                    <ul class="phase-list">
+                        <li><strong>Head Name:</strong> Type a descriptive name (e.g., <strong>"Cash Withdrawal," "Bank Transfer,"</strong> or <strong>"Expense Payout"</strong>).</li>
+                        <li><strong>Head Code:</strong> Assign a unique numeric or alphanumeric code. This is essential for referencing these withdrawals in financial statements and audit reports.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-save"></i></div>
+                <div class="step-details">
+                    <h4>Finalize & Record</h4>
+                    <p>Double-check that the code is unique before saving. Once recorded, this category will be available for all future accounting transactions.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+    <hr class="section-divider" />
+
+<!-- ============================
+ 5.2 Daily Receive
+ ================================ -->
+
+
+
+ <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.2 Daily Receive</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-calendar-check"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface is designed to track and manage daily cash or digital receipts across various branches. It provides a consolidated view of incoming funds linked to unique receipt numbers, ensuring accurate financial recording and simplifying the daily reconciliation process.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-route"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Daily Receive</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-cash-register"></i>
+                <h3>Daily Receipt Management</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Apply Filters</strong>
+                        <p>Select the <strong>Branch</strong> to isolate receipts for a specific outlet. Define the <strong>Receive Date Range</strong> to view transactions for a single day or a specific period.</p>
+                        <div class="highlight-info-box">
+                            <i class="fa fa-filter"></i> Click the <span class="badge-search">SEARCH</span> button to refresh the table data.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Analyze Records</strong>
+                        <p>The table displays the receipt number, date, amount, and source. Use this view to verify that the physical cash or bank deposits match the system records.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Receipt Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>Full receipt breakdown</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Correct entry details</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove duplicate entries</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.2 Daily Receive Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Daily Receive</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-signature"></i>
+            <h3>New Receipt Entry Process</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Basic Receipt Details</h4>
+                    <p>Identify the location and timing of the transaction:</p>
+                    <ul class="phase-list">
+                        <li><strong>Branch:</strong> Select the specific outlet recording the receipt.</li>
+                        <li><strong>Receive No:</strong> Automatically generated (e.g., <i>RCV00010100003</i>).</li>
+                        <li><strong>Receive Date:</strong> Confirm the actual date the funds were collected.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Transaction Breakdown</h4>
+                    <p>Enter individual line items in the transaction table:</p>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-table"></i> 
+                        <strong>Head Name:</strong> Select the Income Category.<br>
+                        <strong>Payment Account:</strong> Choose <strong>Cash</strong> or <strong>Bank</strong>.<br>
+                        <strong>Local Narration:</strong> Specific note for this line item.
+                    </div>
+                    <p style="margin-top:10px;">Use the <i class="fa fa-plus-circle"></i> <strong>Add Row</strong> button for receipts involving multiple income heads.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Review & Global Narration</h4>
+                    <p>Verify the <strong>Total Amount</strong> matches your physical collection. Add a summary in the <strong>Global Narration Details</strong> box for high-level reporting (e.g., "Total collections for Saturday morning shift").</p>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize & Save</h4>
+                    <p>Once saved, the entry updates the ledger and becomes available in the Daily Receive list for reconciliation.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+  <hr class="section-divider" />
+
+
+<!-- =========================
+ 5.3 Daily expense
+ ============================== -->
+
+
+
+
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.3 Daily Expense</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-receipt"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface is designed to record and manage daily expenditure across different branches. Each transaction is linked to a unique expense number, ensuring branch accountability and accurate reconciliation of cash and bank outflows for financial audits.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-paper-plane"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Daily Expense</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-wallet"></i>
+                <h3>Expense Tracking & Auditing</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Filter Expenditures</strong>
+                        <p>Select the <strong>Branch</strong> and <strong>Expense Date Range</strong>. This allows you to verify spending for a specific day or analyze costs over a set period. Click <span class="badge-search">SEARCH</span> to load the records.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Reconcile Outflows</strong>
+                        <p>Verify the <strong>Amount</strong> column against physical receipts or bank statements. This step is critical for ensuring that branch-level spending matches corporate financial records.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Expense Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>See expense breakdown</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Correct amount/details</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove error entries</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon" style="background:#34495e; color:white;"><i class="fa fa-bullhorn"></i></div>
+                        <div class="action-info"><strong>Status</strong><span>Publish or Unpublish</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title"> Daily Expense Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Daily Expense</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-invoice-dollar"></i>
+            <h3>Recording New Expenditures</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Basic Expense Details</h4>
+                    <p>Set the location and date for the transaction:</p>
+                    <ul class="phase-list">
+                        <li><strong>Branch:</strong> Select the branch or outlet where the expense occurred.</li>
+                        <li><strong>Expense No:</strong> System-generated for unique tracking (e.g., <i>EX00000100001</i>).</li>
+                        <li><strong>Expense Date:</strong> Confirm the date the payment was made.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Expense Details Breakdown</h4>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-list-ol"></i> 
+                        <strong>Head Name*:</strong> Choose the category (Marketing, Utilities, etc.).<br>
+                        <strong>Payment Account:</strong> Source of funds (Cash or Bank).<br>
+                        <strong>Local Narration:</strong> Specific details for this line item.<br>
+                        <strong>Amount*:</strong> Numeric value of the expense.
+                    </div>
+                    <p style="margin-top:10px;">Click the <i class="fa fa-plus-circle"></i> <strong>Add Row</strong> button if a single payment covers multiple expense heads.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Totals & Global Narration</h4>
+                    <p>Verify the <strong>Total Amount</strong> at the bottom of the table. Use the <strong>Global Narration Details</strong> box to provide an overall summary for the accounting team.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Confirm Entry</h4>
+                    <p>Saving the entry updates the branch's ledger and reflects in the Daily Expense list immediately.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- =============================
+  5.4 Opening Balance
+  =============================== -->
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">5.4 Opening Balance</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-flag-checkered"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This interface records the initial financial position (cash on hand, bank balances, etc.) for each branch at the start of an accounting period. Establishing accurate opening balances is vital for successful daily reconciliations and long-term financial reporting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-door-open"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Opening Balance</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-balance-scale"></i>
+                <h3>Opening Balance Records</h3>
+            </div>
+            
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Filter by Location</strong>
+                        <p>Select a specific <strong>Branch</strong> from the dropdown menu to see its unique starting balance. Click the <span class="badge-search">SEARCH</span> button to populate the records table.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Review Ledger Start Points</strong>
+                        <p>The table displays the <strong>Opening Balance No</strong>, <strong>Branch Name</strong>, <strong>Opening Date</strong>, and <strong>Total Amount</strong>. Each row represents the formal financial handover to the current period.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Balance Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info"><strong>View</strong><span>See balance breakdown</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info"><strong>Edit</strong><span>Correct starting figures</span></div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info"><strong>Delete</strong><span>Remove erroneous starts</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title"> Opening Balance Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-plus-circle"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Accounts</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Opening Balance</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-key"></i>
+            <h3>Financial Initialization Process</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Basic Initialization Details</h4>
+                    <p>Establish the context for the opening balance:</p>
+                    <ul class="phase-list">
+                        <li><strong>Branch:</strong> Select the location for which the balance is being set.</li>
+                        <li><strong>Opening Date:</strong> Choose the effective date (usually the first day of the fiscal year or month).</li>
+                        <li><strong>Opening Balance No:</strong> System-generated for unique identification.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Add Account Balances</h4>
+                    <p>The system provides a list of all configured payment accounts. Enter the starting amount for each:</p>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-university"></i> 
+                        <strong>Payment Account:</strong> Lists Cash, Bank, Mobile Wallets, etc.<br>
+                        <strong>Amount:</strong> Enter the exact balance. If an account is empty, leave it as <strong>0</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check-double"></i></div>
+                <div class="step-details">
+                    <h4>Verify and Save</h4>
+                    <p>Check the <strong>Total Amount</strong> at the bottom of the grid. Ensure this matches your physical audit or bank statements before proceeding.</p>
+                    
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+  <hr class="section-divider" />
+
+</div>
+</div>
+
+          <!-- FOOTER  start -->
+          <footer>
+
+            <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+              <a href="../pages/coa.html" class="btn btn-neutral float-right">
+                Next &gt;&gt;
+              </a>
+              <a href="../pages/overview.html" class="btn btn-neutral float-left">
+                &lt;&lt;Previous
+              </a>
+            </div>
+
+            <hr>
+
+            <div role="contentinfo">
+              <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+            </div>
+          </footer>
+          <!-- Footer End -->
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+
+
+
+      <span class="next-span"><a href="../pages/coa.html" class="nav-next">Next &raquo;</a></span>
+
+    </span>
+  </div>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop" class="top-button">
+    ↑
+  </button>
+
+
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+  <script src="../assets/js/search_index-data.js"></script>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/search/require.js"></script>
+  <script src="../assets/js/search/search.js"></script>
+
+
+  <script>
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  </script>
+</body>
+
+</html>

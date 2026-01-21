@@ -1,0 +1,23 @@
+/* Status Dots */
+.status-indicator-list {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.status-indicator-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.unapproved { background-color: #f39c12; } /* Orange */
+.approved { background-color: #3498db; }   /* Blue */
+.completed { background-color: #27ae60; }  /* Green */

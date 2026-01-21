@@ -1,74 +1,81 @@
-/* Breadcrumb Styles */
-.breadcrumb-container {
-    padding: 10px 0;
+/* =========================================================
+   COLOR SYSTEM & VARIABLES
+   ========================================================= */
+:root {
+    --primary-deep: #401f44;
+    --primary-light: #513558;
+    --primary-brand: #23072b;       /* Dark Purple for Title */
+    --primary-brand-light: #bd45bd;
+    
+    --accent-purple: #801880;
+    --accent-glow: #d52bff;
+    --accent-blue: #5b6ee1;
+    --accent-indigo: #6366f1;
+    
+    --bg-light: #f8f9fc;
+    --surface-white: #ffffff;
+    --border-soft: #d8dcf0;
+    
+    /* Darker text variables for better visibility */
+    --text-main: #101524;           /* Near black for headers */
+    --text-muted: #334155;          /* Darker Slate for table content */
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.wy-breadcrumbs {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Hero Section - FORCING DARK PURPLE */
+.animate-title {
+    color: var(--primary-brand) !important; /* !important ensures it beats other styles */
+    font-weight: 800;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-.breadcrumb-home-link {
-    color: #4d035e;
-    font-weight: bold;
+/* Lead text under title */
+.lead-text {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-.breadcrumb-current {
-    margin-left: 10px;
-    color: #555;
+/* Table Text Fixes */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-soft);
+    background: var(--surface-white);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
-.wy-breadcrumbs-aside {
-    margin-left: auto;
+.custom-table th {
+    background-color: #f1f5f9;      /* Slightly darker header background */
+    color: var(--primary-brand);    /* Table headers in Dark Purple */
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-weight: 700;
 }
 
-.breadcrumb-hr {
-    margin-top: 15px;
-    border-top: 1px solid #e1e4e5;
+.custom-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-main) !important; /* Forces text to show in the dark color */
+    font-size: 0.95rem;
 }
 
-/* Card & Grid Adjustments */
-.card-delay {
-    animation-delay: 0.2s;
+/* Specific styling for descriptions inside the table */
+.custom-table td:last-child {
+    color: var(--text-muted) !important; 
 }
 
-/* Footer Styles */
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Ensure the wrapper doesn't have conflicting text colors */
+.main-content-wrapper {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    padding: 3rem 2rem;
+    font-family: 'Inter', sans-serif;
 }
-
-.support-phone {
-    margin-top: 10px;
-}
-
-/* Versioning Bar */
-.version-next {
-    margin-left: 15px;
-}
-
-.version-next a {
-    color: #f1eff1;
-}
-
-/* Back to Top Button */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    font-size: large;
-    background: #eaebee;
-    color: rgb(253, 194, 1);
-    border: 2px solid #eef11c;
-    border-radius: 100px;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-/* Cursor pointer for version bar */

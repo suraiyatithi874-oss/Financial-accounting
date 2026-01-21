@@ -1,0 +1,136 @@
+/* Container & Main Titles */
+.doc-container { padding: 20px; max-width: 1000px; margin: auto; font-family: 'Segoe UI', sans-serif; }
+.main-title { color: #2c3e50; font-size: 1.5rem; margin-bottom: 20px; margin-top: 20px; }
+
+/* Purpose Box Styles */
+.purpose-box {
+    background: #f8faff;
+    border-radius: 8px;
+    border: 1px solid #e1e8f0;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.purpose-container { display: flex; align-items: flex-start; gap: 15px; }
+.purpose-icon { color: #3498db; font-size: 1.5rem; }
+.purpose-title { margin: 0; font-size: 1.1rem; color: #2c3e50; }
+.purpose-description { margin: 5px 0 0; color: #576574; font-size: 0.95rem; }
+
+/* Navigation & Breadcrumbs */
+.nav-hint {
+    display: flex;
+    align-items: center;
+    background: #f1f2f6;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+.nav-label { margin-right: 10px; color: #2f3542; font-size: 0.9rem; }
+.breadcrumb-trail { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.path-link { color: #57606f; }
+.current-path { color: #e84393; font-weight: bold; }
+.fa-angle-right { color: #a4b0be; font-size: 0.8rem; }
+
+/* Features Hub Grid (Tiled Layout) */
+.features-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.hub-tile {
+    display: flex;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+.hub-tile:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.tile-icon-wrap {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.bg-teal { background: #1abc9c; }
+.bg-blue { background: #3498db; }
+.bg-indigo { background: #5f27cd; }
+.tile-body strong { display: block; margin-bottom: 4px; color: #2c3e50; }
+.tile-body p { margin: 0; font-size: 0.85rem; color: #7f8c8d; }
+
+/* Image Styling */
+.image-wrapper-fancy {
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+}
+.doc-img { max-width: 100%; border-radius: 4px; }
+.img-caption { font-size: 0.8rem; color: #7f8c8d; margin-top: 8px; font-style: italic; }
+
+.section-divider { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+
+/* Color Variants for Icons */
+.bg-purple { background: #8e44ad; }
+.bg-orange { background: #f39c12; }
+.bg-teal { background: #16a085; }
+
+/* Features Header (Matches your GNL example) */
+.features-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.features-header i {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.features-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Fancy Image Wrapper */
+.image-wrapper-fancy {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e1e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.image-inner-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.doc-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-inner-container:hover .doc-img {
+    transform: scale(1.02);
+}
+
+.img-caption {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}

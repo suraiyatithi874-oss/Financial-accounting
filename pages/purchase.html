@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Tara Tech Ltd">
+  <title>2. Dashboard - Point of Sales System</title>
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+   <link rel="stylesheet" href="../assets/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/purchase.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <!-- SIDEBAR -->
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home">
+          POINT OF SALES
+        </a>
+
+        <div class="user-manual-label">
+          User Manual
+        </div>
+        <div role="search">
+          <form class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" placeholder="Search documentation">
+          </form>
+        </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" role="navigation" aria-label="main navigation">
+        <ul class="current">
+
+          <li class="toctree-l1">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li class="toctree-l1">
+            <a href="../pages/overview.html"> Overview</a>
+          </li>
+          <li class="toctree-l1"><a href="../pages/generate-vouchar.html">1. Dashboard</a></li>
+
+
+          <li class="toctree-l1"><a href="../pages/sales.html">2. Sales & Invoice</a></li>
+
+          
+          <li class="toctree-l1 current">
+            <a class="current" href=" ">3. Purchase Management</a>
+            <ul>
+              <li><a href="#prerequisites">3.1 Purchase Order</a></li>
+              <li><a href="#navigation-overview">3.2 Purchase receive</a></li>
+              <li><a href="#first-login">3.3 Purchase</a></li>
+              <li><a href="#initial-setup">3.4 Purchase Return</a></li>
+            </ul>
+          </li>
+        
+          <li class="toctree-l1"><a href="../pages/bank.html">4. Stock Transfer</a></li>
+          <li class="toctree-l1"><a href="../pages/income.html">5. Accounts</a></li>
+          <li class="toctree-l1"><a href="../pages/process.html">6. Gold Module</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">7. Waiver or Gift or Damage</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">8. Product Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">9. BarCode Print</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">10. Discount Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">11. Customer Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">12. Supplier Management</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">13. Day close</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">14. Stock Audit</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">15. Necessity file</a></li>
+          <li class="toctree-l1"><a href="../pages/reports.html">16. All Reports</a></li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <div class="wy-nav-content">
+        <div class="rst-content">
+
+
+
+
+
+          <div role="navigation" aria-label="breadcrumbs navigation" class="navigation-pad">
+            <ul class="wy-breadcrumbs square">
+              <li>
+                <a href="../index.html" class="icon icon-home docs"> Docs</a> &raquo;
+              </li>
+              <li class="docs-text">Dashboard</li>
+
+              <li class="wy-breadcrumbs-aside ttl-logo-li">
+                <a href="https://www.taratechltd.com/" target="_blank" rel="noopener noreferrer" class="ttl">
+                  <div class="logo-container logo">
+                    <img src="../assets/images/others/logo-of-ttl.jpg" class="logo-img" alt="TTL Logo">
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <hr class="all-hr">
+          </div>
+
+    
+<div class="doc-container">
+    <div class="section-wrapper">
+    <h2 class="text">3.Purchase Management</h2>
+        <h2 class="main-title">3.1 Purchase Order</h2>
+        
+        <!-- <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon"><i class="fa fa-info-circle"></i></div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        To provide a real-time overview of organizational performance, including daily/monthly sales and top-selling products for informed decision-making.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-map-marker-alt"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Dashboard</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Organization Status</span>
+            </div>
+        </div>
+
+        
+
+<div class="image-wrapper-fancy">
+    <div class="image-inner-container">
+        <img src="../assets/images/outlet-status.png" alt="Outlet Status Dashboard" class="doc-img">
+        <div class="img-overlay-simple">
+            <i class="fa fa-expand"></i>
+        </div>
+    </div>
+    <div class="img-caption">Figure 1.3: Visual Comparison of Branch Performance</div>
+</div> -->
+
+
+   <!-- Purpose -->
+                <div class="info-box purpose">
+                    <span class="info-title">
+                        <i class="fas fa-bullseye"></i> Purpose
+                    </span>
+                    <p>
+                        To create, track, and manage purchase orders—ensuring timely procurement,
+                        supplier coordination, and effective inventory planning across branches.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div class="nav-path">
+                    <i class="fas fa-map-signs"></i>
+                    <strong>Navigation:</strong>
+                    <span>
+                        Menu <i class="fas fa-chevron-right"></i>
+                        Purchase Management <i class="fas fa-chevron-right"></i>
+                        Purchase Orders
+                    </span>
+                </div>
+
+                <!-- How to Use -->
+                <div class="usage-section">
+                    <h4 class="sub-title">
+                        <i class="fas fa-list-check"></i> How to Use
+                    </h4>
+
+                    <div class="step">
+                        <span class="step-count">1</span>
+                        <p>Apply filters to locate specific purchase orders.</p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-count">2</span>
+                        <p>
+                            Click the <strong>Search</strong>
+                            <i class="fas fa-search action-icon"></i>
+                            button to load matching entries.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-count">3</span>
+                        <p>Review the table, which includes:</p>
+                        <ul class="data-list">
+                            <li>Order No, Product Name, Quantity</li>
+                            <li>Supplier, Ordered Date, Delivery Date</li>
+                            <li>Status (Approved, Completed, Pending)</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-count">4</span>
+                        <p>Use the <strong>Action icons</strong> beside each entry:</p>
+                        <ul class="action-list">
+                            <li>
+                                <i class="fas fa-edit edit"></i>
+                                <strong>Edit:</strong> Modify order details
+                            </li>
+                            <li>
+                                <i class="fas fa-eye view"></i>
+                                <strong>View:</strong> See full order information
+                            </li>
+                            <li>
+                                <i class="fas fa-trash delete"></i>
+                                <strong>Delete:</strong> Remove incorrect entries
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+    <!-- purchase entry -->
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.1 Purchase Order Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-file-contract"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Orders</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-edit"></i>
+            <h3>Order Composition Steps</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Order Details</h4>
+                    <ul class="phase-list">
+                        <li><strong>Order No:</strong> Auto-generated system ID or manual entry.</li>
+                        <li><strong>Supplier:</strong> Choose from the registered supplier database.</li>
+                        <li><strong>Delivery:</strong> Specify the <strong>Delivery Place</strong> and <strong>Expected Date</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Letter Body</h4>
+                    <p>Provide a <strong>Subject</strong> line and customize the <strong>Letter Body</strong>. This is the formal communication that will be sent to the supplier.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Product Selection</h4>
+                    <p>Filter items by Group, Category, or Model. Select the <strong>Product Name</strong> and enter the <strong>Quantity</strong>.</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-plus"></i> New Product Button</span>
+                        <span><i class="fa fa-copy"></i> Duplicate Product Button</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">4</div>
+                <div class="step-details">
+                    <h4>Terms & Conditions</h4>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-gavel"></i> Review VAT, Payment Methods, Warranty, and Delivery Timelines.
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Remarks & Signature</h4>
+                    <p>Add final <strong>Remarks</strong>. The <strong>Signature Block</strong> auto-fills based on your authorized user profile.</p>
+                    <button class="btn-save-print"><i class="fa fa-save"></i> SAVE PURCHASE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+    <hr class="section-divider" />
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.2 Purchase Receive</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-info-circle"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        To record and verify goods received against purchase orders—ensuring accurate inventory updates, supplier accountability, and financial tracking.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-truck-loading"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Purchase Receive</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-clipboard-check"></i>
+                <h3>Managing Purchase Receipts</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Locate Records</strong>
+                        <p>Apply filters to locate specific purchase receipts within the system database.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Load Entries</strong>
+                        <p>Click the <span class="badge-search">SEARCH</span> button to load all matching entries into the data table.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <strong>Review Receipt Data</strong>
+                        <p>Verify the table information, including <strong>Bill No</strong>, <strong>Order No</strong>, Supplier, Product Name, and <strong>Quantity Received</strong>.</p>
+                        <div class="highlight-info-box">
+                            <i class="fa fa-exclamation-circle"></i> Monitor the <strong>Status</strong> column (e.g., Incomplete) to track pending financial settlements.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Receipt Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info">
+                            <strong>Edit</strong>
+                            <span>Update receipt details</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>See full receipt info</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove incorrect entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title"> Purchase Receive Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-file-import"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Receive</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-list-ul"></i>
+            <h3>Entry Steps</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Header Information</h4>
+                    <ul class="phase-list">
+                        <li><strong>Supplier:</strong> Select from the list or add a new supplier record.</li>
+                        <li><strong>Order No:</strong> Link to the corresponding Purchase Order.</li>
+                        <li><strong>Reference:</strong> Enter Invoice, LC, or Challan numbers.</li>
+                        <li><strong>Tracking:</strong> Input <strong>Bill No</strong> (Auto/Manual), Date, and <strong>Delivery No</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Narration</h4>
+                    <p>Use the <strong>Enter Remarks</strong> field to document any specific notes, observations, or instructions regarding this shipment.</p>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Financial Breakdown</h4>
+                    <p>Input <strong>Discount</strong> and <strong>VAT</strong> percentages. Enter the <strong>Paid Amount</strong> and select the <strong>Payment System</strong> (Cash/Bank/Mobile).</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-calculator"></i> T/A After Discount</span>
+                        <span><i class="fa fa-calculator"></i> Total Payable Amount</span>
+                        <span><i class="fa fa-calculator"></i> Due Amount</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize & Complete</h4>
+                    <p>Conduct a final review of all financial and tracking fields for accuracy.</p>
+                    <button class="btn-save-print"><i class="fa fa-save"></i> SAVE RECEIVE ENTRY</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+</div>
+
+
+
+
+<!-- ===========================
+ 3.3 purchase receive
+ =============================== -->
+
+
+<!-- ============================
+ 3.3 purchase
+ ============================= -->
+
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.3 Purchase Management</h2>
+
+        <div class="purpose-box pb-m">
+            <div class="purpose-container">
+                <div class="purpose-icon">
+                    <i class="fa fa-shopping-basket"></i>
+                </div>
+                <div class="purpose-content">
+                    <h3 class="purpose-title">Purpose</h3>
+                    <p class="purpose-description">
+                        This module helps users track, manage, and verify purchase records across all branches. It centralizes supplier transactions, product details, and payment statuses to streamline procurement and inventory workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-hint">
+            <div class="nav-label">
+                <i class="fa fa-sitemap"></i> <strong>Navigation:</strong>
+            </div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span>
+                <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">Purchase</span>
+            </div>
+        </div>
+
+        <div class="usage-guide-container">
+            <div class="features-header">
+                <i class="fa fa-search-plus"></i>
+                <h3>How to Use</h3>
+            </div>
+
+            <div class="process-flow">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <strong>Filter Purchases</strong>
+                        <p>Select relevant filters such as <strong>Supplier</strong> or <strong>Date Range</strong> to narrow down specific records. Click <span class="badge-search">SEARCH</span> to refresh the view.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <strong>Review Records</strong>
+                        <p>Scan the table for key details like <strong>Quantity</strong> and <strong>Amount</strong>. Use the <strong>Status</strong> column to identify pending or completed procurement cycles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-legend-box">
+                <h4 class="legend-title">Purchase Actions</h4>
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon btn-edit"><i class="fa fa-edit"></i></div>
+                        <div class="action-info">
+                            <strong>Edit</strong>
+                            <span>Modify purchase details (Qty, Supplier)</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-view"><i class="fa fa-eye"></i></div>
+                        <div class="action-info">
+                            <strong>View</strong>
+                            <span>Open full purchase summary</span>
+                        </div>
+                    </div>
+                    <div class="action-card">
+                        <div class="action-icon btn-delete"><i class="fa fa-trash-alt"></i></div>
+                        <div class="action-info">
+                            <strong>Delete</strong>
+                            <span>Remove erroneous/duplicate entries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.3 Purchase Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-cart-plus"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-invoice"></i>
+            <h3>Purchase Entry Process</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Supplier & Purchase Info</h4>
+                    <ul class="phase-list">
+                        <li><strong>Supplier:</strong> Select from dropdown (e.g., PRAN-RFL).</li>
+                        <li><strong>Contact:</strong> Auto-filled based on supplier selection.</li>
+                        <li><strong>Purchase For:</strong> Choose the destination warehouse/branch.</li>
+                        <li><strong>References:</strong> Input <strong>Reference No</strong> (Invoice/Chalan) and <strong>Bill No/Date</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Add Product Details</h4>
+                    <p>Select or scan the product. Enter the <strong>Quantity</strong> and confirm the <strong>MRP & Purchase Price</strong>.</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-calculator"></i> Line Total: Automatically Calculated</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Apply Discounts & VAT</h4>
+                    <p>Input applicable <strong>Discount (%)</strong> and <strong>VAT (%)</strong>. The system performs a summary review of total quantity and amounts.</p>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-percentage"></i> <strong>Total After Discount:</strong> System calculates final amount.
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">4</div>
+                <div class="step-details">
+                    <h4>Handle Payment</h4>
+                    <p>Verify the <strong>Total Payable Amount</strong>. Enter the <strong>Paid Amount</strong> and select the <strong>Payment System</strong> (e.g., Cash).</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-minus-circle"></i> Due Amount: Auto-calculated Balance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize Entry</h4>
+                    <p>Submit the record or return to the previous screen.</p>
+                 <div class="btn-group-row">
+    <button class="btn-save-print">
+        <i class="fa fa-save"></i> SAVE
+    </button>
+    
+    <button class="btn-back">
+        <i class="fa fa-arrow-left"></i> BACK
+    </button>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</div>
+
+<!-- =============================
+ purchase return
+ =================================== -->
+
+<div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.4 Purchase Return Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-undo-alt"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Return</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-invoice-dollar"></i>
+            <h3>Return Process Steps</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Select Supplier & Filters</h4>
+                    <p>Identify the origin of the goods and the specific item details:</p>
+                    <ul class="phase-list">
+                        <li><strong>Supplier:</strong> Choose the supplier from the dropdown list.</li>
+                        <li><strong>Product Filters:</strong> Narrow down items by Group, Category, Sub-Category, or Model.</li>
+                        <li><strong>Tracking:</strong> Review the auto-generated <strong>Bill No</strong> and adjust the <strong>Return Date</strong> if needed.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Add Product Information</h4>
+                    <p>Select the <strong>Product Name</strong> and enter the <strong>Quantity</strong> and <strong>Cost Price</strong>.</p>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-calculator"></i> Total: Quantity × Cost Price</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Review & Adjustments</h4>
+                    <p>Confirm the <strong>Total Amount</strong> and <strong>Total Payable Amount</strong>. Select the <strong>Return Type</strong>:</p>
+                    <div class="highlight-info-box">
+                        <i class="fa fa-exchange-alt"></i> <strong>Return vs. Return Adjustment:</strong> Choose based on whether it is a direct return or an adjustment against previous balances.
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize the Entry</h4>
+                    <p>Commit the changes to the system or cancel the action.</p>
+                    <div class="btn-group-row">
+                        <button class="btn-save-print"><i class="fa fa-save"></i> SAVE</button>
+                        <button class="btn-back"><i class="fa fa-times"></i> BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="doc-container">
+    <section class="section-wrapper">
+        <h2 class="main-title">3.4 Purchase Return Entry</h2>
+
+        <div class="nav-hint">
+            <div class="nav-label"><i class="fa fa-undo-alt"></i> <strong>Navigation:</strong></div>
+            <div class="breadcrumb-trail">
+                <span class="path-link">Menu</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Management</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link">Purchase Return</span> <i class="fa fa-angle-right"></i>
+                <span class="path-link current-path">New Entry</span>
+            </div>
+        </div>
+
+        <div class="features-header">
+            <i class="fa fa-file-invoice-dollar"></i>
+            <h3>Return Process Workflow</h3>
+        </div>
+
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="step-marker">1</div>
+                <div class="step-details">
+                    <h4>Select Supplier & Product Details</h4>
+                    <p>Identify the origin of the return and filter the catalog:</p>
+                    <ul class="phase-list">
+                        <li><strong>Supplier:</strong> Select the supplier from the dropdown.</li>
+                        <li><strong>Categorization:</strong> Narrow products by Group, Category, Sub-Category, or Model.</li>
+                        <li><strong>Record Info:</strong> Note the <strong>Bill No</strong> (e.g., PR000000129) and verify the <strong>Return Date</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">2</div>
+                <div class="step-details">
+                    <h4>Add Product Information</h4>
+                    <p>Input the specific item data for the return:</p>
+                    <ul class="phase-list">
+                        <li><strong>Product Name:</strong> Select the item to be returned.</li>
+                        <li><strong>Quantity:</strong> Enter the number of units.</li>
+                        <li><strong>Cost Price:</strong> Input the unit cost price.</li>
+                    </ul>
+                    <div class="auto-calc-grid">
+                        <span><i class="fa fa-calculator"></i> Total: Automatically calculated (Qty × Cost)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-marker">3</div>
+                <div class="step-details">
+                    <h4>Review Totals & Type</h4>
+                    <p>Verify the financial summaries before finalizing:</p>
+                    <div class="summary-table">
+                        <div class="s-row"><span>Total Amount</span><strong>Sum of Entries</strong></div>
+                        <div class="s-row total"><span>Total Payable</span><strong>Final Amount</strong></div>
+                    </div>
+                    <div class="highlight-info-box" style="margin-top:10px;">
+                        <i class="fa fa-exchange-alt"></i> <strong>Return Type:</strong> Choose <em>Return</em> (direct) or <em>Return Adjustment</em> (against previous balance).
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-step finish">
+                <div class="step-marker"><i class="fa fa-check"></i></div>
+                <div class="step-details">
+                    <h4>Finalize the Entry</h4>
+                    <p>Commit the transaction or cancel the changes.</p>
+                   
+
+                    <div class="btn-group-row">
+    <button class="btn-save-print">
+        <i class="fa fa-save"></i> SAVE
+    </button>
+    
+    <button class="btn-back">
+        <i class="fa fa-arrow-left"></i> BACK
+    </button>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+          <!-- FOOTER  start -->
+          <footer>
+
+            <div style="margin-top: 10px;" class="rst-footer-buttons" role="navigation">
+              <a href="../pages/coa.html" class="btn btn-neutral float-right">
+                Next &gt;&gt;
+              </a>
+              <a href="../pages/overview.html" class="btn btn-neutral float-left">
+                &lt;&lt;Previous
+              </a>
+            </div>
+
+            <hr>
+
+            <div role="contentinfo">
+              <p>&copy; 2026 <strong>Tara Tech Ltd</strong>. All Rights Reserved.</p>
+            </div>
+          </footer>
+          <!-- Footer End -->
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+
+
+
+      <span class="next-span"><a href="../pages/coa.html" class="nav-next">Next &raquo;</a></span>
+
+    </span>
+  </div>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop" class="top-button">
+    ↑
+  </button>
+
+
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
+  <script src="../assets/js/search_index-data.js"></script>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/search/require.js"></script>
+  <script src="../assets/js/search/search.js"></script>
+
+
+  <script>
+    window.onscroll = function () {
+      const btn = document.getElementById("backToTop");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  </script>
+</body>
+
+</html>

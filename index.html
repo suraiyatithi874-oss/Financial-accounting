@@ -8,13 +8,14 @@
   <meta name="description" content="Financial Accounting System Documentation">
   <meta name="author" content="thecreation">
   <link rel="shortcut icon" href="./img/favicon.ico">
-  <title>Home - Financial Accounting System Documentation</title>
+  <title>Home - Point of Sales</title>
 
-  <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="./assets/css/fontawesome.min.css"> -->
   <link rel="stylesheet" href="./assets/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="./assets/css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="./assets/css/highlight.css">
   <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
 
 </head>
 
@@ -23,7 +24,7 @@
 
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> FINANCIAL ACCOUNTING</a>
+        <a href="index.html" class="icon icon-home"> POINT OF SALES</a>
         <div class="user-manual-label">User Manual</div>
 
         <div role="search">
@@ -38,18 +39,27 @@
           <li class="toctree-l1 current">
             <a class="current" href="index.html">Home</a>
             <ul class="subnav">
-              <li class="toctree-l2"><a href="#financial-accounting-template-documentation">Financial Accounting
+              <li class="toctree-l2"><a href="#financial-accounting-template-documentation">Point of Sales
                   Documentation</a></li>
             </ul>
           </li>
           <li class="toctree-l1"><a href="./pages/overview.html">Overview</a></li>
-          <li class="toctree-l1"><a href="./pages/dashboard.html">1. Accounting Dashboard</a></li>
-          <li class="toctree-l1"><a href="./pages/coa.html">2. Chart of Accounts</a></li>
-          <li class="toctree-l1"><a href="./pages/generate-vouchar.html">3. Generate Vouchers</a></li>
-          <li class="toctree-l1"><a href="./pages/bank.html">4. Bank Reconciliation</a></li>
-          <li class="toctree-l1"><a href="./pages/income.html">5. Income & Expense Voucher</a></li>
-          <li class="toctree-l1"><a href="./pages/process.html">6. Process</a></li>
-          <li class="toctree-l1"><a href="./pages/reports.html">7. Reports</a></li>
+          <li class="toctree-l1"><a href="./pages/dashboard.html">1. Dashboard</a></li>
+          <li class="toctree-l1"><a href="./pages/sales.html">2. Sales & Invoice</a></li>
+          <li class="toctree-l1"><a href="./pages/purchase.html">3. Purchase Management</a></li>
+          <li class="toctree-l1"><a href="./pages/bank.html">4. Stock Transfer</a></li>
+          <li class="toctree-l1"><a href="./pages/income.html">5. Accounts</a></li>
+          <li class="toctree-l1"><a href="./pages/process.html">6. Gold Module</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">7. Waiver or Gift or Damage</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">8. Product Management</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">9. BarCode Print</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">10. Discount Management</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">11. Customer Management</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">12. Supplier Management</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">13. Day close</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">14. Stock Audit</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">15. Necessity file</a></li>
+          <li class="toctree-l1"><a href="./pages/reports.html">16. All Reports</a></li>
         </ul>
       </div>
     </nav>
@@ -57,7 +67,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">financial accounting documentation</a>
+        <a href="index.html">Point Of Sales documentation</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -83,52 +93,72 @@
 
           <div role="main" class="main-content-wrapper">
             <div class="section main-hero">
-              <h1 id="financial-accounting-documentation" class="animate-title">Financial Accounting System</h1>
+              <h2 id="pos-documentation-title" class="animate-title text">Point Of Sales System</h2>
               <p class="lead-text animate-fade-in">
-                Welcome to the official documentation for the Financial Accounting System, engineered by <strong>Tara
-                  Tech Ltd</strong>.
-                This guide is designed to help you manage your organization's fiscal health with precision.
+                Welcome to the official documentation for the POS & Inventory Management System, engineered by
+                <strong>Tara Tech Ltd</strong>.
+                Everything you need to manage retail, stock, and financial operations.
               </p>
 
               <div class="module-grid">
                 <div class="card glass-card animate-slide-up">
-                  <div class="card-icon">🚀</div>
-                  <h3>Quick Start</h3>
-                  <p>New to the system? Learn how to set up your <a href="./pages/coa.html">Chart of Accounts</a> and
-                    enter your first voucher.</p>
+                  <div class="card-icon">🛒</div>
+                  <h3>Sales & Retail</h3>
+                  <p>Process <a href="#retail-sales">Retail</a>, <a href="#installment">Installments</a>, and <a
+                      href="#credit">Credit Sales</a> efficiently.</p>
                   <div class="card-arrow">→</div>
                 </div>
 
                 <div class="card glass-card animate-slide-up card-delay">
-                  <div class="card-icon">📊</div>
-                  <h3>Financial Reporting</h3>
-                  <p>Generate <a href="./pages/reports.html#7-6-trial-balance">Trial Balances</a>, P&L Statements, and
-                    Balance Sheets in one click.</p>
+                  <div class="card-icon">📦</div>
+                  <h3>Inventory Control</h3>
+                  <p>Manage <a href="#stock-transfer">Stock Transfers</a>, Requisitions, and <a href="#barcode">Barcode
+                      Printing</a>.</p>
+                  <div class="card-arrow">→</div>
+                </div>
+
+                <div class="card glass-card animate-slide-up card-delay-2">
+                  <div class="card-icon">💰</div>
+                  <h3>Financials</h3>
+                  <p>Track <a href="#accounts">Daily Expenses</a>, Investment Heads, and Profit/Loss Statements.</p>
                   <div class="card-arrow">→</div>
                 </div>
               </div>
 
-              <h2 class="section-title">Core Documentation Paths</h2>
+              <h2 class="section-title">Documentation Index by Module</h2>
+
               <div class="table-container animate-fade-in">
                 <table class="docutils custom-table">
                   <thead>
                     <tr>
-                      <th>Phase</th>
-                      <th>Description</th>
+                      <th>Operational Module</th>
+                      <th>Core Functionalities</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><span class="badge setup">Setup</span></td>
-                      <td>COA List Entry, Opening Balances, and Dashboard configuration.</td>
+                      <td><span class="badge category-sales">Sales & Invoicing</span></td>
+                      <td>Cash/Retail/Credit Sales, Returns, Replacements, and Collections.</td>
                     </tr>
                     <tr>
-                      <td><span class="badge daily">Daily Operations</span></td>
-                      <td>Debit, Credit, Journal, and Fund Transfer Voucher entries.</td>
+                      <td><span class="badge category-stock">Stock & Purchase</span></td>
+                      <td>Purchase Orders, Requisitions, Branch Transfers, and Stock Audits.</td>
                     </tr>
                     <tr>
-                      <td><span class="badge periodic">Periodic Tasks</span></td>
-                      <td>Bank Reconciliation, Day Close, and Month-End processing.</td>
+                      <td><span class="badge category-gold">Gold Module</span></td>
+                      <td>Carat Configuration, Gold Purchase/Sales, and Product Price Lists.</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge category-product">Product Settings</span></td>
+                      <td>Category Management, UOM, Variants (Color/Size), and MRP Updates.</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge category-crm">CRM & Loyalty</span></td>
+                      <td>Customer/Supplier Lists, Membership Types, and Reward Rules.</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge category-reports">Analytics & Reports</span></td>
+                      <td>Register Reports, Stock Details, Profitability, and CRM Analytics.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -139,7 +169,7 @@
           <footer>
             <hr />
             <div class="footer-content" role="contentinfo">
-              <p>© 2026 <strong>Tara Tech Ltd</strong> | Financial Accounting Solutions</p>
+              <p>© 2026 <strong>Tara Tech Ltd</strong> | Point Of Sales Solutions</p>
               <div class="footer-support">
                 <div class="support-container">
                   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@taratechltd.com&su=Technical%20Support%20Request&body=Hi%20Tara%20Tech%20Team,"
@@ -162,7 +192,7 @@
       <span class="version-next"><a href="./pages/overview.html">Next &raquo;</a></span>
     </span>
   </div>
- 
+
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop">↑</button>
 

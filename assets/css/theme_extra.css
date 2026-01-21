@@ -1,12 +1,13 @@
 /* =========================================================
    COLOR SYSTEM & VARIABLES
    ========================================================= */
+
 :root {
     /* Primary Branding (Navbars & Sidebar) */
-    --primary-deep: #1f2a44;
-    --primary-light: #4f5fa8;
-    --primary-brand: #3b4a7a;
-    --primary-brand-light: #5f6fb8;
+    --primary-deep: #401f44;
+    --primary-light: #513558;
+    --primary-brand: #23072b;
+    --primary-brand-light: #bd45bd;
     
     /* Secondary & UI Accents */
     --accent-purple: #801880;
@@ -14,6 +15,7 @@
     --accent-blue: #5b6ee1;
     --accent-blue-light: #7f8cff;
     --accent-yellow: #eef11c;
+    --primary-heading:  #9d3bee;
     
     /* Neutral Tones */
     --bg-light: #f8f9fc;
@@ -26,6 +28,8 @@
 /* =========================================================
    BASE FIXES & MKDOCS / RTD COMPATIBILITY
    ========================================================= */
+
+
 
 .logo{
      background: white; 
@@ -92,6 +96,12 @@
     .wy-nav-side { height: 100%; }
 }
 
+/* Footer Styles */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 .rst-versions { 
@@ -1037,3 +1047,15 @@ figcaption:hover {
                cursor: pointer; 
                z-index: 1000;
 }
+
+h2.text {
+   
+    font-size: 2.4rem !important;
+    font-weight: 750 !important;
+    color: var(--primary-heading) !important;;
+    margin: 8px 0 10px !important;;
+}
+
+
+
+
